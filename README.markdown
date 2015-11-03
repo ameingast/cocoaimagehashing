@@ -78,13 +78,12 @@ The CocoaImageHashing API is described in detail in this
 
 The framework uses the following types in its API:
 
-|Name|Primitive|Size|Description|
+|Name|Bitsize|Description|
 |:-:|:-:|:-:|
-|OSHashType|64 bit|The result or fingerprint of a perceptual hashing function|
-|OSHashDistanceType|64 bit|The distance between to fingerprints|
-|OSImageHashingProviderId|16 bit|The API representation of a hashing algorithm|
-|OSImageHashingQuality|16 bit|The API representation of a hashing algorithm
- described by its hashing quality|
+|OSHashType|64|The result or fingerprint of a perceptual hashing function|
+|OSHashDistanceType|64|The distance between to fingerprints|
+|OSImageHashingProviderId|16|The API representation of a hashing algorithm|
+|OSImageHashingQuality|16|The API representation of a hashing algorithm described by its hashing quality|
 
 More detailed information on types is available
 [here](CocoaImageHashing/OSTypes.h).
