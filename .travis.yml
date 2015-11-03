@@ -1,7 +1,4 @@
-language: objective-c
-
 osx_image: xcode7
+language: objective-c
 xcode_project: CocoaImageHashing.xcodeproj
 xcode_scheme: CocoaImageHashing (OS X Static Library)
-
-script: xctool -project CocoaImageHashing.xcodeproj -scheme CocoaImageHashing\ \(OS\ X\ Framework\) test
