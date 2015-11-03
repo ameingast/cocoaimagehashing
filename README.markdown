@@ -191,7 +191,6 @@ More examples can be found in the test suite!
 
 ## ToDo
 
-* Add missing documentation in source code
 * Submit podspec file to cocoapods
 
 ## Contact and Contributions
