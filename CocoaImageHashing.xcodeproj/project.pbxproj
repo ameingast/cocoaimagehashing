@@ -1,0 +1,1668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA462F7E1BD252930010EEBD /* OSSimilaritySearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA462F7D1BD252930010EEBD /* OSSimilaritySearchTests.m */; };
+		CA5EFBD71BCA916E00143DAA /* architecture1.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD01BC8EFC00039E5A8 /* architecture1.bmp */; };
+		CA5EFBD81BCA916E00143DAA /* architecture_2.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD11BC8EFC00039E5A8 /* architecture_2.bmp */; };
+		CA5EFBD91BCA916E00143DAA /* bamarket115.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD21BC8EFC00039E5A8 /* bamarket115.bmp */; };
+		CA5EFBDA1BCA916E00143DAA /* butterflywallpaper.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD31BC8EFC00039E5A8 /* butterflywallpaper.bmp */; };
+		CA5EFBDB1BCA916E00143DAA /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD41BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp */; };
+		CA5EFBDC1BCA916E00143DAA /* damien_hirst.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD51BC8EFC00039E5A8 /* damien_hirst.bmp */; };
+		CA5EFBDD1BCA916E00143DAA /* damien_hirst_does_fashion_week.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD61BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.bmp */; };
+		CA5EFBDE1BCA916E00143DAA /* damien_hirst_virgin_mother.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD71BC8EFC00039E5A8 /* damien_hirst_virgin_mother.bmp */; };
+		CA5EFBDF1BCA916E00143DAA /* damienhirst.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD81BC8EFC00039E5A8 /* damienhirst.bmp */; };
+		CA5EFBE01BCA916E00143DAA /* dhirst_a3b9ddea.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD91BC8EFC00039E5A8 /* dhirst_a3b9ddea.bmp */; };
+		CA5EFBE11BCA916E00143DAA /* diamondskull.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDA1BC8EFC00039E5A8 /* diamondskull.bmp */; };
+		CA5EFBE21BCA916E00143DAA /* doodle.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDB1BC8EFC00039E5A8 /* doodle.bmp */; };
+		CA5EFBE31BCA916E00143DAA /* england.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDC1BC8EFC00039E5A8 /* england.bmp */; };
+		CA5EFBE41BCA916E00143DAA /* englandpath.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDD1BC8EFC00039E5A8 /* englandpath.bmp */; };
+		CA5EFBE51BCA916E00143DAA /* Hhirst_BGE.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDE1BC8EFC00039E5A8 /* Hhirst_BGE.bmp */; };
+		CA5EFBE61BCA916E00143DAA /* jasper_johns.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDF1BC8EFC00039E5A8 /* jasper_johns.bmp */; };
+		CA5EFBE71BCA916E00143DAA /* johns_portrait_380x311.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE01BC8EFC00039E5A8 /* johns_portrait_380x311.bmp */; };
+		CA5EFBE81BCA916E00143DAA /* latrobe.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE11BC8EFC00039E5A8 /* latrobe.bmp */; };
+		CA5EFBE91BCA916E00143DAA /* Scotland_castle_wedding.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE21BC8EFC00039E5A8 /* Scotland_castle_wedding.bmp */; };
+		CA5EFBEA1BCA916E00143DAA /* targetjasperjohns.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE31BC8EFC00039E5A8 /* targetjasperjohns.bmp */; };
+		CA5EFBEB1BCA916E00143DAA /* Tower-Bridge-at-night--London--England_web.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE41BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.bmp */; };
+		CA5EFBEC1BCA916E00143DAA /* uk-golf-scotland.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE51BC8EFC00039E5A8 /* uk-golf-scotland.bmp */; };
+		CA5EFBED1BCA916E00143DAA /* wallacestevens.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE61BC8EFC00039E5A8 /* wallacestevens.bmp */; };
+		CA5EFBEF1BCA988E00143DAA /* architecture1.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BE81BC8EFC00039E5A8 /* architecture1.jpg */; };
+		CA5EFBF01BCA988E00143DAA /* architecture_2.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BE91BC8EFC00039E5A8 /* architecture_2.jpg */; };
+		CA5EFBF11BCA988E00143DAA /* bamarket115.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BEA1BC8EFC00039E5A8 /* bamarket115.jpg */; };
+		CA5EFBF21BCA988E00143DAA /* butterflywallpaper.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BEB1BC8EFC00039E5A8 /* butterflywallpaper.jpg */; };
+		CA5EFBF31BCA988E00143DAA /* Chang_PermanentMidnightintheChairofJasperJohns_large.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BEC1BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.jpg */; };
+		CA5EFBF41BCA988E00143DAA /* damien_hirst.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BED1BC8EFC00039E5A8 /* damien_hirst.jpg */; };
+		CA5EFBF51BCA988E00143DAA /* damien_hirst_does_fashion_week.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BEE1BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.jpg */; };
+		CA5EFBF61BCA988E00143DAA /* damien_hirst_virgin_mother.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BEF1BC8EFC00039E5A8 /* damien_hirst_virgin_mother.jpg */; };
+		CA5EFBF71BCA988E00143DAA /* damienhirst.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF01BC8EFC00039E5A8 /* damienhirst.jpg */; };
+		CA5EFBF81BCA988E00143DAA /* dhirst_a3b9ddea.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF11BC8EFC00039E5A8 /* dhirst_a3b9ddea.jpg */; };
+		CA5EFBF91BCA988E00143DAA /* diamondskull.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF21BC8EFC00039E5A8 /* diamondskull.jpg */; };
+		CA5EFBFA1BCA988E00143DAA /* doodle.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF31BC8EFC00039E5A8 /* doodle.jpg */; };
+		CA5EFBFB1BCA988E00143DAA /* england.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF41BC8EFC00039E5A8 /* england.jpg */; };
+		CA5EFBFC1BCA988E00143DAA /* englandpath.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF51BC8EFC00039E5A8 /* englandpath.jpg */; };
+		CA5EFBFD1BCA988E00143DAA /* Hhirst_BGE.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF61BC8EFC00039E5A8 /* Hhirst_BGE.jpg */; };
+		CA5EFBFE1BCA988E00143DAA /* jasper_johns.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF71BC8EFC00039E5A8 /* jasper_johns.jpg */; };
+		CA5EFBFF1BCA988E00143DAA /* johns_portrait_380x311.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF81BC8EFC00039E5A8 /* johns_portrait_380x311.jpg */; };
+		CA5EFC001BCA988E00143DAA /* latrobe.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF91BC8EFC00039E5A8 /* latrobe.jpg */; };
+		CA5EFC011BCA988E00143DAA /* Scotland_castle_wedding.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BFA1BC8EFC00039E5A8 /* Scotland_castle_wedding.jpg */; };
+		CA5EFC021BCA988E00143DAA /* targetjasperjohns.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BFB1BC8EFC00039E5A8 /* targetjasperjohns.jpg */; };
+		CA5EFC031BCA988E00143DAA /* Tower-Bridge-at-night--London--England_web.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BFC1BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.jpg */; };
+		CA5EFC041BCA988E00143DAA /* uk-golf-scotland.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BFD1BC8EFC00039E5A8 /* uk-golf-scotland.jpg */; };
+		CA5EFC051BCA988E00143DAA /* wallacestevens.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BFE1BC8EFC00039E5A8 /* wallacestevens.jpg */; };
+		CA5EFC071BCA98A200143DAA /* architecture1.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C001BC8EFC00039E5A8 /* architecture1.bmp */; };
+		CA5EFC081BCA98A200143DAA /* architecture_2.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C011BC8EFC00039E5A8 /* architecture_2.bmp */; };
+		CA5EFC091BCA98A200143DAA /* bamarket115.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C021BC8EFC00039E5A8 /* bamarket115.bmp */; };
+		CA5EFC0A1BCA98A200143DAA /* butterflywallpaper.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C031BC8EFC00039E5A8 /* butterflywallpaper.bmp */; };
+		CA5EFC0B1BCA98A200143DAA /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C041BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp */; };
+		CA5EFC0C1BCA98A200143DAA /* damien_hirst.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C051BC8EFC00039E5A8 /* damien_hirst.bmp */; };
+		CA5EFC0D1BCA98A200143DAA /* damien_hirst_does_fashion_week.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C061BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.bmp */; };
+		CA5EFC0E1BCA98A200143DAA /* damien_hirst_virgin_mother.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C071BC8EFC00039E5A8 /* damien_hirst_virgin_mother.bmp */; };
+		CA5EFC0F1BCA98A200143DAA /* damienhirst.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C081BC8EFC00039E5A8 /* damienhirst.bmp */; };
+		CA5EFC101BCA98A200143DAA /* dhirst_a3b9ddea.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C091BC8EFC00039E5A8 /* dhirst_a3b9ddea.bmp */; };
+		CA5EFC111BCA98A200143DAA /* diamondskull.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0A1BC8EFC00039E5A8 /* diamondskull.bmp */; };
+		CA5EFC121BCA98A200143DAA /* doodle.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0B1BC8EFC00039E5A8 /* doodle.bmp */; };
+		CA5EFC131BCA98A200143DAA /* england.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0C1BC8EFC00039E5A8 /* england.bmp */; };
+		CA5EFC141BCA98A200143DAA /* englandpath.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0D1BC8EFC00039E5A8 /* englandpath.bmp */; };
+		CA5EFC151BCA98A200143DAA /* Hhirst_BGE.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0E1BC8EFC00039E5A8 /* Hhirst_BGE.bmp */; };
+		CA5EFC161BCA98A200143DAA /* jasper_johns.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0F1BC8EFC00039E5A8 /* jasper_johns.bmp */; };
+		CA5EFC171BCA98A200143DAA /* johns_portrait_380x311.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C101BC8EFC00039E5A8 /* johns_portrait_380x311.bmp */; };
+		CA5EFC181BCA98A200143DAA /* latrobe.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C111BC8EFC00039E5A8 /* latrobe.bmp */; };
+		CA5EFC191BCA98A200143DAA /* Scotland_castle_wedding.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C121BC8EFC00039E5A8 /* Scotland_castle_wedding.bmp */; };
+		CA5EFC1A1BCA98A200143DAA /* targetjasperjohns.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C131BC8EFC00039E5A8 /* targetjasperjohns.bmp */; };
+		CA5EFC1B1BCA98A200143DAA /* Tower-Bridge-at-night--London--England_web.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C141BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.bmp */; };
+		CA5EFC1C1BCA98A200143DAA /* uk-golf-scotland.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C151BC8EFC00039E5A8 /* uk-golf-scotland.bmp */; };
+		CA5EFC1D1BCA98A200143DAA /* wallacestevens.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C161BC8EFC00039E5A8 /* wallacestevens.bmp */; };
+		CA7413721BD0DE9600C816B5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CA7413711BD0DE9600C816B5 /* LICENSE */; };
+		CA7413861BD0E61C00C816B5 /* OSAHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6A1BC8F1DD0039E5A8 /* OSAHash.m */; };
+		CA7413871BD0E61C00C816B5 /* OSDHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C601BC8F0370039E5A8 /* OSDHash.m */; };
+		CA7413881BD0E61C00C816B5 /* OSPHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6F1BC8F1E40039E5A8 /* OSPHash.m */; };
+		CA7413891BD0E61C00C816B5 /* OSImageHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */; };
+		CA74138A1BD0E62600C816B5 /* OSCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EF1BCAD7D30061A909 /* OSCategories.m */; };
+		CA74138B1BD0E62600C816B5 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
+		CA74138D1BD0E62600C816B5 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA963C131BCFCC6200D74D22 /* OSTypes.m */; };
+		CA74138E1BD0E65100C816B5 /* OSAHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C691BC8F1DD0039E5A8 /* OSAHash.h */; };
+		CA74138F1BD0E65100C816B5 /* OSDHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C5F1BC8F0370039E5A8 /* OSDHash.h */; };
+		CA7413901BD0E65100C816B5 /* OSPHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C6E1BC8F1E40039E5A8 /* OSPHash.h */; };
+		CA7413911BD0E65100C816B5 /* CocoaImageHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6BB51BC8EF9A0039E5A8 /* CocoaImageHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413931BD0E65100C816B5 /* OSTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CA963C111BCFCBD500D74D22 /* OSTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413941BD0E65100C816B5 /* OSImageHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C641BC8F15A0039E5A8 /* OSImageHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413951BD0E67400C816B5 /* OSCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE958EE1BCAD7D30061A909 /* OSCategories.h */; };
+		CA7413961BD0E67400C816B5 /* OSFastGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = CA95045D1BCD9A1000305210 /* OSFastGraphics.h */; };
+		CA7413A61BD0E7FB00C816B5 /* OSAHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6A1BC8F1DD0039E5A8 /* OSAHash.m */; };
+		CA7413A71BD0E7FB00C816B5 /* OSDHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C601BC8F0370039E5A8 /* OSDHash.m */; };
+		CA7413A81BD0E7FB00C816B5 /* OSPHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6F1BC8F1E40039E5A8 /* OSPHash.m */; };
+		CA7413A91BD0E7FB00C816B5 /* OSCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EF1BCAD7D30061A909 /* OSCategories.m */; };
+		CA7413AA1BD0E7FB00C816B5 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
+		CA7413AC1BD0E7FB00C816B5 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA963C131BCFCC6200D74D22 /* OSTypes.m */; };
+		CA7413AD1BD0E7FB00C816B5 /* OSImageHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */; };
+		CA7413AF1BD0E81700C816B5 /* OSAHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C691BC8F1DD0039E5A8 /* OSAHash.h */; };
+		CA7413B01BD0E81700C816B5 /* OSDHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C5F1BC8F0370039E5A8 /* OSDHash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413B11BD0E81700C816B5 /* OSPHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C6E1BC8F1E40039E5A8 /* OSPHash.h */; };
+		CA7413B21BD0E81700C816B5 /* CocoaImageHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6BB51BC8EF9A0039E5A8 /* CocoaImageHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413B41BD0E81700C816B5 /* OSTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CA963C111BCFCBD500D74D22 /* OSTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413B51BD0E81700C816B5 /* OSImageHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C641BC8F15A0039E5A8 /* OSImageHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413B61BD0E82500C816B5 /* OSCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE958EE1BCAD7D30061A909 /* OSCategories.h */; };
+		CA7413B71BD0E82500C816B5 /* OSFastGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = CA95045D1BCD9A1000305210 /* OSFastGraphics.h */; };
+		CA7413C51BD0E87400C816B5 /* OSAHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6A1BC8F1DD0039E5A8 /* OSAHash.m */; };
+		CA7413C61BD0E87400C816B5 /* OSDHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C601BC8F0370039E5A8 /* OSDHash.m */; };
+		CA7413C71BD0E87400C816B5 /* OSPHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6F1BC8F1E40039E5A8 /* OSPHash.m */; };
+		CA7413C81BD0E87400C816B5 /* OSCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EF1BCAD7D30061A909 /* OSCategories.m */; };
+		CA7413C91BD0E87400C816B5 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
+		CA7413CB1BD0E87400C816B5 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA963C131BCFCC6200D74D22 /* OSTypes.m */; };
+		CA7413CC1BD0E87400C816B5 /* OSImageHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */; };
+		CA7413CD1BD0E88300C816B5 /* OSAHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C691BC8F1DD0039E5A8 /* OSAHash.h */; };
+		CA7413CE1BD0E88300C816B5 /* OSDHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C5F1BC8F0370039E5A8 /* OSDHash.h */; };
+		CA7413CF1BD0E88300C816B5 /* OSPHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C6E1BC8F1E40039E5A8 /* OSPHash.h */; };
+		CA7413D01BD0E88300C816B5 /* CocoaImageHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6BB51BC8EF9A0039E5A8 /* CocoaImageHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413D21BD0E88300C816B5 /* OSTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CA963C111BCFCBD500D74D22 /* OSTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413D31BD0E88300C816B5 /* OSImageHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C641BC8F15A0039E5A8 /* OSImageHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413D41BD0E89100C816B5 /* OSCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE958EE1BCAD7D30061A909 /* OSCategories.h */; };
+		CA7413D51BD0E89100C816B5 /* OSFastGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = CA95045D1BCD9A1000305210 /* OSFastGraphics.h */; };
+		CA7413D81BD0EAA800C816B5 /* OSAbstractHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CA7413D61BD0EAA800C816B5 /* OSAbstractHash.h */; };
+		CA7413D91BD0EAA800C816B5 /* OSAbstractHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CA7413D61BD0EAA800C816B5 /* OSAbstractHash.h */; };
+		CA7413DA1BD0EAA800C816B5 /* OSAbstractHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CA7413D61BD0EAA800C816B5 /* OSAbstractHash.h */; };
+		CA7413DB1BD0EAA800C816B5 /* OSAbstractHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CA7413D61BD0EAA800C816B5 /* OSAbstractHash.h */; };
+		CA7413DC1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7413D71BD0EAA800C816B5 /* OSAbstractHash.m */; };
+		CA7413DD1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7413D71BD0EAA800C816B5 /* OSAbstractHash.m */; };
+		CA7413DE1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7413D71BD0EAA800C816B5 /* OSAbstractHash.m */; };
+		CA7413DF1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7413D71BD0EAA800C816B5 /* OSAbstractHash.m */; };
+		CA77A5521BD7E31000F9EA70 /* OSAHashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958E81BCAD6E50061A909 /* OSAHashTests.m */; };
+		CA77A5531BD7E31000F9EA70 /* OSDHashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BC11BC8EF9A0039E5A8 /* OSDHashTests.m */; };
+		CA77A5541BD7E31000F9EA70 /* OSPHashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EA1BCAD7000061A909 /* OSPHashTests.m */; };
+		CA77A5551BD7E31000F9EA70 /* OSSimilaritySearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA462F7D1BD252930010EEBD /* OSSimilaritySearchTests.m */; };
+		CA77A5561BD7E31000F9EA70 /* OSFastGraphicsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE6DAED1BCF932A00E7B167 /* OSFastGraphicsTests.m */; };
+		CA77A5571BD7E31000F9EA70 /* OSImageHashingBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB919721BCC4A9900BB6137 /* OSImageHashingBaseTest.m */; };
+		CA77A5581BD7E31000F9EA70 /* CococaImageHashingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EC1BCAD7100061A909 /* CococaImageHashingTests.m */; };
+		CA77A55C1BD7E34300F9EA70 /* architecture1.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD01BC8EFC00039E5A8 /* architecture1.bmp */; };
+		CA77A55D1BD7E34300F9EA70 /* architecture_2.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD11BC8EFC00039E5A8 /* architecture_2.bmp */; };
+		CA77A55E1BD7E34300F9EA70 /* bamarket115.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD21BC8EFC00039E5A8 /* bamarket115.bmp */; };
+		CA77A55F1BD7E34300F9EA70 /* butterflywallpaper.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD31BC8EFC00039E5A8 /* butterflywallpaper.bmp */; };
+		CA77A5601BD7E34300F9EA70 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD41BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp */; };
+		CA77A5611BD7E34300F9EA70 /* damien_hirst.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD51BC8EFC00039E5A8 /* damien_hirst.bmp */; };
+		CA77A5621BD7E34300F9EA70 /* damien_hirst_does_fashion_week.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD61BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.bmp */; };
+		CA77A5631BD7E34300F9EA70 /* damien_hirst_virgin_mother.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD71BC8EFC00039E5A8 /* damien_hirst_virgin_mother.bmp */; };
+		CA77A5641BD7E34300F9EA70 /* damienhirst.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD81BC8EFC00039E5A8 /* damienhirst.bmp */; };
+		CA77A5651BD7E34300F9EA70 /* dhirst_a3b9ddea.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BD91BC8EFC00039E5A8 /* dhirst_a3b9ddea.bmp */; };
+		CA77A5661BD7E34300F9EA70 /* diamondskull.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDA1BC8EFC00039E5A8 /* diamondskull.bmp */; };
+		CA77A5671BD7E34300F9EA70 /* doodle.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDB1BC8EFC00039E5A8 /* doodle.bmp */; };
+		CA77A5681BD7E34300F9EA70 /* england.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDC1BC8EFC00039E5A8 /* england.bmp */; };
+		CA77A5691BD7E34300F9EA70 /* englandpath.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDD1BC8EFC00039E5A8 /* englandpath.bmp */; };
+		CA77A56A1BD7E34300F9EA70 /* Hhirst_BGE.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDE1BC8EFC00039E5A8 /* Hhirst_BGE.bmp */; };
+		CA77A56B1BD7E34300F9EA70 /* jasper_johns.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BDF1BC8EFC00039E5A8 /* jasper_johns.bmp */; };
+		CA77A56C1BD7E34300F9EA70 /* johns_portrait_380x311.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE01BC8EFC00039E5A8 /* johns_portrait_380x311.bmp */; };
+		CA77A56D1BD7E34300F9EA70 /* latrobe.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE11BC8EFC00039E5A8 /* latrobe.bmp */; };
+		CA77A56E1BD7E34300F9EA70 /* Scotland_castle_wedding.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE21BC8EFC00039E5A8 /* Scotland_castle_wedding.bmp */; };
+		CA77A56F1BD7E34300F9EA70 /* targetjasperjohns.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE31BC8EFC00039E5A8 /* targetjasperjohns.bmp */; };
+		CA77A5701BD7E34300F9EA70 /* Tower-Bridge-at-night--London--England_web.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE41BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.bmp */; };
+		CA77A5711BD7E34300F9EA70 /* uk-golf-scotland.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE51BC8EFC00039E5A8 /* uk-golf-scotland.bmp */; };
+		CA77A5721BD7E34300F9EA70 /* wallacestevens.bmp in Copy Blurred Images */ = {isa = PBXBuildFile; fileRef = CADF6BE61BC8EFC00039E5A8 /* wallacestevens.bmp */; };
+		CA77A5731BD7E34E00F9EA70 /* architecture1.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BE81BC8EFC00039E5A8 /* architecture1.jpg */; };
+		CA77A5741BD7E34E00F9EA70 /* architecture_2.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BE91BC8EFC00039E5A8 /* architecture_2.jpg */; };
+		CA77A5751BD7E34E00F9EA70 /* bamarket115.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BEA1BC8EFC00039E5A8 /* bamarket115.jpg */; };
+		CA77A5761BD7E34E00F9EA70 /* butterflywallpaper.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BEB1BC8EFC00039E5A8 /* butterflywallpaper.jpg */; };
+		CA77A5771BD7E34E00F9EA70 /* Chang_PermanentMidnightintheChairofJasperJohns_large.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BEC1BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.jpg */; };
+		CA77A5781BD7E34E00F9EA70 /* damien_hirst.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BED1BC8EFC00039E5A8 /* damien_hirst.jpg */; };
+		CA77A5791BD7E34E00F9EA70 /* damien_hirst_does_fashion_week.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BEE1BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.jpg */; };
+		CA77A57A1BD7E34E00F9EA70 /* damien_hirst_virgin_mother.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BEF1BC8EFC00039E5A8 /* damien_hirst_virgin_mother.jpg */; };
+		CA77A57B1BD7E34E00F9EA70 /* damienhirst.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF01BC8EFC00039E5A8 /* damienhirst.jpg */; };
+		CA77A57C1BD7E34E00F9EA70 /* dhirst_a3b9ddea.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF11BC8EFC00039E5A8 /* dhirst_a3b9ddea.jpg */; };
+		CA77A57D1BD7E34E00F9EA70 /* diamondskull.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF21BC8EFC00039E5A8 /* diamondskull.jpg */; };
+		CA77A57E1BD7E34E00F9EA70 /* doodle.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF31BC8EFC00039E5A8 /* doodle.jpg */; };
+		CA77A57F1BD7E34E00F9EA70 /* england.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF41BC8EFC00039E5A8 /* england.jpg */; };
+		CA77A5801BD7E34E00F9EA70 /* englandpath.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF51BC8EFC00039E5A8 /* englandpath.jpg */; };
+		CA77A5811BD7E34E00F9EA70 /* Hhirst_BGE.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF61BC8EFC00039E5A8 /* Hhirst_BGE.jpg */; };
+		CA77A5821BD7E34E00F9EA70 /* jasper_johns.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF71BC8EFC00039E5A8 /* jasper_johns.jpg */; };
+		CA77A5831BD7E34E00F9EA70 /* johns_portrait_380x311.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF81BC8EFC00039E5A8 /* johns_portrait_380x311.jpg */; };
+		CA77A5841BD7E34E00F9EA70 /* latrobe.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BF91BC8EFC00039E5A8 /* latrobe.jpg */; };
+		CA77A5851BD7E34E00F9EA70 /* Scotland_castle_wedding.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BFA1BC8EFC00039E5A8 /* Scotland_castle_wedding.jpg */; };
+		CA77A5861BD7E34E00F9EA70 /* targetjasperjohns.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BFB1BC8EFC00039E5A8 /* targetjasperjohns.jpg */; };
+		CA77A5871BD7E34E00F9EA70 /* Tower-Bridge-at-night--London--England_web.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BFC1BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.jpg */; };
+		CA77A5881BD7E34E00F9EA70 /* uk-golf-scotland.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BFD1BC8EFC00039E5A8 /* uk-golf-scotland.jpg */; };
+		CA77A5891BD7E34E00F9EA70 /* wallacestevens.jpg in Copy Compressed Images */ = {isa = PBXBuildFile; fileRef = CADF6BFE1BC8EFC00039E5A8 /* wallacestevens.jpg */; };
+		CA77A58A1BD7E35A00F9EA70 /* architecture1.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C001BC8EFC00039E5A8 /* architecture1.bmp */; };
+		CA77A58B1BD7E35A00F9EA70 /* architecture_2.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C011BC8EFC00039E5A8 /* architecture_2.bmp */; };
+		CA77A58C1BD7E35A00F9EA70 /* bamarket115.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C021BC8EFC00039E5A8 /* bamarket115.bmp */; };
+		CA77A58D1BD7E35A00F9EA70 /* butterflywallpaper.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C031BC8EFC00039E5A8 /* butterflywallpaper.bmp */; };
+		CA77A58E1BD7E35A00F9EA70 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C041BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp */; };
+		CA77A58F1BD7E35A00F9EA70 /* damien_hirst.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C051BC8EFC00039E5A8 /* damien_hirst.bmp */; };
+		CA77A5901BD7E35A00F9EA70 /* damien_hirst_does_fashion_week.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C061BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.bmp */; };
+		CA77A5911BD7E35A00F9EA70 /* damien_hirst_virgin_mother.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C071BC8EFC00039E5A8 /* damien_hirst_virgin_mother.bmp */; };
+		CA77A5921BD7E35A00F9EA70 /* damienhirst.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C081BC8EFC00039E5A8 /* damienhirst.bmp */; };
+		CA77A5931BD7E35A00F9EA70 /* dhirst_a3b9ddea.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C091BC8EFC00039E5A8 /* dhirst_a3b9ddea.bmp */; };
+		CA77A5941BD7E35A00F9EA70 /* diamondskull.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0A1BC8EFC00039E5A8 /* diamondskull.bmp */; };
+		CA77A5951BD7E35A00F9EA70 /* doodle.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0B1BC8EFC00039E5A8 /* doodle.bmp */; };
+		CA77A5961BD7E35A00F9EA70 /* england.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0C1BC8EFC00039E5A8 /* england.bmp */; };
+		CA77A5971BD7E35A00F9EA70 /* englandpath.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0D1BC8EFC00039E5A8 /* englandpath.bmp */; };
+		CA77A5981BD7E35A00F9EA70 /* Hhirst_BGE.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0E1BC8EFC00039E5A8 /* Hhirst_BGE.bmp */; };
+		CA77A5991BD7E35A00F9EA70 /* jasper_johns.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C0F1BC8EFC00039E5A8 /* jasper_johns.bmp */; };
+		CA77A59A1BD7E35A00F9EA70 /* johns_portrait_380x311.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C101BC8EFC00039E5A8 /* johns_portrait_380x311.bmp */; };
+		CA77A59B1BD7E35A00F9EA70 /* latrobe.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C111BC8EFC00039E5A8 /* latrobe.bmp */; };
+		CA77A59C1BD7E35A00F9EA70 /* Scotland_castle_wedding.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C121BC8EFC00039E5A8 /* Scotland_castle_wedding.bmp */; };
+		CA77A59D1BD7E35A00F9EA70 /* targetjasperjohns.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C131BC8EFC00039E5A8 /* targetjasperjohns.bmp */; };
+		CA77A59E1BD7E35A00F9EA70 /* Tower-Bridge-at-night--London--England_web.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C141BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.bmp */; };
+		CA77A59F1BD7E35A00F9EA70 /* uk-golf-scotland.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C151BC8EFC00039E5A8 /* uk-golf-scotland.bmp */; };
+		CA77A5A01BD7E35A00F9EA70 /* wallacestevens.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C161BC8EFC00039E5A8 /* wallacestevens.bmp */; };
+		CA95045F1BCD9A1000305210 /* OSFastGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = CA95045D1BCD9A1000305210 /* OSFastGraphics.h */; };
+		CA9504601BCD9A1000305210 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
+		CA963C121BCFCBD500D74D22 /* OSTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CA963C111BCFCBD500D74D22 /* OSTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA963C141BCFCC6200D74D22 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA963C131BCFCC6200D74D22 /* OSTypes.m */; };
+		CAC724221BD7C71500B78B0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC724211BD7C71500B78B0C /* UIKit.framework */; };
+		CAC7242D1BD7C81000B78B0C /* CocoaImageHashing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7413BD1BD0E84300C816B5 /* CocoaImageHashing.framework */; };
+		CADF6BB61BC8EF9A0039E5A8 /* CocoaImageHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6BB51BC8EF9A0039E5A8 /* CocoaImageHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CADF6BBD1BC8EF9A0039E5A8 /* CocoaImageHashing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADF6BB21BC8EF9A0039E5A8 /* CocoaImageHashing.framework */; };
+		CADF6BC21BC8EF9A0039E5A8 /* OSDHashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BC11BC8EF9A0039E5A8 /* OSDHashTests.m */; };
+		CADF6C611BC8F0370039E5A8 /* OSDHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C5F1BC8F0370039E5A8 /* OSDHash.h */; };
+		CADF6C621BC8F0370039E5A8 /* OSDHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C601BC8F0370039E5A8 /* OSDHash.m */; };
+		CADF6C661BC8F15A0039E5A8 /* OSImageHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C641BC8F15A0039E5A8 /* OSImageHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CADF6C6B1BC8F1DD0039E5A8 /* OSAHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C691BC8F1DD0039E5A8 /* OSAHash.h */; };
+		CADF6C6C1BC8F1DD0039E5A8 /* OSAHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6A1BC8F1DD0039E5A8 /* OSAHash.m */; };
+		CADF6C701BC8F1E40039E5A8 /* OSPHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C6E1BC8F1E40039E5A8 /* OSPHash.h */; };
+		CADF6C711BC8F1E40039E5A8 /* OSPHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6F1BC8F1E40039E5A8 /* OSPHash.m */; };
+		CADF6C741BC8F3820039E5A8 /* OSImageHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */; };
+		CAE6DAEB1BCF925500E7B167 /* OSImageHashingBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB919721BCC4A9900BB6137 /* OSImageHashingBaseTest.m */; };
+		CAE6DAEE1BCF932A00E7B167 /* OSFastGraphicsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE6DAED1BCF932A00E7B167 /* OSFastGraphicsTests.m */; };
+		CAE958E91BCAD6E50061A909 /* OSAHashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958E81BCAD6E50061A909 /* OSAHashTests.m */; };
+		CAE958EB1BCAD7000061A909 /* OSPHashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EA1BCAD7000061A909 /* OSPHashTests.m */; };
+		CAE958ED1BCAD7100061A909 /* CococaImageHashingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EC1BCAD7100061A909 /* CococaImageHashingTests.m */; };
+		CAE958F01BCAD7D30061A909 /* OSCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE958EE1BCAD7D30061A909 /* OSCategories.h */; };
+		CAE958F11BCAD7D30061A909 /* OSCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EF1BCAD7D30061A909 /* OSCategories.m */; };
+		CAEA26631BD110C200380B76 /* OSSimilaritySearch.h in Headers */ = {isa = PBXBuildFile; fileRef = CAEA26611BD110C200380B76 /* OSSimilaritySearch.h */; };
+		CAEA26641BD110C200380B76 /* OSSimilaritySearch.h in Headers */ = {isa = PBXBuildFile; fileRef = CAEA26611BD110C200380B76 /* OSSimilaritySearch.h */; };
+		CAEA26651BD110C200380B76 /* OSSimilaritySearch.h in Headers */ = {isa = PBXBuildFile; fileRef = CAEA26611BD110C200380B76 /* OSSimilaritySearch.h */; };
+		CAEA26661BD110C200380B76 /* OSSimilaritySearch.h in Headers */ = {isa = PBXBuildFile; fileRef = CAEA26611BD110C200380B76 /* OSSimilaritySearch.h */; };
+		CAEA26671BD110C200380B76 /* OSSimilaritySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEA26621BD110C200380B76 /* OSSimilaritySearch.m */; };
+		CAEA26681BD110C200380B76 /* OSSimilaritySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEA26621BD110C200380B76 /* OSSimilaritySearch.m */; };
+		CAEA26691BD110C200380B76 /* OSSimilaritySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEA26621BD110C200380B76 /* OSSimilaritySearch.m */; };
+		CAEA266A1BD110C200380B76 /* OSSimilaritySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEA26621BD110C200380B76 /* OSSimilaritySearch.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAC7242E1BD7C81000B78B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CADF6BA91BC8EF9A0039E5A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA7413BC1BD0E84300C816B5;
+			remoteInfo = "CocoaImageHashing (iOS Framework)";
+		};
+		CADF6BBE1BC8EF9A0039E5A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CADF6BA91BC8EF9A0039E5A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CADF6BB11BC8EF9A0039E5A8;
+			remoteInfo = CocoaImageHashing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CA5EFBD61BCA915800143DAA /* Copy Blurred Images */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = blurred;
+			dstSubfolderSpec = 7;
+			files = (
+				CA5EFBD71BCA916E00143DAA /* architecture1.bmp in Copy Blurred Images */,
+				CA5EFBD81BCA916E00143DAA /* architecture_2.bmp in Copy Blurred Images */,
+				CA5EFBD91BCA916E00143DAA /* bamarket115.bmp in Copy Blurred Images */,
+				CA5EFBDA1BCA916E00143DAA /* butterflywallpaper.bmp in Copy Blurred Images */,
+				CA5EFBDB1BCA916E00143DAA /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp in Copy Blurred Images */,
+				CA5EFBDC1BCA916E00143DAA /* damien_hirst.bmp in Copy Blurred Images */,
+				CA5EFBDD1BCA916E00143DAA /* damien_hirst_does_fashion_week.bmp in Copy Blurred Images */,
+				CA5EFBDE1BCA916E00143DAA /* damien_hirst_virgin_mother.bmp in Copy Blurred Images */,
+				CA5EFBDF1BCA916E00143DAA /* damienhirst.bmp in Copy Blurred Images */,
+				CA5EFBE01BCA916E00143DAA /* dhirst_a3b9ddea.bmp in Copy Blurred Images */,
+				CA5EFBE11BCA916E00143DAA /* diamondskull.bmp in Copy Blurred Images */,
+				CA5EFBE21BCA916E00143DAA /* doodle.bmp in Copy Blurred Images */,
+				CA5EFBE31BCA916E00143DAA /* england.bmp in Copy Blurred Images */,
+				CA5EFBE41BCA916E00143DAA /* englandpath.bmp in Copy Blurred Images */,
+				CA5EFBE51BCA916E00143DAA /* Hhirst_BGE.bmp in Copy Blurred Images */,
+				CA5EFBE61BCA916E00143DAA /* jasper_johns.bmp in Copy Blurred Images */,
+				CA5EFBE71BCA916E00143DAA /* johns_portrait_380x311.bmp in Copy Blurred Images */,
+				CA5EFBE81BCA916E00143DAA /* latrobe.bmp in Copy Blurred Images */,
+				CA5EFBE91BCA916E00143DAA /* Scotland_castle_wedding.bmp in Copy Blurred Images */,
+				CA5EFBEA1BCA916E00143DAA /* targetjasperjohns.bmp in Copy Blurred Images */,
+				CA5EFBEB1BCA916E00143DAA /* Tower-Bridge-at-night--London--England_web.bmp in Copy Blurred Images */,
+				CA5EFBEC1BCA916E00143DAA /* uk-golf-scotland.bmp in Copy Blurred Images */,
+				CA5EFBED1BCA916E00143DAA /* wallacestevens.bmp in Copy Blurred Images */,
+			);
+			name = "Copy Blurred Images";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA5EFBEE1BCA987E00143DAA /* Copy Compressed Images */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = compressed;
+			dstSubfolderSpec = 7;
+			files = (
+				CA5EFBEF1BCA988E00143DAA /* architecture1.jpg in Copy Compressed Images */,
+				CA5EFBF01BCA988E00143DAA /* architecture_2.jpg in Copy Compressed Images */,
+				CA5EFBF11BCA988E00143DAA /* bamarket115.jpg in Copy Compressed Images */,
+				CA5EFBF21BCA988E00143DAA /* butterflywallpaper.jpg in Copy Compressed Images */,
+				CA5EFBF31BCA988E00143DAA /* Chang_PermanentMidnightintheChairofJasperJohns_large.jpg in Copy Compressed Images */,
+				CA5EFBF41BCA988E00143DAA /* damien_hirst.jpg in Copy Compressed Images */,
+				CA5EFBF51BCA988E00143DAA /* damien_hirst_does_fashion_week.jpg in Copy Compressed Images */,
+				CA5EFBF61BCA988E00143DAA /* damien_hirst_virgin_mother.jpg in Copy Compressed Images */,
+				CA5EFBF71BCA988E00143DAA /* damienhirst.jpg in Copy Compressed Images */,
+				CA5EFBF81BCA988E00143DAA /* dhirst_a3b9ddea.jpg in Copy Compressed Images */,
+				CA5EFBF91BCA988E00143DAA /* diamondskull.jpg in Copy Compressed Images */,
+				CA5EFBFA1BCA988E00143DAA /* doodle.jpg in Copy Compressed Images */,
+				CA5EFBFB1BCA988E00143DAA /* england.jpg in Copy Compressed Images */,
+				CA5EFBFC1BCA988E00143DAA /* englandpath.jpg in Copy Compressed Images */,
+				CA5EFBFD1BCA988E00143DAA /* Hhirst_BGE.jpg in Copy Compressed Images */,
+				CA5EFBFE1BCA988E00143DAA /* jasper_johns.jpg in Copy Compressed Images */,
+				CA5EFBFF1BCA988E00143DAA /* johns_portrait_380x311.jpg in Copy Compressed Images */,
+				CA5EFC001BCA988E00143DAA /* latrobe.jpg in Copy Compressed Images */,
+				CA5EFC011BCA988E00143DAA /* Scotland_castle_wedding.jpg in Copy Compressed Images */,
+				CA5EFC021BCA988E00143DAA /* targetjasperjohns.jpg in Copy Compressed Images */,
+				CA5EFC031BCA988E00143DAA /* Tower-Bridge-at-night--London--England_web.jpg in Copy Compressed Images */,
+				CA5EFC041BCA988E00143DAA /* uk-golf-scotland.jpg in Copy Compressed Images */,
+				CA5EFC051BCA988E00143DAA /* wallacestevens.jpg in Copy Compressed Images */,
+			);
+			name = "Copy Compressed Images";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA5EFC061BCA989300143DAA /* Copy Misc Images */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = misc;
+			dstSubfolderSpec = 7;
+			files = (
+				CA5EFC071BCA98A200143DAA /* architecture1.bmp in Copy Misc Images */,
+				CA5EFC081BCA98A200143DAA /* architecture_2.bmp in Copy Misc Images */,
+				CA5EFC091BCA98A200143DAA /* bamarket115.bmp in Copy Misc Images */,
+				CA5EFC0A1BCA98A200143DAA /* butterflywallpaper.bmp in Copy Misc Images */,
+				CA5EFC0B1BCA98A200143DAA /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp in Copy Misc Images */,
+				CA5EFC0C1BCA98A200143DAA /* damien_hirst.bmp in Copy Misc Images */,
+				CA5EFC0D1BCA98A200143DAA /* damien_hirst_does_fashion_week.bmp in Copy Misc Images */,
+				CA5EFC0E1BCA98A200143DAA /* damien_hirst_virgin_mother.bmp in Copy Misc Images */,
+				CA5EFC0F1BCA98A200143DAA /* damienhirst.bmp in Copy Misc Images */,
+				CA5EFC101BCA98A200143DAA /* dhirst_a3b9ddea.bmp in Copy Misc Images */,
+				CA5EFC111BCA98A200143DAA /* diamondskull.bmp in Copy Misc Images */,
+				CA5EFC121BCA98A200143DAA /* doodle.bmp in Copy Misc Images */,
+				CA5EFC131BCA98A200143DAA /* england.bmp in Copy Misc Images */,
+				CA5EFC141BCA98A200143DAA /* englandpath.bmp in Copy Misc Images */,
+				CA5EFC151BCA98A200143DAA /* Hhirst_BGE.bmp in Copy Misc Images */,
+				CA5EFC161BCA98A200143DAA /* jasper_johns.bmp in Copy Misc Images */,
+				CA5EFC171BCA98A200143DAA /* johns_portrait_380x311.bmp in Copy Misc Images */,
+				CA5EFC181BCA98A200143DAA /* latrobe.bmp in Copy Misc Images */,
+				CA5EFC191BCA98A200143DAA /* Scotland_castle_wedding.bmp in Copy Misc Images */,
+				CA5EFC1A1BCA98A200143DAA /* targetjasperjohns.bmp in Copy Misc Images */,
+				CA5EFC1B1BCA98A200143DAA /* Tower-Bridge-at-night--London--England_web.bmp in Copy Misc Images */,
+				CA5EFC1C1BCA98A200143DAA /* uk-golf-scotland.bmp in Copy Misc Images */,
+				CA5EFC1D1BCA98A200143DAA /* wallacestevens.bmp in Copy Misc Images */,
+			);
+			name = "Copy Misc Images";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA74139B1BD0E7CF00C816B5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA77A5591BD7E31C00F9EA70 /* Copy Blurred Images */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = blurred;
+			dstSubfolderSpec = 7;
+			files = (
+				CA77A55C1BD7E34300F9EA70 /* architecture1.bmp in Copy Blurred Images */,
+				CA77A55D1BD7E34300F9EA70 /* architecture_2.bmp in Copy Blurred Images */,
+				CA77A55E1BD7E34300F9EA70 /* bamarket115.bmp in Copy Blurred Images */,
+				CA77A55F1BD7E34300F9EA70 /* butterflywallpaper.bmp in Copy Blurred Images */,
+				CA77A5601BD7E34300F9EA70 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp in Copy Blurred Images */,
+				CA77A5611BD7E34300F9EA70 /* damien_hirst.bmp in Copy Blurred Images */,
+				CA77A5621BD7E34300F9EA70 /* damien_hirst_does_fashion_week.bmp in Copy Blurred Images */,
+				CA77A5631BD7E34300F9EA70 /* damien_hirst_virgin_mother.bmp in Copy Blurred Images */,
+				CA77A5641BD7E34300F9EA70 /* damienhirst.bmp in Copy Blurred Images */,
+				CA77A5651BD7E34300F9EA70 /* dhirst_a3b9ddea.bmp in Copy Blurred Images */,
+				CA77A5661BD7E34300F9EA70 /* diamondskull.bmp in Copy Blurred Images */,
+				CA77A5671BD7E34300F9EA70 /* doodle.bmp in Copy Blurred Images */,
+				CA77A5681BD7E34300F9EA70 /* england.bmp in Copy Blurred Images */,
+				CA77A5691BD7E34300F9EA70 /* englandpath.bmp in Copy Blurred Images */,
+				CA77A56A1BD7E34300F9EA70 /* Hhirst_BGE.bmp in Copy Blurred Images */,
+				CA77A56B1BD7E34300F9EA70 /* jasper_johns.bmp in Copy Blurred Images */,
+				CA77A56C1BD7E34300F9EA70 /* johns_portrait_380x311.bmp in Copy Blurred Images */,
+				CA77A56D1BD7E34300F9EA70 /* latrobe.bmp in Copy Blurred Images */,
+				CA77A56E1BD7E34300F9EA70 /* Scotland_castle_wedding.bmp in Copy Blurred Images */,
+				CA77A56F1BD7E34300F9EA70 /* targetjasperjohns.bmp in Copy Blurred Images */,
+				CA77A5701BD7E34300F9EA70 /* Tower-Bridge-at-night--London--England_web.bmp in Copy Blurred Images */,
+				CA77A5711BD7E34300F9EA70 /* uk-golf-scotland.bmp in Copy Blurred Images */,
+				CA77A5721BD7E34300F9EA70 /* wallacestevens.bmp in Copy Blurred Images */,
+			);
+			name = "Copy Blurred Images";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA77A55A1BD7E32500F9EA70 /* Copy Compressed Images */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = compressed;
+			dstSubfolderSpec = 7;
+			files = (
+				CA77A5731BD7E34E00F9EA70 /* architecture1.jpg in Copy Compressed Images */,
+				CA77A5741BD7E34E00F9EA70 /* architecture_2.jpg in Copy Compressed Images */,
+				CA77A5751BD7E34E00F9EA70 /* bamarket115.jpg in Copy Compressed Images */,
+				CA77A5761BD7E34E00F9EA70 /* butterflywallpaper.jpg in Copy Compressed Images */,
+				CA77A5771BD7E34E00F9EA70 /* Chang_PermanentMidnightintheChairofJasperJohns_large.jpg in Copy Compressed Images */,
+				CA77A5781BD7E34E00F9EA70 /* damien_hirst.jpg in Copy Compressed Images */,
+				CA77A5791BD7E34E00F9EA70 /* damien_hirst_does_fashion_week.jpg in Copy Compressed Images */,
+				CA77A57A1BD7E34E00F9EA70 /* damien_hirst_virgin_mother.jpg in Copy Compressed Images */,
+				CA77A57B1BD7E34E00F9EA70 /* damienhirst.jpg in Copy Compressed Images */,
+				CA77A57C1BD7E34E00F9EA70 /* dhirst_a3b9ddea.jpg in Copy Compressed Images */,
+				CA77A57D1BD7E34E00F9EA70 /* diamondskull.jpg in Copy Compressed Images */,
+				CA77A57E1BD7E34E00F9EA70 /* doodle.jpg in Copy Compressed Images */,
+				CA77A57F1BD7E34E00F9EA70 /* england.jpg in Copy Compressed Images */,
+				CA77A5801BD7E34E00F9EA70 /* englandpath.jpg in Copy Compressed Images */,
+				CA77A5811BD7E34E00F9EA70 /* Hhirst_BGE.jpg in Copy Compressed Images */,
+				CA77A5821BD7E34E00F9EA70 /* jasper_johns.jpg in Copy Compressed Images */,
+				CA77A5831BD7E34E00F9EA70 /* johns_portrait_380x311.jpg in Copy Compressed Images */,
+				CA77A5841BD7E34E00F9EA70 /* latrobe.jpg in Copy Compressed Images */,
+				CA77A5851BD7E34E00F9EA70 /* Scotland_castle_wedding.jpg in Copy Compressed Images */,
+				CA77A5861BD7E34E00F9EA70 /* targetjasperjohns.jpg in Copy Compressed Images */,
+				CA77A5871BD7E34E00F9EA70 /* Tower-Bridge-at-night--London--England_web.jpg in Copy Compressed Images */,
+				CA77A5881BD7E34E00F9EA70 /* uk-golf-scotland.jpg in Copy Compressed Images */,
+				CA77A5891BD7E34E00F9EA70 /* wallacestevens.jpg in Copy Compressed Images */,
+			);
+			name = "Copy Compressed Images";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA77A55B1BD7E32D00F9EA70 /* Copy Misc Images */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = misc;
+			dstSubfolderSpec = 7;
+			files = (
+				CA77A58A1BD7E35A00F9EA70 /* architecture1.bmp in Copy Misc Images */,
+				CA77A58B1BD7E35A00F9EA70 /* architecture_2.bmp in Copy Misc Images */,
+				CA77A58C1BD7E35A00F9EA70 /* bamarket115.bmp in Copy Misc Images */,
+				CA77A58D1BD7E35A00F9EA70 /* butterflywallpaper.bmp in Copy Misc Images */,
+				CA77A58E1BD7E35A00F9EA70 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp in Copy Misc Images */,
+				CA77A58F1BD7E35A00F9EA70 /* damien_hirst.bmp in Copy Misc Images */,
+				CA77A5901BD7E35A00F9EA70 /* damien_hirst_does_fashion_week.bmp in Copy Misc Images */,
+				CA77A5911BD7E35A00F9EA70 /* damien_hirst_virgin_mother.bmp in Copy Misc Images */,
+				CA77A5921BD7E35A00F9EA70 /* damienhirst.bmp in Copy Misc Images */,
+				CA77A5931BD7E35A00F9EA70 /* dhirst_a3b9ddea.bmp in Copy Misc Images */,
+				CA77A5941BD7E35A00F9EA70 /* diamondskull.bmp in Copy Misc Images */,
+				CA77A5951BD7E35A00F9EA70 /* doodle.bmp in Copy Misc Images */,
+				CA77A5961BD7E35A00F9EA70 /* england.bmp in Copy Misc Images */,
+				CA77A5971BD7E35A00F9EA70 /* englandpath.bmp in Copy Misc Images */,
+				CA77A5981BD7E35A00F9EA70 /* Hhirst_BGE.bmp in Copy Misc Images */,
+				CA77A5991BD7E35A00F9EA70 /* jasper_johns.bmp in Copy Misc Images */,
+				CA77A59A1BD7E35A00F9EA70 /* johns_portrait_380x311.bmp in Copy Misc Images */,
+				CA77A59B1BD7E35A00F9EA70 /* latrobe.bmp in Copy Misc Images */,
+				CA77A59C1BD7E35A00F9EA70 /* Scotland_castle_wedding.bmp in Copy Misc Images */,
+				CA77A59D1BD7E35A00F9EA70 /* targetjasperjohns.bmp in Copy Misc Images */,
+				CA77A59E1BD7E35A00F9EA70 /* Tower-Bridge-at-night--London--England_web.bmp in Copy Misc Images */,
+				CA77A59F1BD7E35A00F9EA70 /* uk-golf-scotland.bmp in Copy Misc Images */,
+				CA77A5A01BD7E35A00F9EA70 /* wallacestevens.bmp in Copy Misc Images */,
+			);
+			name = "Copy Misc Images";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CA462F7D1BD252930010EEBD /* OSSimilaritySearchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSimilaritySearchTests.m; sourceTree = "<group>"; };
+		CA46F8A41BD680CB0067D945 /* CocoaImageHashing.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = CocoaImageHashing.profdata; sourceTree = "<group>"; };
+		CA7413711BD0DE9600C816B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CA7413731BD0E01500C816B5 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		CA7413771BD0E1F900C816B5 /* CocoaImageHashing.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CocoaImageHashing.podspec.json; sourceTree = "<group>"; };
+		CA74137D1BD0E5D200C816B5 /* libCocoaImageHashing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaImageHashing.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA74139D1BD0E7CF00C816B5 /* libCocoaImageHashing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaImageHashing.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7413BD1BD0E84300C816B5 /* CocoaImageHashing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaImageHashing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7413D61BD0EAA800C816B5 /* OSAbstractHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSAbstractHash.h; path = CocoaImageHashing/OSAbstractHash.h; sourceTree = "<group>"; };
+		CA7413D71BD0EAA800C816B5 /* OSAbstractHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSAbstractHash.m; path = CocoaImageHashing/OSAbstractHash.m; sourceTree = "<group>"; };
+		CA95045D1BCD9A1000305210 /* OSFastGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSFastGraphics.h; path = CocoaImageHashing/OSFastGraphics.h; sourceTree = "<group>"; };
+		CA95045E1BCD9A1000305210 /* OSFastGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSFastGraphics.m; path = CocoaImageHashing/OSFastGraphics.m; sourceTree = "<group>"; };
+		CA963C111BCFCBD500D74D22 /* OSTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSTypes.h; path = CocoaImageHashing/OSTypes.h; sourceTree = "<group>"; };
+		CA963C131BCFCC6200D74D22 /* OSTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSTypes.m; path = CocoaImageHashing/OSTypes.m; sourceTree = "<group>"; };
+		CAB919711BCC4A9900BB6137 /* OSImageHashingBaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSImageHashingBaseTest.h; sourceTree = "<group>"; };
+		CAB919721BCC4A9900BB6137 /* OSImageHashingBaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSImageHashingBaseTest.m; sourceTree = "<group>"; };
+		CAC724211BD7C71500B78B0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		CAC724281BD7C81000B78B0C /* CocoaImageHashingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaImageHashingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADF6BB21BC8EF9A0039E5A8 /* CocoaImageHashing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaImageHashing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADF6BB51BC8EF9A0039E5A8 /* CocoaImageHashing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CocoaImageHashing.h; path = CocoaImageHashing/CocoaImageHashing.h; sourceTree = "<group>"; };
+		CADF6BB71BC8EF9A0039E5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = CocoaImageHashing/Info.plist; sourceTree = "<group>"; };
+		CADF6BBC1BC8EF9A0039E5A8 /* CocoaImageHashingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaImageHashingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADF6BC11BC8EF9A0039E5A8 /* OSDHashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSDHashTests.m; sourceTree = "<group>"; };
+		CADF6BC31BC8EF9A0039E5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = CocoaImageHashingTests/Info.plist; sourceTree = "<group>"; };
+		CADF6BD01BC8EFC00039E5A8 /* architecture1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = architecture1.bmp; sourceTree = "<group>"; };
+		CADF6BD11BC8EFC00039E5A8 /* architecture_2.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = architecture_2.bmp; sourceTree = "<group>"; };
+		CADF6BD21BC8EFC00039E5A8 /* bamarket115.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = bamarket115.bmp; sourceTree = "<group>"; };
+		CADF6BD31BC8EFC00039E5A8 /* butterflywallpaper.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = butterflywallpaper.bmp; sourceTree = "<group>"; };
+		CADF6BD41BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Chang_PermanentMidnightintheChairofJasperJohns_large.bmp; sourceTree = "<group>"; };
+		CADF6BD51BC8EFC00039E5A8 /* damien_hirst.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = damien_hirst.bmp; sourceTree = "<group>"; };
+		CADF6BD61BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = damien_hirst_does_fashion_week.bmp; sourceTree = "<group>"; };
+		CADF6BD71BC8EFC00039E5A8 /* damien_hirst_virgin_mother.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = damien_hirst_virgin_mother.bmp; sourceTree = "<group>"; };
+		CADF6BD81BC8EFC00039E5A8 /* damienhirst.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = damienhirst.bmp; sourceTree = "<group>"; };
+		CADF6BD91BC8EFC00039E5A8 /* dhirst_a3b9ddea.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = dhirst_a3b9ddea.bmp; sourceTree = "<group>"; };
+		CADF6BDA1BC8EFC00039E5A8 /* diamondskull.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = diamondskull.bmp; sourceTree = "<group>"; };
+		CADF6BDB1BC8EFC00039E5A8 /* doodle.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = doodle.bmp; sourceTree = "<group>"; };
+		CADF6BDC1BC8EFC00039E5A8 /* england.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = england.bmp; sourceTree = "<group>"; };
+		CADF6BDD1BC8EFC00039E5A8 /* englandpath.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = englandpath.bmp; sourceTree = "<group>"; };
+		CADF6BDE1BC8EFC00039E5A8 /* Hhirst_BGE.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Hhirst_BGE.bmp; sourceTree = "<group>"; };
+		CADF6BDF1BC8EFC00039E5A8 /* jasper_johns.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = jasper_johns.bmp; sourceTree = "<group>"; };
+		CADF6BE01BC8EFC00039E5A8 /* johns_portrait_380x311.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = johns_portrait_380x311.bmp; sourceTree = "<group>"; };
+		CADF6BE11BC8EFC00039E5A8 /* latrobe.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = latrobe.bmp; sourceTree = "<group>"; };
+		CADF6BE21BC8EFC00039E5A8 /* Scotland_castle_wedding.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Scotland_castle_wedding.bmp; sourceTree = "<group>"; };
+		CADF6BE31BC8EFC00039E5A8 /* targetjasperjohns.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = targetjasperjohns.bmp; sourceTree = "<group>"; };
+		CADF6BE41BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "Tower-Bridge-at-night--London--England_web.bmp"; sourceTree = "<group>"; };
+		CADF6BE51BC8EFC00039E5A8 /* uk-golf-scotland.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "uk-golf-scotland.bmp"; sourceTree = "<group>"; };
+		CADF6BE61BC8EFC00039E5A8 /* wallacestevens.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = wallacestevens.bmp; sourceTree = "<group>"; };
+		CADF6BE81BC8EFC00039E5A8 /* architecture1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = architecture1.jpg; sourceTree = "<group>"; };
+		CADF6BE91BC8EFC00039E5A8 /* architecture_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = architecture_2.jpg; sourceTree = "<group>"; };
+		CADF6BEA1BC8EFC00039E5A8 /* bamarket115.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bamarket115.jpg; sourceTree = "<group>"; };
+		CADF6BEB1BC8EFC00039E5A8 /* butterflywallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = butterflywallpaper.jpg; sourceTree = "<group>"; };
+		CADF6BEC1BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chang_PermanentMidnightintheChairofJasperJohns_large.jpg; sourceTree = "<group>"; };
+		CADF6BED1BC8EFC00039E5A8 /* damien_hirst.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = damien_hirst.jpg; sourceTree = "<group>"; };
+		CADF6BEE1BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = damien_hirst_does_fashion_week.jpg; sourceTree = "<group>"; };
+		CADF6BEF1BC8EFC00039E5A8 /* damien_hirst_virgin_mother.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = damien_hirst_virgin_mother.jpg; sourceTree = "<group>"; };
+		CADF6BF01BC8EFC00039E5A8 /* damienhirst.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = damienhirst.jpg; sourceTree = "<group>"; };
+		CADF6BF11BC8EFC00039E5A8 /* dhirst_a3b9ddea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dhirst_a3b9ddea.jpg; sourceTree = "<group>"; };
+		CADF6BF21BC8EFC00039E5A8 /* diamondskull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = diamondskull.jpg; sourceTree = "<group>"; };
+		CADF6BF31BC8EFC00039E5A8 /* doodle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doodle.jpg; sourceTree = "<group>"; };
+		CADF6BF41BC8EFC00039E5A8 /* england.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = england.jpg; sourceTree = "<group>"; };
+		CADF6BF51BC8EFC00039E5A8 /* englandpath.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = englandpath.jpg; sourceTree = "<group>"; };
+		CADF6BF61BC8EFC00039E5A8 /* Hhirst_BGE.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hhirst_BGE.jpg; sourceTree = "<group>"; };
+		CADF6BF71BC8EFC00039E5A8 /* jasper_johns.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jasper_johns.jpg; sourceTree = "<group>"; };
+		CADF6BF81BC8EFC00039E5A8 /* johns_portrait_380x311.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = johns_portrait_380x311.jpg; sourceTree = "<group>"; };
+		CADF6BF91BC8EFC00039E5A8 /* latrobe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = latrobe.jpg; sourceTree = "<group>"; };
+		CADF6BFA1BC8EFC00039E5A8 /* Scotland_castle_wedding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Scotland_castle_wedding.jpg; sourceTree = "<group>"; };
+		CADF6BFB1BC8EFC00039E5A8 /* targetjasperjohns.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targetjasperjohns.jpg; sourceTree = "<group>"; };
+		CADF6BFC1BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tower-Bridge-at-night--London--England_web.jpg"; sourceTree = "<group>"; };
+		CADF6BFD1BC8EFC00039E5A8 /* uk-golf-scotland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "uk-golf-scotland.jpg"; sourceTree = "<group>"; };
+		CADF6BFE1BC8EFC00039E5A8 /* wallacestevens.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallacestevens.jpg; sourceTree = "<group>"; };
+		CADF6C001BC8EFC00039E5A8 /* architecture1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = architecture1.bmp; sourceTree = "<group>"; };
+		CADF6C011BC8EFC00039E5A8 /* architecture_2.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = architecture_2.bmp; sourceTree = "<group>"; };
+		CADF6C021BC8EFC00039E5A8 /* bamarket115.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = bamarket115.bmp; sourceTree = "<group>"; };
+		CADF6C031BC8EFC00039E5A8 /* butterflywallpaper.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = butterflywallpaper.bmp; sourceTree = "<group>"; };
+		CADF6C041BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Chang_PermanentMidnightintheChairofJasperJohns_large.bmp; sourceTree = "<group>"; };
+		CADF6C051BC8EFC00039E5A8 /* damien_hirst.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = damien_hirst.bmp; sourceTree = "<group>"; };
+		CADF6C061BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = damien_hirst_does_fashion_week.bmp; sourceTree = "<group>"; };
+		CADF6C071BC8EFC00039E5A8 /* damien_hirst_virgin_mother.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = damien_hirst_virgin_mother.bmp; sourceTree = "<group>"; };
+		CADF6C081BC8EFC00039E5A8 /* damienhirst.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = damienhirst.bmp; sourceTree = "<group>"; };
+		CADF6C091BC8EFC00039E5A8 /* dhirst_a3b9ddea.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = dhirst_a3b9ddea.bmp; sourceTree = "<group>"; };
+		CADF6C0A1BC8EFC00039E5A8 /* diamondskull.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = diamondskull.bmp; sourceTree = "<group>"; };
+		CADF6C0B1BC8EFC00039E5A8 /* doodle.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = doodle.bmp; sourceTree = "<group>"; };
+		CADF6C0C1BC8EFC00039E5A8 /* england.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = england.bmp; sourceTree = "<group>"; };
+		CADF6C0D1BC8EFC00039E5A8 /* englandpath.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = englandpath.bmp; sourceTree = "<group>"; };
+		CADF6C0E1BC8EFC00039E5A8 /* Hhirst_BGE.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Hhirst_BGE.bmp; sourceTree = "<group>"; };
+		CADF6C0F1BC8EFC00039E5A8 /* jasper_johns.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = jasper_johns.bmp; sourceTree = "<group>"; };
+		CADF6C101BC8EFC00039E5A8 /* johns_portrait_380x311.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = johns_portrait_380x311.bmp; sourceTree = "<group>"; };
+		CADF6C111BC8EFC00039E5A8 /* latrobe.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = latrobe.bmp; sourceTree = "<group>"; };
+		CADF6C121BC8EFC00039E5A8 /* Scotland_castle_wedding.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Scotland_castle_wedding.bmp; sourceTree = "<group>"; };
+		CADF6C131BC8EFC00039E5A8 /* targetjasperjohns.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = targetjasperjohns.bmp; sourceTree = "<group>"; };
+		CADF6C141BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "Tower-Bridge-at-night--London--England_web.bmp"; sourceTree = "<group>"; };
+		CADF6C151BC8EFC00039E5A8 /* uk-golf-scotland.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "uk-golf-scotland.bmp"; sourceTree = "<group>"; };
+		CADF6C161BC8EFC00039E5A8 /* wallacestevens.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = wallacestevens.bmp; sourceTree = "<group>"; };
+		CADF6C5F1BC8F0370039E5A8 /* OSDHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSDHash.h; path = CocoaImageHashing/OSDHash.h; sourceTree = "<group>"; };
+		CADF6C601BC8F0370039E5A8 /* OSDHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSDHash.m; path = CocoaImageHashing/OSDHash.m; sourceTree = "<group>"; };
+		CADF6C641BC8F15A0039E5A8 /* OSImageHashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSImageHashing.h; path = CocoaImageHashing/OSImageHashing.h; sourceTree = "<group>"; };
+		CADF6C691BC8F1DD0039E5A8 /* OSAHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSAHash.h; path = CocoaImageHashing/OSAHash.h; sourceTree = "<group>"; };
+		CADF6C6A1BC8F1DD0039E5A8 /* OSAHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSAHash.m; path = CocoaImageHashing/OSAHash.m; sourceTree = "<group>"; };
+		CADF6C6E1BC8F1E40039E5A8 /* OSPHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSPHash.h; path = CocoaImageHashing/OSPHash.h; sourceTree = "<group>"; };
+		CADF6C6F1BC8F1E40039E5A8 /* OSPHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSPHash.m; path = CocoaImageHashing/OSPHash.m; sourceTree = "<group>"; };
+		CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSImageHashing.m; path = CocoaImageHashing/OSImageHashing.m; sourceTree = "<group>"; };
+		CAE6DAED1BCF932A00E7B167 /* OSFastGraphicsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSFastGraphicsTests.m; sourceTree = "<group>"; };
+		CAE958E81BCAD6E50061A909 /* OSAHashTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSAHashTests.m; sourceTree = "<group>"; };
+		CAE958EA1BCAD7000061A909 /* OSPHashTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSPHashTests.m; sourceTree = "<group>"; };
+		CAE958EC1BCAD7100061A909 /* CococaImageHashingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CococaImageHashingTests.m; sourceTree = "<group>"; };
+		CAE958EE1BCAD7D30061A909 /* OSCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSCategories.h; path = CocoaImageHashing/OSCategories.h; sourceTree = "<group>"; };
+		CAE958EF1BCAD7D30061A909 /* OSCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSCategories.m; path = CocoaImageHashing/OSCategories.m; sourceTree = "<group>"; };
+		CAEA26611BD110C200380B76 /* OSSimilaritySearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSimilaritySearch.h; path = CocoaImageHashing/OSSimilaritySearch.h; sourceTree = "<group>"; };
+		CAEA26621BD110C200380B76 /* OSSimilaritySearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSSimilaritySearch.m; path = CocoaImageHashing/OSSimilaritySearch.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA74137A1BD0E5D200C816B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA74139A1BD0E7CF00C816B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7413B91BD0E84300C816B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC724221BD7C71500B78B0C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC724251BD7C81000B78B0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC7242D1BD7C81000B78B0C /* CocoaImageHashing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADF6BAE1BC8EF9A0039E5A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADF6BB91BC8EF9A0039E5A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADF6BBD1BC8EF9A0039E5A8 /* CocoaImageHashing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA315C361BD2C28600141BAB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CA7413D61BD0EAA800C816B5 /* OSAbstractHash.h */,
+				CA7413D71BD0EAA800C816B5 /* OSAbstractHash.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		CA462F7C1BD252800010EEBD /* Similarity Search */ = {
+			isa = PBXGroup;
+			children = (
+				CA462F7D1BD252930010EEBD /* OSSimilaritySearchTests.m */,
+			);
+			name = "Similarity Search";
+			sourceTree = "<group>";
+		};
+		CA46F8A31BD680CB0067D945 /* Optimization Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				CA46F8A41BD680CB0067D945 /* CocoaImageHashing.profdata */,
+			);
+			name = "Optimization Profiles";
+			path = OptimizationProfiles;
+			sourceTree = "<group>";
+		};
+		CA73155E1BCE35CD00F42629 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6BB51BC8EF9A0039E5A8 /* CocoaImageHashing.h */,
+				CAE958EE1BCAD7D30061A909 /* OSCategories.h */,
+				CAE958EF1BCAD7D30061A909 /* OSCategories.m */,
+				CA95045D1BCD9A1000305210 /* OSFastGraphics.h */,
+				CA95045E1BCD9A1000305210 /* OSFastGraphics.m */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		CA73155F1BCE383600F42629 /* Hashing Provider */ = {
+			isa = PBXGroup;
+			children = (
+				CAE958E81BCAD6E50061A909 /* OSAHashTests.m */,
+				CADF6BC11BC8EF9A0039E5A8 /* OSDHashTests.m */,
+				CAE958EA1BCAD7000061A909 /* OSPHashTests.m */,
+			);
+			name = "Hashing Provider";
+			sourceTree = "<group>";
+		};
+		CA74136F1BD0DE7B00C816B5 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6BCE1BC8EFC00039E5A8 /* Assets */,
+				CADF6BC31BC8EF9A0039E5A8 /* Info.plist */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
+		CA7413E11BD0F11E00C816B5 /* Hashing */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6C5E1BC8F0040039E5A8 /* aHash */,
+				CADF6C5C1BC8EFF10039E5A8 /* dHash */,
+				CADF6C5D1BC8EFFB0039E5A8 /* pHash */,
+				CA315C361BD2C28600141BAB /* Common */,
+			);
+			name = Hashing;
+			sourceTree = "<group>";
+		};
+		CAC724231BD7C74B00B78B0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAC724211BD7C71500B78B0C /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CADF6BA81BC8EF9A0039E5A8 = {
+			isa = PBXGroup;
+			children = (
+				CAC724231BD7C74B00B78B0C /* Frameworks */,
+				CADF6BB31BC8EF9A0039E5A8 /* Products */,
+				CADF6BCD1BC8EFB20039E5A8 /* Resources */,
+				CADF6BCC1BC8EFA90039E5A8 /* Source */,
+				CADF6BC01BC8EF9A0039E5A8 /* Tests */,
+			);
+			sourceTree = "<group>";
+		};
+		CADF6BB31BC8EF9A0039E5A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6BB21BC8EF9A0039E5A8 /* CocoaImageHashing.framework */,
+				CADF6BBC1BC8EF9A0039E5A8 /* CocoaImageHashingTests.xctest */,
+				CA74137D1BD0E5D200C816B5 /* libCocoaImageHashing.a */,
+				CA74139D1BD0E7CF00C816B5 /* libCocoaImageHashing.a */,
+				CA7413BD1BD0E84300C816B5 /* CocoaImageHashing.framework */,
+				CAC724281BD7C81000B78B0C /* CocoaImageHashingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CADF6BC01BC8EF9A0039E5A8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CA73155F1BCE383600F42629 /* Hashing Provider */,
+				CA462F7C1BD252800010EEBD /* Similarity Search */,
+				CAE6DAE31BCEA6D600E7B167 /* Support */,
+				CAE958EC1BCAD7100061A909 /* CococaImageHashingTests.m */,
+			);
+			name = Tests;
+			path = CocoaImageHashingTests;
+			sourceTree = "<group>";
+		};
+		CADF6BCC1BC8EFA90039E5A8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CA7413E11BD0F11E00C816B5 /* Hashing */,
+				CAEA26601BD110AB00380B76 /* Similarity Search */,
+				CA73155E1BCE35CD00F42629 /* Support */,
+				CADF6C641BC8F15A0039E5A8 /* OSImageHashing.h */,
+				CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */,
+				CA963C111BCFCBD500D74D22 /* OSTypes.h */,
+				CA963C131BCFCC6200D74D22 /* OSTypes.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		CADF6BCD1BC8EFB20039E5A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA46F8A31BD680CB0067D945 /* Optimization Profiles */,
+				CA74136F1BD0DE7B00C816B5 /* Test */,
+				CA7413771BD0E1F900C816B5 /* CocoaImageHashing.podspec.json */,
+				CADF6BB71BC8EF9A0039E5A8 /* Info.plist */,
+				CA7413711BD0DE9600C816B5 /* LICENSE */,
+				CA7413731BD0E01500C816B5 /* README.markdown */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CADF6BCE1BC8EFC00039E5A8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6BCF1BC8EFC00039E5A8 /* blurred */,
+				CADF6BE71BC8EFC00039E5A8 /* compressed */,
+				CADF6BFF1BC8EFC00039E5A8 /* misc */,
+			);
+			name = Assets;
+			path = CocoaImageHashingTests/Assets;
+			sourceTree = "<group>";
+		};
+		CADF6BCF1BC8EFC00039E5A8 /* blurred */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6BD01BC8EFC00039E5A8 /* architecture1.bmp */,
+				CADF6BD11BC8EFC00039E5A8 /* architecture_2.bmp */,
+				CADF6BD21BC8EFC00039E5A8 /* bamarket115.bmp */,
+				CADF6BD31BC8EFC00039E5A8 /* butterflywallpaper.bmp */,
+				CADF6BD41BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp */,
+				CADF6BD51BC8EFC00039E5A8 /* damien_hirst.bmp */,
+				CADF6BD61BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.bmp */,
+				CADF6BD71BC8EFC00039E5A8 /* damien_hirst_virgin_mother.bmp */,
+				CADF6BD81BC8EFC00039E5A8 /* damienhirst.bmp */,
+				CADF6BD91BC8EFC00039E5A8 /* dhirst_a3b9ddea.bmp */,
+				CADF6BDA1BC8EFC00039E5A8 /* diamondskull.bmp */,
+				CADF6BDB1BC8EFC00039E5A8 /* doodle.bmp */,
+				CADF6BDC1BC8EFC00039E5A8 /* england.bmp */,
+				CADF6BDD1BC8EFC00039E5A8 /* englandpath.bmp */,
+				CADF6BDE1BC8EFC00039E5A8 /* Hhirst_BGE.bmp */,
+				CADF6BDF1BC8EFC00039E5A8 /* jasper_johns.bmp */,
+				CADF6BE01BC8EFC00039E5A8 /* johns_portrait_380x311.bmp */,
+				CADF6BE11BC8EFC00039E5A8 /* latrobe.bmp */,
+				CADF6BE21BC8EFC00039E5A8 /* Scotland_castle_wedding.bmp */,
+				CADF6BE31BC8EFC00039E5A8 /* targetjasperjohns.bmp */,
+				CADF6BE41BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.bmp */,
+				CADF6BE51BC8EFC00039E5A8 /* uk-golf-scotland.bmp */,
+				CADF6BE61BC8EFC00039E5A8 /* wallacestevens.bmp */,
+			);
+			name = blurred;
+			path = blur;
+			sourceTree = "<group>";
+		};
+		CADF6BE71BC8EFC00039E5A8 /* compressed */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6BE81BC8EFC00039E5A8 /* architecture1.jpg */,
+				CADF6BE91BC8EFC00039E5A8 /* architecture_2.jpg */,
+				CADF6BEA1BC8EFC00039E5A8 /* bamarket115.jpg */,
+				CADF6BEB1BC8EFC00039E5A8 /* butterflywallpaper.jpg */,
+				CADF6BEC1BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.jpg */,
+				CADF6BED1BC8EFC00039E5A8 /* damien_hirst.jpg */,
+				CADF6BEE1BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.jpg */,
+				CADF6BEF1BC8EFC00039E5A8 /* damien_hirst_virgin_mother.jpg */,
+				CADF6BF01BC8EFC00039E5A8 /* damienhirst.jpg */,
+				CADF6BF11BC8EFC00039E5A8 /* dhirst_a3b9ddea.jpg */,
+				CADF6BF21BC8EFC00039E5A8 /* diamondskull.jpg */,
+				CADF6BF31BC8EFC00039E5A8 /* doodle.jpg */,
+				CADF6BF41BC8EFC00039E5A8 /* england.jpg */,
+				CADF6BF51BC8EFC00039E5A8 /* englandpath.jpg */,
+				CADF6BF61BC8EFC00039E5A8 /* Hhirst_BGE.jpg */,
+				CADF6BF71BC8EFC00039E5A8 /* jasper_johns.jpg */,
+				CADF6BF81BC8EFC00039E5A8 /* johns_portrait_380x311.jpg */,
+				CADF6BF91BC8EFC00039E5A8 /* latrobe.jpg */,
+				CADF6BFA1BC8EFC00039E5A8 /* Scotland_castle_wedding.jpg */,
+				CADF6BFB1BC8EFC00039E5A8 /* targetjasperjohns.jpg */,
+				CADF6BFC1BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.jpg */,
+				CADF6BFD1BC8EFC00039E5A8 /* uk-golf-scotland.jpg */,
+				CADF6BFE1BC8EFC00039E5A8 /* wallacestevens.jpg */,
+			);
+			name = compressed;
+			path = compr;
+			sourceTree = "<group>";
+		};
+		CADF6BFF1BC8EFC00039E5A8 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6C001BC8EFC00039E5A8 /* architecture1.bmp */,
+				CADF6C011BC8EFC00039E5A8 /* architecture_2.bmp */,
+				CADF6C021BC8EFC00039E5A8 /* bamarket115.bmp */,
+				CADF6C031BC8EFC00039E5A8 /* butterflywallpaper.bmp */,
+				CADF6C041BC8EFC00039E5A8 /* Chang_PermanentMidnightintheChairofJasperJohns_large.bmp */,
+				CADF6C051BC8EFC00039E5A8 /* damien_hirst.bmp */,
+				CADF6C061BC8EFC00039E5A8 /* damien_hirst_does_fashion_week.bmp */,
+				CADF6C071BC8EFC00039E5A8 /* damien_hirst_virgin_mother.bmp */,
+				CADF6C081BC8EFC00039E5A8 /* damienhirst.bmp */,
+				CADF6C091BC8EFC00039E5A8 /* dhirst_a3b9ddea.bmp */,
+				CADF6C0A1BC8EFC00039E5A8 /* diamondskull.bmp */,
+				CADF6C0B1BC8EFC00039E5A8 /* doodle.bmp */,
+				CADF6C0C1BC8EFC00039E5A8 /* england.bmp */,
+				CADF6C0D1BC8EFC00039E5A8 /* englandpath.bmp */,
+				CADF6C0E1BC8EFC00039E5A8 /* Hhirst_BGE.bmp */,
+				CADF6C0F1BC8EFC00039E5A8 /* jasper_johns.bmp */,
+				CADF6C101BC8EFC00039E5A8 /* johns_portrait_380x311.bmp */,
+				CADF6C111BC8EFC00039E5A8 /* latrobe.bmp */,
+				CADF6C121BC8EFC00039E5A8 /* Scotland_castle_wedding.bmp */,
+				CADF6C131BC8EFC00039E5A8 /* targetjasperjohns.bmp */,
+				CADF6C141BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.bmp */,
+				CADF6C151BC8EFC00039E5A8 /* uk-golf-scotland.bmp */,
+				CADF6C161BC8EFC00039E5A8 /* wallacestevens.bmp */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
+		CADF6C5C1BC8EFF10039E5A8 /* dHash */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6C5F1BC8F0370039E5A8 /* OSDHash.h */,
+				CADF6C601BC8F0370039E5A8 /* OSDHash.m */,
+			);
+			name = dHash;
+			sourceTree = "<group>";
+		};
+		CADF6C5D1BC8EFFB0039E5A8 /* pHash */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6C6E1BC8F1E40039E5A8 /* OSPHash.h */,
+				CADF6C6F1BC8F1E40039E5A8 /* OSPHash.m */,
+			);
+			name = pHash;
+			sourceTree = "<group>";
+		};
+		CADF6C5E1BC8F0040039E5A8 /* aHash */ = {
+			isa = PBXGroup;
+			children = (
+				CADF6C691BC8F1DD0039E5A8 /* OSAHash.h */,
+				CADF6C6A1BC8F1DD0039E5A8 /* OSAHash.m */,
+			);
+			name = aHash;
+			sourceTree = "<group>";
+		};
+		CAE6DAE31BCEA6D600E7B167 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				CAE6DAED1BCF932A00E7B167 /* OSFastGraphicsTests.m */,
+				CAB919711BCC4A9900BB6137 /* OSImageHashingBaseTest.h */,
+				CAB919721BCC4A9900BB6137 /* OSImageHashingBaseTest.m */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		CAEA26601BD110AB00380B76 /* Similarity Search */ = {
+			isa = PBXGroup;
+			children = (
+				CAEA26611BD110C200380B76 /* OSSimilaritySearch.h */,
+				CAEA26621BD110C200380B76 /* OSSimilaritySearch.m */,
+			);
+			name = "Similarity Search";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CA74137B1BD0E5D200C816B5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7413D91BD0EAA800C816B5 /* OSAbstractHash.h in Headers */,
+				CA74138E1BD0E65100C816B5 /* OSAHash.h in Headers */,
+				CA74138F1BD0E65100C816B5 /* OSDHash.h in Headers */,
+				CAEA26641BD110C200380B76 /* OSSimilaritySearch.h in Headers */,
+				CA7413901BD0E65100C816B5 /* OSPHash.h in Headers */,
+				CA7413911BD0E65100C816B5 /* CocoaImageHashing.h in Headers */,
+				CA7413931BD0E65100C816B5 /* OSTypes.h in Headers */,
+				CA7413941BD0E65100C816B5 /* OSImageHashing.h in Headers */,
+				CA7413951BD0E67400C816B5 /* OSCategories.h in Headers */,
+				CA7413961BD0E67400C816B5 /* OSFastGraphics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7413AE1BD0E80700C816B5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7413DB1BD0EAA800C816B5 /* OSAbstractHash.h in Headers */,
+				CA7413AF1BD0E81700C816B5 /* OSAHash.h in Headers */,
+				CA7413B01BD0E81700C816B5 /* OSDHash.h in Headers */,
+				CAEA26661BD110C200380B76 /* OSSimilaritySearch.h in Headers */,
+				CA7413B11BD0E81700C816B5 /* OSPHash.h in Headers */,
+				CA7413B21BD0E81700C816B5 /* CocoaImageHashing.h in Headers */,
+				CA7413B41BD0E81700C816B5 /* OSTypes.h in Headers */,
+				CA7413B51BD0E81700C816B5 /* OSImageHashing.h in Headers */,
+				CA7413B61BD0E82500C816B5 /* OSCategories.h in Headers */,
+				CA7413B71BD0E82500C816B5 /* OSFastGraphics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7413BA1BD0E84300C816B5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7413DA1BD0EAA800C816B5 /* OSAbstractHash.h in Headers */,
+				CA7413CD1BD0E88300C816B5 /* OSAHash.h in Headers */,
+				CA7413CE1BD0E88300C816B5 /* OSDHash.h in Headers */,
+				CAEA26651BD110C200380B76 /* OSSimilaritySearch.h in Headers */,
+				CA7413CF1BD0E88300C816B5 /* OSPHash.h in Headers */,
+				CA7413D01BD0E88300C816B5 /* CocoaImageHashing.h in Headers */,
+				CA7413D21BD0E88300C816B5 /* OSTypes.h in Headers */,
+				CA7413D31BD0E88300C816B5 /* OSImageHashing.h in Headers */,
+				CA7413D41BD0E89100C816B5 /* OSCategories.h in Headers */,
+				CA7413D51BD0E89100C816B5 /* OSFastGraphics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADF6BAF1BC8EF9A0039E5A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7413D81BD0EAA800C816B5 /* OSAbstractHash.h in Headers */,
+				CA95045F1BCD9A1000305210 /* OSFastGraphics.h in Headers */,
+				CAE958F01BCAD7D30061A909 /* OSCategories.h in Headers */,
+				CAEA26631BD110C200380B76 /* OSSimilaritySearch.h in Headers */,
+				CADF6C701BC8F1E40039E5A8 /* OSPHash.h in Headers */,
+				CA963C121BCFCBD500D74D22 /* OSTypes.h in Headers */,
+				CADF6C661BC8F15A0039E5A8 /* OSImageHashing.h in Headers */,
+				CADF6BB61BC8EF9A0039E5A8 /* CocoaImageHashing.h in Headers */,
+				CADF6C6B1BC8F1DD0039E5A8 /* OSAHash.h in Headers */,
+				CADF6C611BC8F0370039E5A8 /* OSDHash.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CA74137C1BD0E5D200C816B5 /* CocoaImageHashing (OS X Static Library) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA7413831BD0E5D200C816B5 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (OS X Static Library)" */;
+			buildPhases = (
+				CA7413791BD0E5D200C816B5 /* Sources */,
+				CA74137A1BD0E5D200C816B5 /* Frameworks */,
+				CA74137B1BD0E5D200C816B5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CocoaImageHashing (OS X Static Library)";
+			productName = "CocoaImageHashing (OS X Static Library)";
+			productReference = CA74137D1BD0E5D200C816B5 /* libCocoaImageHashing.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CA74139C1BD0E7CF00C816B5 /* CocoaImageHashing (iOS Static Library) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA7413A31BD0E7CF00C816B5 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (iOS Static Library)" */;
+			buildPhases = (
+				CA7413991BD0E7CF00C816B5 /* Sources */,
+				CA74139A1BD0E7CF00C816B5 /* Frameworks */,
+				CA74139B1BD0E7CF00C816B5 /* CopyFiles */,
+				CA7413AE1BD0E80700C816B5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CocoaImageHashing (iOS Static Library)";
+			productName = "CocoaImageHashing (iOS Static Library)";
+			productReference = CA74139D1BD0E7CF00C816B5 /* libCocoaImageHashing.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CA7413BC1BD0E84300C816B5 /* CocoaImageHashing (iOS Framework) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA7413C21BD0E84300C816B5 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (iOS Framework)" */;
+			buildPhases = (
+				CA7413B81BD0E84300C816B5 /* Sources */,
+				CA7413B91BD0E84300C816B5 /* Frameworks */,
+				CA7413BA1BD0E84300C816B5 /* Headers */,
+				CA7413BB1BD0E84300C816B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CocoaImageHashing (iOS Framework)";
+			productName = "CocoaImageHashing (iOS Framework)";
+			productReference = CA7413BD1BD0E84300C816B5 /* CocoaImageHashing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CAC724271BD7C81000B78B0C /* CocoaImageHashingTests (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAC724301BD7C81000B78B0C /* Build configuration list for PBXNativeTarget "CocoaImageHashingTests (iOS)" */;
+			buildPhases = (
+				CAC724241BD7C81000B78B0C /* Sources */,
+				CAC724251BD7C81000B78B0C /* Frameworks */,
+				CAC724261BD7C81000B78B0C /* Resources */,
+				CA77A5591BD7E31C00F9EA70 /* Copy Blurred Images */,
+				CA77A55A1BD7E32500F9EA70 /* Copy Compressed Images */,
+				CA77A55B1BD7E32D00F9EA70 /* Copy Misc Images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAC7242F1BD7C81000B78B0C /* PBXTargetDependency */,
+			);
+			name = "CocoaImageHashingTests (iOS)";
+			productName = "CocoaImageHashingTests (iOS)";
+			productReference = CAC724281BD7C81000B78B0C /* CocoaImageHashingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CADF6BB11BC8EF9A0039E5A8 /* CocoaImageHashing (OS X Framework) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CADF6BC61BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (OS X Framework)" */;
+			buildPhases = (
+				CADF6BAD1BC8EF9A0039E5A8 /* Sources */,
+				CADF6BAE1BC8EF9A0039E5A8 /* Frameworks */,
+				CADF6BAF1BC8EF9A0039E5A8 /* Headers */,
+				CADF6BB01BC8EF9A0039E5A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CocoaImageHashing (OS X Framework)";
+			productName = CocoaImageHashing;
+			productReference = CADF6BB21BC8EF9A0039E5A8 /* CocoaImageHashing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CADF6BBB1BC8EF9A0039E5A8 /* CocoaImageHashingTests (OS X) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CADF6BC91BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashingTests (OS X)" */;
+			buildPhases = (
+				CADF6BB81BC8EF9A0039E5A8 /* Sources */,
+				CADF6BB91BC8EF9A0039E5A8 /* Frameworks */,
+				CADF6BBA1BC8EF9A0039E5A8 /* Resources */,
+				CA5EFBD61BCA915800143DAA /* Copy Blurred Images */,
+				CA5EFBEE1BCA987E00143DAA /* Copy Compressed Images */,
+				CA5EFC061BCA989300143DAA /* Copy Misc Images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CADF6BBF1BC8EF9A0039E5A8 /* PBXTargetDependency */,
+			);
+			name = "CocoaImageHashingTests (OS X)";
+			productName = CocoaImageHashingTests;
+			productReference = CADF6BBC1BC8EF9A0039E5A8 /* CocoaImageHashingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CADF6BA91BC8EF9A0039E5A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Andreas Meingast";
+				TargetAttributes = {
+					CA74137C1BD0E5D200C816B5 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					CA74139C1BD0E7CF00C816B5 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					CA7413BC1BD0E84300C816B5 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					CAC724271BD7C81000B78B0C = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					CADF6BB11BC8EF9A0039E5A8 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 9MLD39WDQ7;
+					};
+					CADF6BBB1BC8EF9A0039E5A8 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = CADF6BAC1BC8EF9A0039E5A8 /* Build configuration list for PBXProject "CocoaImageHashing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CADF6BA81BC8EF9A0039E5A8;
+			productRefGroup = CADF6BB31BC8EF9A0039E5A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CADF6BB11BC8EF9A0039E5A8 /* CocoaImageHashing (OS X Framework) */,
+				CA74137C1BD0E5D200C816B5 /* CocoaImageHashing (OS X Static Library) */,
+				CA7413BC1BD0E84300C816B5 /* CocoaImageHashing (iOS Framework) */,
+				CA74139C1BD0E7CF00C816B5 /* CocoaImageHashing (iOS Static Library) */,
+				CADF6BBB1BC8EF9A0039E5A8 /* CocoaImageHashingTests (OS X) */,
+				CAC724271BD7C81000B78B0C /* CocoaImageHashingTests (iOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA7413BB1BD0E84300C816B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC724261BD7C81000B78B0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADF6BB01BC8EF9A0039E5A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7413721BD0DE9600C816B5 /* LICENSE in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADF6BBA1BC8EF9A0039E5A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA7413791BD0E5D200C816B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA74138A1BD0E62600C816B5 /* OSCategories.m in Sources */,
+				CA74138B1BD0E62600C816B5 /* OSFastGraphics.m in Sources */,
+				CA74138D1BD0E62600C816B5 /* OSTypes.m in Sources */,
+				CA7413DD1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */,
+				CA7413861BD0E61C00C816B5 /* OSAHash.m in Sources */,
+				CAEA26681BD110C200380B76 /* OSSimilaritySearch.m in Sources */,
+				CA7413871BD0E61C00C816B5 /* OSDHash.m in Sources */,
+				CA7413881BD0E61C00C816B5 /* OSPHash.m in Sources */,
+				CA7413891BD0E61C00C816B5 /* OSImageHashing.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7413991BD0E7CF00C816B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7413A61BD0E7FB00C816B5 /* OSAHash.m in Sources */,
+				CA7413A71BD0E7FB00C816B5 /* OSDHash.m in Sources */,
+				CA7413A81BD0E7FB00C816B5 /* OSPHash.m in Sources */,
+				CA7413A91BD0E7FB00C816B5 /* OSCategories.m in Sources */,
+				CA7413DF1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */,
+				CAEA266A1BD110C200380B76 /* OSSimilaritySearch.m in Sources */,
+				CA7413AA1BD0E7FB00C816B5 /* OSFastGraphics.m in Sources */,
+				CA7413AC1BD0E7FB00C816B5 /* OSTypes.m in Sources */,
+				CA7413AD1BD0E7FB00C816B5 /* OSImageHashing.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7413B81BD0E84300C816B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7413C51BD0E87400C816B5 /* OSAHash.m in Sources */,
+				CA7413C61BD0E87400C816B5 /* OSDHash.m in Sources */,
+				CA7413C71BD0E87400C816B5 /* OSPHash.m in Sources */,
+				CA7413C81BD0E87400C816B5 /* OSCategories.m in Sources */,
+				CA7413DE1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */,
+				CAEA26691BD110C200380B76 /* OSSimilaritySearch.m in Sources */,
+				CA7413C91BD0E87400C816B5 /* OSFastGraphics.m in Sources */,
+				CA7413CB1BD0E87400C816B5 /* OSTypes.m in Sources */,
+				CA7413CC1BD0E87400C816B5 /* OSImageHashing.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC724241BD7C81000B78B0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA77A5521BD7E31000F9EA70 /* OSAHashTests.m in Sources */,
+				CA77A5531BD7E31000F9EA70 /* OSDHashTests.m in Sources */,
+				CA77A5541BD7E31000F9EA70 /* OSPHashTests.m in Sources */,
+				CA77A5551BD7E31000F9EA70 /* OSSimilaritySearchTests.m in Sources */,
+				CA77A5561BD7E31000F9EA70 /* OSFastGraphicsTests.m in Sources */,
+				CA77A5571BD7E31000F9EA70 /* OSImageHashingBaseTest.m in Sources */,
+				CA77A5581BD7E31000F9EA70 /* CococaImageHashingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADF6BAD1BC8EF9A0039E5A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE958F11BCAD7D30061A909 /* OSCategories.m in Sources */,
+				CADF6C711BC8F1E40039E5A8 /* OSPHash.m in Sources */,
+				CADF6C621BC8F0370039E5A8 /* OSDHash.m in Sources */,
+				CA963C141BCFCC6200D74D22 /* OSTypes.m in Sources */,
+				CA7413DC1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */,
+				CAEA26671BD110C200380B76 /* OSSimilaritySearch.m in Sources */,
+				CADF6C741BC8F3820039E5A8 /* OSImageHashing.m in Sources */,
+				CA9504601BCD9A1000305210 /* OSFastGraphics.m in Sources */,
+				CADF6C6C1BC8F1DD0039E5A8 /* OSAHash.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADF6BB81BC8EF9A0039E5A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE6DAEE1BCF932A00E7B167 /* OSFastGraphicsTests.m in Sources */,
+				CAE958E91BCAD6E50061A909 /* OSAHashTests.m in Sources */,
+				CAE958ED1BCAD7100061A909 /* CococaImageHashingTests.m in Sources */,
+				CA462F7E1BD252930010EEBD /* OSSimilaritySearchTests.m in Sources */,
+				CADF6BC21BC8EF9A0039E5A8 /* OSDHashTests.m in Sources */,
+				CAE6DAEB1BCF925500E7B167 /* OSImageHashingBaseTest.m in Sources */,
+				CAE958EB1BCAD7000061A909 /* OSPHashTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAC7242F1BD7C81000B78B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA7413BC1BD0E84300C816B5 /* CocoaImageHashing (iOS Framework) */;
+			targetProxy = CAC7242E1BD7C81000B78B0C /* PBXContainerItemProxy */;
+		};
+		CADF6BBF1BC8EF9A0039E5A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CADF6BB11BC8EF9A0039E5A8 /* CocoaImageHashing (OS X Framework) */;
+			targetProxy = CADF6BBE1BC8EF9A0039E5A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CA7413841BD0E5D200C816B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = CocoaImageHashing;
+			};
+			name = Debug;
+		};
+		CA7413851BD0E5D200C816B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = CocoaImageHashing;
+			};
+			name = Release;
+		};
+		CA7413A41BD0E7CF00C816B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = CocoaImageHashing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CA7413A51BD0E7CF00C816B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = CocoaImageHashing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA7413C31BD0E84300C816B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CocoaImageHashing/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.operationalsemantics.CocoaImageHashing--iOS-Framework-";
+				PRODUCT_NAME = CocoaImageHashing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA7413C41BD0E84300C816B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CocoaImageHashing/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.operationalsemantics.CocoaImageHashing--iOS-Framework-";
+				PRODUCT_NAME = CocoaImageHashing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAC724311BD7C81000B78B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CocoaImageHashingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.operationalsemantics.CocoaImageHashingTests--iOS-";
+				PRODUCT_NAME = CocoaImageHashingTests;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CAC724321BD7C81000B78B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CocoaImageHashingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.operationalsemantics.CocoaImageHashingTests--iOS-";
+				PRODUCT_NAME = CocoaImageHashingTests;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CADF6BC41BC8EF9A0039E5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_CFLAGS = (
+					"-Wno-gnu",
+					"-Wno-static-in-inline",
+				);
+			};
+			name = Debug;
+		};
+		CADF6BC51BC8EF9A0039E5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"-Wno-gnu",
+					"-Wno-static-in-inline",
+				);
+			};
+			name = Release;
+		};
+		CADF6BC71BC8EF9A0039E5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = CocoaImageHashing/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.operationalsemantics.CocoaImageHashing;
+				PRODUCT_NAME = CocoaImageHashing;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CADF6BC81BC8EF9A0039E5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = CocoaImageHashing/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.operationalsemantics.CocoaImageHashing;
+				PRODUCT_NAME = CocoaImageHashing;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CADF6BCA1BC8EF9A0039E5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CocoaImageHashingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.operationalsemantics.CocoaImageHashingTests;
+				PRODUCT_NAME = CocoaImageHashingTests;
+			};
+			name = Debug;
+		};
+		CADF6BCB1BC8EF9A0039E5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CocoaImageHashingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.operationalsemantics.CocoaImageHashingTests;
+				PRODUCT_NAME = CocoaImageHashingTests;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA7413831BD0E5D200C816B5 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (OS X Static Library)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA7413841BD0E5D200C816B5 /* Debug */,
+				CA7413851BD0E5D200C816B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA7413A31BD0E7CF00C816B5 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (iOS Static Library)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA7413A41BD0E7CF00C816B5 /* Debug */,
+				CA7413A51BD0E7CF00C816B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA7413C21BD0E84300C816B5 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (iOS Framework)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA7413C31BD0E84300C816B5 /* Debug */,
+				CA7413C41BD0E84300C816B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAC724301BD7C81000B78B0C /* Build configuration list for PBXNativeTarget "CocoaImageHashingTests (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC724311BD7C81000B78B0C /* Debug */,
+				CAC724321BD7C81000B78B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CADF6BAC1BC8EF9A0039E5A8 /* Build configuration list for PBXProject "CocoaImageHashing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CADF6BC41BC8EF9A0039E5A8 /* Debug */,
+				CADF6BC51BC8EF9A0039E5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CADF6BC61BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (OS X Framework)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CADF6BC71BC8EF9A0039E5A8 /* Debug */,
+				CADF6BC81BC8EF9A0039E5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CADF6BC91BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashingTests (OS X)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CADF6BCA1BC8EF9A0039E5A8 /* Debug */,
+				CADF6BCB1BC8EF9A0039E5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CADF6BA91BC8EF9A0039E5A8 /* Project object */;
+}

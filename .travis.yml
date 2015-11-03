@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: CocoaImageHashing.xcodeproj
+xcode_scheme: CocoaImageHashing (OS X Static Library)
