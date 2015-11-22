@@ -16,6 +16,7 @@
 
 - (OSHashType)hashImage:(OSImageType *)image
 {
+    NSAssert(image, @"Image must not be null");
     NSData *data = [image dataRepresentation];
     OSHashType result = [self hashImageData:data];
     return result;
@@ -24,6 +25,8 @@
 - (BOOL)compareImageData:(NSData *)leftHandImageData
                       to:(NSData *)rightHandImageData
 {
+    NSAssert(leftHandImageData, @"Left hand image data must not be null");
+    NSAssert(rightHandImageData, @"Right hand image data must not be null");
     BOOL result = [self compareImageData:leftHandImageData
                                       to:rightHandImageData
                    withDistanceThreshold:[self hashDistanceSimilarityThreshold]];
@@ -41,6 +44,8 @@
                       to:(NSData *)rightHandImageData
    withDistanceThreshold:(OSHashDistanceType)distanceThreshold
 {
+    NSAssert(leftHandImageData, @"Left hand image data must not be null");
+    NSAssert(rightHandImageData, @"Right hand image data must not be null");
     OSHashType leftHandImageDataHash = [self hashImageData:leftHandImageData];
     OSHashType rightHandImageDataHash = [self hashImageData:rightHandImageData];
     OSHashDistanceType distance = [self hashDistance:leftHandImageDataHash
@@ -52,6 +57,10 @@
                                                    forLeftHandImageData:(NSData *)leftHandImageData
                                                   forRightHandImageData:(NSData *)rightHandImageData
 {
+    NSAssert(baseImageData, @"Base image data must not be null");
+    NSAssert(rightHandImageData, @"Right hand image data must not be null");
+    NSAssert(leftHandImageData, @"Left hand image data must not be null");
+    NSAssert(rightHandImageData, @"Right hand image data must not be null");
     OSHashType leftHandImageHash = [self hashImageData:leftHandImageData];
     OSHashType rightHandImageHash = [self hashImageData:rightHandImageData];
     OSHashType baseImageHash = [self hashImageData:baseImageData];

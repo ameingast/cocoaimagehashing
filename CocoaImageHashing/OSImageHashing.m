@@ -289,6 +289,9 @@
                                 forImageHashingProviderId:(OSImageHashingProviderId)imageHashingProviderId
                                         forImageConverter:(NSData * (^)(id arrayElement))imageConverter
 {
+    NSAssert(baseImage, @"Base image must not be null");
+    NSAssert(array, @"Array must not be null");
+    NSAssert(imageConverter, @"Image converter must not be null");
     NSArray<id> *result = [array sortedArrayUsingComparator:^NSComparisonResult(id leftHandElement, id rightHandElement) {
       NSData *leftHandImageData = imageConverter(leftHandElement);
       NSData *rightHandImageData = imageConverter(rightHandElement);

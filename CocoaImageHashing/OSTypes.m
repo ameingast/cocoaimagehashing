@@ -52,6 +52,7 @@ inline OSImageHashingProviderId OSImageHashingProviderDefaultProviderId(void)
 
 inline OSImageHashingProviderId OSImageHashingProviderIdFromString(NSString *name)
 {
+    NSCAssert(name, @"Image hashing provider name must not be null");
     if ([name isEqualToString:@"aHash"]) {
         return OSImageHashingProviderAHash;
     } else if ([name isEqualToString:@"dHash"]) {
@@ -94,6 +95,7 @@ inline NSArray<NSString *> *NSArrayFromOSImageHashingProviderIdNames()
 
 OSImageHashingQuality OSImageHashingQualityFromString(NSString *name)
 {
+    NSCAssert(name, @"Image hashing quality name must not be null");
     if ([name isEqualToString:@"Low"]) {
         return OSImageHashingQualityLow;
     } else if ([name isEqualToString:@"Medium"]) {

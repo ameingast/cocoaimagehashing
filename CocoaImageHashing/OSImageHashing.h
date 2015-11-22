@@ -90,6 +90,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Given a stream of images, create an NSArray of tuples containing similar images.
  * 
+ * Data is provided through the imageStreamHandler parameter. Returning nil inside imageStreamHandler
+ * signals that the stream was closed and no more data is available.
+ * 
  * This method nils out all data-tuples it receives allowing for swift garbage collection. If there are no further
  * references to the provided data-tuples, this method will execute in (almost) constant space wrt to image-data.
  *

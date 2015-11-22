@@ -29,7 +29,8 @@
             forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)())imageStreamHandler
                  forResultHandler:(void (^)(OSImageId *leftHandImageId, OSImageId *rightHandImageId))resultHandler
 {
-
+    NSAssert(imageStreamHandler, @"Image stream handler must not be nil");
+    NSAssert(resultHandler, @"Result handler must not be nil");
     NSCondition __block *condition = [NSCondition new];
     NSMutableArray<OSHashResultTuple<NSString *> *> __block *fingerPrintedTuples = [NSMutableArray new];
     dispatch_group_t hashingDispatchGroup = dispatch_group_create();
@@ -80,6 +81,7 @@
                                                   withHashDistanceThreshold:(OSHashDistanceType)hashDistanceThreshold
                                                       forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)())imageStreamHandler
 {
+    NSAssert(imageStreamHandler, @"Image stream handler must not be nil");
     NSMutableArray<OSTuple<NSString *, NSString *> *> *tuples = [NSMutableArray new];
     [self similarImagesWithProvider:imageHashingProviderId
           withHashDistanceThreshold:hashDistanceThreshold
@@ -96,6 +98,7 @@
                                                   withHashDistanceThreshold:(OSHashDistanceType)hashDistanceThreshold
                                                                   forImages:(NSArray<OSTuple<OSImageId *, NSData *> *> *)imageTuples
 {
+    NSAssert(imageTuples, @"Image tuple array must not be nil");
     NSUInteger __block i = 0;
     NSArray<OSTuple<OSImageId *, OSImageId *> *> *result = [self
         similarImagesWithProvider:imageHashingProviderId
@@ -115,6 +118,7 @@
 
 - (NSDictionary<OSImageId *, NSSet<OSImageId *> *> *)dictionaryFromSimilarImagesResult:(NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImageTuples
 {
+    NSAssert(similarImageTuples, @"Similar image tuple array must not be nil");
     NSMutableDictionary<OSImageId *, NSSet<OSImageId *> *> *result = [NSMutableDictionary new];
     for (OSTuple<OSImageId *, OSImageId *> *tuple in similarImageTuples) {
         if (tuple.first && tuple.second) {

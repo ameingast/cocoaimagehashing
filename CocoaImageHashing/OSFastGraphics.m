@@ -14,6 +14,87 @@
 
 #define SETBIT(i, k) (i |= ((OSHashType)1 << (k)))
 
+#pragma mark - Matrix Rotation
+
+#define MATRIX_A(m, i, j, n) m[i + (n * j)]
+#define MATRIX_B(m, i, j, n) m[(n - 1 - j) + (n * (i))]
+#define MATRIX_C(m, i, j, n) m[(n - 1 - i) + (n * (n - 1 - j))]
+#define MATRIX_D(m, i, j, n) m[j + (n * (n - 1 - i))]
+
+inline void rotate_matrix(unsigned char *pixels, const unsigned int n)
+{
+    for (unsigned int i = 0; i < n / 2; i++) {
+        for (unsigned int j = 0; j < (n + 1) / 2; j++) {
+            unsigned char tmp = MATRIX_A(pixels, i, j, n);
+            MATRIX_A(pixels, i, j, n) = MATRIX_B(pixels, i, j, n);
+            MATRIX_B(pixels, i, j, n) = MATRIX_C(pixels, i, j, n);
+            MATRIX_C(pixels, i, j, n) = MATRIX_D(pixels, i, j, n);
+            MATRIX_D(pixels, i, j, n) = tmp;
+        }
+    }
+}
+
+#define INLINE_UNROLL_MATRIX(m, i, j, n)                   \
+    tmp = MATRIX_A(pixels, i, j, n);                       \
+    MATRIX_A(pixels, i, j, n) = MATRIX_B(pixels, i, j, n); \
+    MATRIX_B(pixels, i, j, n) = MATRIX_C(pixels, i, j, n); \
+    MATRIX_C(pixels, i, j, n) = MATRIX_D(pixels, i, j, n); \
+    MATRIX_D(pixels, i, j, n) = tmp
+
+#define UNROLL_INLINE_MATRIX_J(m, i, n) \
+    INLINE_UNROLL_MATRIX(m, i, 0, n);   \
+    INLINE_UNROLL_MATRIX(m, i, 1, n);   \
+    INLINE_UNROLL_MATRIX(m, i, 2, n);   \
+    INLINE_UNROLL_MATRIX(m, i, 3, n);   \
+    INLINE_UNROLL_MATRIX(m, i, 4, n);
+
+#define UNROLL_INLINE_MATRIX_I(m, n) \
+    UNROLL_INLINE_MATRIX_J(m, 0, n); \
+    UNROLL_INLINE_MATRIX_J(m, 1, n); \
+    UNROLL_INLINE_MATRIX_J(m, 2, n); \
+    UNROLL_INLINE_MATRIX_J(m, 3, n)
+
+inline void rotate_matrix_9_9(unsigned char *pixels)
+{
+    unsigned char tmp;
+    UNROLL_INLINE_MATRIX_I(pixels, 9);
+}
+
+inline void rotate_rgba_matrix_9_9(unsigned char *pixels)
+{
+    unsigned char r_matrix[9 * 9 * sizeof(unsigned char)] = {0};
+    unsigned char g_matrix[9 * 9 * sizeof(unsigned char)] = {0};
+    unsigned char b_matrix[9 * 9 * sizeof(unsigned char)] = {0};
+    unsigned char a_matrix[9 * 9 * sizeof(unsigned char)] = {0};
+    unsigned int cnt = 0;
+    unsigned char tmp = 0;
+    for (int i = 0; i < 9 * 9; i++) {
+        r_matrix[i] = pixels[cnt++];
+        g_matrix[i] = pixels[cnt++];
+        b_matrix[i] = pixels[cnt++];
+        a_matrix[i] = pixels[cnt++];
+    }
+    UNROLL_INLINE_MATRIX_I(r_matrix, 9);
+    UNROLL_INLINE_MATRIX_I(g_matrix, 9);
+    UNROLL_INLINE_MATRIX_I(b_matrix, 9);
+    UNROLL_INLINE_MATRIX_I(a_matrix, 9);
+    cnt = 0;
+    for (int i = 0; i < 9 * 9; i++) {
+        pixels[cnt++] = r_matrix[i];
+        pixels[cnt++] = g_matrix[i];
+        pixels[cnt++] = b_matrix[i];
+        pixels[cnt++] = a_matrix[i];
+    }
+}
+
+#undef UNROLL_INLINE_MATRIX_I
+#undef UNROLL_INLINE_MATRIX_J
+#undef INLINE_MATRIX
+#undef MATRIX_D
+#undef MATRIX_C
+#undef MATRIX_B
+#undef MATRIX_A
+
 #pragma mark - Greyscale 32 x 32
 
 #define INLINE_GREYSCALE(row, col)                  \
@@ -93,7 +174,7 @@
     UNROLL_GREYSCALE_Y(30);  \
     UNROLL_GREYSCALE_Y(31);
 
-inline void greyscale_pixels_rgba_32_32(unsigned char *pixels, double result[32][32])
+inline void greyscale_pixels_rgba_32_32(const unsigned char *pixels, double result[32][32])
 {
     unsigned char red, green, blue;
     UNROLL_GREYSCALE_X();
@@ -175,7 +256,7 @@ inline void greyscale_pixels_rgba_32_32(unsigned char *pixels, double result[32]
     UNROLL_DCT_J(30, U, V); \
     UNROLL_DCT_J(31, U, V);
 
-inline void fast_dct_rgba_32_32(double pixels[32][32], double result[32][32])
+inline void fast_dct_rgba_32_32(const double pixels[32][32], double result[32][32])
 {
     static const int N = 32;
     static double c[32] = {0};
@@ -212,7 +293,7 @@ inline void fast_dct_rgba_32_32(double pixels[32][32], double result[32][32])
 
 #pragma mark - Regular DCT
 
-inline void dct_rgba_32_32(double pixels[32][32], double result[32][32])
+inline void dct_rgba_32_32(const double pixels[32][32], double result[32][32])
 {
     const int N = 32;
     double c[32] = {0};
@@ -267,7 +348,7 @@ inline void dct_rgba_32_32(double pixels[32][32], double result[32][32])
     UNROLL_GREY_AVERAGE_Y(7);   \
     average /= (double)64;
 
-inline double avg_greyscale_value_rgba_8_8(unsigned char *pixels)
+inline double avg_greyscale_value_rgba_8_8(const unsigned char *pixels)
 {
     unsigned char red = 0, green = 0, blue = 0;
     double average = 0.0;
@@ -306,7 +387,7 @@ inline double avg_greyscale_value_rgba_8_8(unsigned char *pixels)
     dctSum -= pixels[0][0]; \
     dctAverage = dctSum / (double)63.0;
 
-inline double fast_avg_no_first_el_rgba_8_8(double pixels[32][32])
+inline double fast_avg_no_first_el_rgba_8_8(const double pixels[32][32])
 {
     double dctSum = 0.0, dctAverage = 0.0;
     UNROLL_AVERAGE_X();
@@ -345,7 +426,7 @@ inline double fast_avg_no_first_el_rgba_8_8(double pixels[32][32])
     UNROLL_PHASH_Y(6);   \
     UNROLL_PHASH_Y(7);
 
-inline OSHashType phash_rgba_8_8(double pixels[32][32], double dctAverage)
+inline OSHashType phash_rgba_8_8(const double pixels[32][32], double dctAverage)
 {
     unsigned char cnt = 0;
     OSHashType result = 0;
@@ -393,7 +474,7 @@ inline OSHashType phash_rgba_8_8(double pixels[32][32], double dctAverage)
     UNROLL_ASHASH_Y(6);   \
     UNROLL_ASHASH_Y(7);
 
-inline OSHashType ahash_rgba_8_8(unsigned char *pixels)
+inline OSHashType ahash_rgba_8_8(const unsigned char *pixels)
 {
     OSHashType result = 0;
     double grey = 0.0, average = 0.0;
@@ -453,7 +534,7 @@ inline OSHashType ahash_rgba_8_8(unsigned char *pixels)
     UNROLL_DHASH_Y(6);   \
     UNROLL_DHASH_Y(7);
 
-inline OSHashType dhash_rgba_9_8(unsigned char *pixels)
+inline OSHashType dhash_rgba_9_9(const unsigned char *pixels)
 {
     OSHashType result = 0;
     double greyLeft = 0.0, greyRight = 0.0;

@@ -83,7 +83,6 @@
 		CA7413881BD0E61C00C816B5 /* OSPHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6F1BC8F1E40039E5A8 /* OSPHash.m */; };
 		CA7413891BD0E61C00C816B5 /* OSImageHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */; };
 		CA74138A1BD0E62600C816B5 /* OSCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EF1BCAD7D30061A909 /* OSCategories.m */; };
-		CA74138B1BD0E62600C816B5 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
 		CA74138D1BD0E62600C816B5 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA963C131BCFCC6200D74D22 /* OSTypes.m */; };
 		CA74138E1BD0E65100C816B5 /* OSAHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C691BC8F1DD0039E5A8 /* OSAHash.h */; };
 		CA74138F1BD0E65100C816B5 /* OSDHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C5F1BC8F0370039E5A8 /* OSDHash.h */; };
@@ -97,7 +96,6 @@
 		CA7413A71BD0E7FB00C816B5 /* OSDHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C601BC8F0370039E5A8 /* OSDHash.m */; };
 		CA7413A81BD0E7FB00C816B5 /* OSPHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6F1BC8F1E40039E5A8 /* OSPHash.m */; };
 		CA7413A91BD0E7FB00C816B5 /* OSCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EF1BCAD7D30061A909 /* OSCategories.m */; };
-		CA7413AA1BD0E7FB00C816B5 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
 		CA7413AC1BD0E7FB00C816B5 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA963C131BCFCC6200D74D22 /* OSTypes.m */; };
 		CA7413AD1BD0E7FB00C816B5 /* OSImageHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */; };
 		CA7413AF1BD0E81700C816B5 /* OSAHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C691BC8F1DD0039E5A8 /* OSAHash.h */; };
@@ -112,7 +110,6 @@
 		CA7413C61BD0E87400C816B5 /* OSDHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C601BC8F0370039E5A8 /* OSDHash.m */; };
 		CA7413C71BD0E87400C816B5 /* OSPHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C6F1BC8F1E40039E5A8 /* OSPHash.m */; };
 		CA7413C81BD0E87400C816B5 /* OSCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE958EF1BCAD7D30061A909 /* OSCategories.m */; };
-		CA7413C91BD0E87400C816B5 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
 		CA7413CB1BD0E87400C816B5 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA963C131BCFCC6200D74D22 /* OSTypes.m */; };
 		CA7413CC1BD0E87400C816B5 /* OSImageHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */; };
 		CA7413CD1BD0E88300C816B5 /* OSAHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C691BC8F1DD0039E5A8 /* OSAHash.h */; };
@@ -208,11 +205,14 @@
 		CA77A59F1BD7E35A00F9EA70 /* uk-golf-scotland.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C151BC8EFC00039E5A8 /* uk-golf-scotland.bmp */; };
 		CA77A5A01BD7E35A00F9EA70 /* wallacestevens.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C161BC8EFC00039E5A8 /* wallacestevens.bmp */; };
 		CA95045F1BCD9A1000305210 /* OSFastGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = CA95045D1BCD9A1000305210 /* OSFastGraphics.h */; };
-		CA9504601BCD9A1000305210 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
 		CA963C121BCFCBD500D74D22 /* OSTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CA963C111BCFCBD500D74D22 /* OSTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA963C141BCFCC6200D74D22 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA963C131BCFCC6200D74D22 /* OSTypes.m */; };
 		CAC724221BD7C71500B78B0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC724211BD7C71500B78B0C /* UIKit.framework */; };
 		CAC7242D1BD7C81000B78B0C /* CocoaImageHashing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7413BD1BD0E84300C816B5 /* CocoaImageHashing.framework */; };
+		CAD201D21BF3BE0600C69589 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
+		CAD201D31BF3BE0600C69589 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
+		CAD201D41BF3BE0600C69589 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
+		CAD201D51BF3BE0700C69589 /* OSFastGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CA95045E1BCD9A1000305210 /* OSFastGraphics.m */; };
 		CADF6BB61BC8EF9A0039E5A8 /* CocoaImageHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6BB51BC8EF9A0039E5A8 /* CocoaImageHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CADF6BBD1BC8EF9A0039E5A8 /* CocoaImageHashing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADF6BB21BC8EF9A0039E5A8 /* CocoaImageHashing.framework */; };
 		CADF6BC21BC8EF9A0039E5A8 /* OSDHashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6BC11BC8EF9A0039E5A8 /* OSDHashTests.m */; };
@@ -1194,10 +1194,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA74138A1BD0E62600C816B5 /* OSCategories.m in Sources */,
-				CA74138B1BD0E62600C816B5 /* OSFastGraphics.m in Sources */,
 				CA74138D1BD0E62600C816B5 /* OSTypes.m in Sources */,
 				CA7413DD1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */,
 				CA7413861BD0E61C00C816B5 /* OSAHash.m in Sources */,
+				CAD201D31BF3BE0600C69589 /* OSFastGraphics.m in Sources */,
 				CAEA26681BD110C200380B76 /* OSSimilaritySearch.m in Sources */,
 				CA7413871BD0E61C00C816B5 /* OSDHash.m in Sources */,
 				CA7413881BD0E61C00C816B5 /* OSPHash.m in Sources */,
@@ -1213,9 +1213,9 @@
 				CA7413A71BD0E7FB00C816B5 /* OSDHash.m in Sources */,
 				CA7413A81BD0E7FB00C816B5 /* OSPHash.m in Sources */,
 				CA7413A91BD0E7FB00C816B5 /* OSCategories.m in Sources */,
+				CAD201D51BF3BE0700C69589 /* OSFastGraphics.m in Sources */,
 				CA7413DF1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */,
 				CAEA266A1BD110C200380B76 /* OSSimilaritySearch.m in Sources */,
-				CA7413AA1BD0E7FB00C816B5 /* OSFastGraphics.m in Sources */,
 				CA7413AC1BD0E7FB00C816B5 /* OSTypes.m in Sources */,
 				CA7413AD1BD0E7FB00C816B5 /* OSImageHashing.m in Sources */,
 			);
@@ -1229,9 +1229,9 @@
 				CA7413C61BD0E87400C816B5 /* OSDHash.m in Sources */,
 				CA7413C71BD0E87400C816B5 /* OSPHash.m in Sources */,
 				CA7413C81BD0E87400C816B5 /* OSCategories.m in Sources */,
+				CAD201D41BF3BE0600C69589 /* OSFastGraphics.m in Sources */,
 				CA7413DE1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */,
 				CAEA26691BD110C200380B76 /* OSSimilaritySearch.m in Sources */,
-				CA7413C91BD0E87400C816B5 /* OSFastGraphics.m in Sources */,
 				CA7413CB1BD0E87400C816B5 /* OSTypes.m in Sources */,
 				CA7413CC1BD0E87400C816B5 /* OSImageHashing.m in Sources */,
 			);
@@ -1259,10 +1259,10 @@
 				CADF6C711BC8F1E40039E5A8 /* OSPHash.m in Sources */,
 				CADF6C621BC8F0370039E5A8 /* OSDHash.m in Sources */,
 				CA963C141BCFCC6200D74D22 /* OSTypes.m in Sources */,
+				CAD201D21BF3BE0600C69589 /* OSFastGraphics.m in Sources */,
 				CA7413DC1BD0EAA800C816B5 /* OSAbstractHash.m in Sources */,
 				CAEA26671BD110C200380B76 /* OSSimilaritySearch.m in Sources */,
 				CADF6C741BC8F3820039E5A8 /* OSImageHashing.m in Sources */,
-				CA9504601BCD9A1000305210 /* OSFastGraphics.m in Sources */,
 				CADF6C6C1BC8F1DD0039E5A8 /* OSAHash.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

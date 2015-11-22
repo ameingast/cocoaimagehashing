@@ -10,6 +10,8 @@
 
 @interface OSSimilaritySearch : NSObject
 
+NS_ASSUME_NONNULL_BEGIN
+
 + (instancetype)sharedInstance;
 
 #pragma mark - Array & Stream Based Similarity Search
@@ -30,5 +32,7 @@
 #pragma mark - Result Conversion
 
 - (NSDictionary<OSImageId *, NSSet<OSImageId *> *> *)dictionaryFromSimilarImagesResult:(NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImageTuples;
+
+NS_ASSUME_NONNULL_END
 
 @end
