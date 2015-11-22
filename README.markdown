@@ -61,8 +61,9 @@ The entrypoint for the framework is the class _OSImageHashing_.
 
 It provides APIs for:
 
-* perceptual hashing of images in NSData format in different complexities
-  depending on the used hashing algorithm or desired outcome quality
+* perceptual hashing of images in NSData, NSImage and UIImage format 
+  in different complexities depending on the used hashing algorithm 
+  or desired outcome quality
 * comparing calulcated fingerprints in O(1) time and space
 * measuring distance between calculated fingerprints in O(1) time and space
 * concurrently finding similar elements in NSArrays in O(n^2) time and
