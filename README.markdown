@@ -49,9 +49,13 @@ per second on 4 cores.
 
 ### Installation with CocoaPods
 
-Once the documentation is finalized, the podspec will be pushed to the 
-official CocoaPods repository. For now, you can use this library as a local 
-CocoaPods dependency.
+Integrating this framework with Cocoapods is straightforward.
+
+Just declare this dependency in your Podfile:
+
+```ruby
+pod 'CocoaImageHashing', :git => 'https://github.com/ameingast/cocoaimagehashing.git'
+```
 
 ### Using the Framework
 
@@ -189,10 +193,6 @@ More detailed information on types is available
 ```
 
 More examples can be found in the test suite!
-
-## ToDo
-
-* Submit podspec file to cocoapods
 
 ## Contact and Contributions
 
