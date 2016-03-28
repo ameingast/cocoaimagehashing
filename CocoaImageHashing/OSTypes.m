@@ -6,10 +6,10 @@
 //  Copyright © 2015 Andreas Meingast. All rights reserved.
 //
 
-#import "OSTypes.h"
 #import "OSAHash.h"
 #import "OSDHash.h"
 #import "OSPHash.h"
+#import "OSTypes.h"
 
 @implementation OSTuple
 
@@ -35,7 +35,7 @@
 - (NSString *)description
 {
     NSString *result = [NSString stringWithFormat:@"<%@: %p, first: %@, second: %@>",
-                                                  NSStringFromClass([self class]), self, self.first, self.second];
+                                                  NSStringFromClass([self class]), (__bridge void *)self, self.first, self.second];
     return result;
 }
 
