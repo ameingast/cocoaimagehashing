@@ -119,14 +119,22 @@
 - (NSDictionary<OSImageId *, NSSet<OSImageId *> *> *)dictionaryFromSimilarImagesResult:(NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImageTuples
 {
     NSAssert(similarImageTuples, @"Similar image tuple array must not be nil");
-    NSMutableDictionary<OSImageId *, NSSet<OSImageId *> *> *result = [NSMutableDictionary new];
+    NSMutableDictionary<OSImageId *, OSImageId *> *representatives = [NSMutableDictionary new];
+    NSMutableDictionary<OSImageId *, NSMutableSet<OSImageId *> *> *result = [NSMutableDictionary new];
     for (OSTuple<OSImageId *, OSImageId *> *tuple in similarImageTuples) {
-        if (tuple.first && tuple.second) {
-            NSMutableSet<OSImageId *> *localMatches = (NSMutableSet<OSImageId *> *)result[OS_CAST_NONNULL(tuple.first)];
-            if (!localMatches) {
-                result[OS_CAST_NONNULL(tuple.first)] = localMatches = [NSMutableSet new];
+        OSImageId *first = tuple.first;
+        OSImageId *second = tuple.second;
+        if (first && second) {
+            OSImageId *firstRep = representatives[first];
+            if (!firstRep) {
+                representatives[first] = firstRep = first;
+                result[first] = [NSMutableSet set];
             }
-            [localMatches addObject:OS_CAST_NONNULL(tuple.second)];
+            OSImageId *secondRep = representatives[second];
+            if (!secondRep) {
+                representatives[second] = firstRep;
+            }
+            [result[firstRep] addObject:second];
         }
     }
     return result;
