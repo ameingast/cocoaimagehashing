@@ -31,16 +31,16 @@
 {
     NSAssert(imageStreamHandler, @"Image stream handler must not be nil");
     NSAssert(resultHandler, @"Result handler must not be nil");
-    NSCondition __block *condition = [NSCondition new];
     NSMutableArray<OSHashResultTuple<NSString *> *> __block *fingerPrintedTuples = [NSMutableArray new];
+    NSUInteger cpuCount = [[NSProcessInfo processInfo] processorCount];
+    dispatch_semaphore_t hashingSemaphore = dispatch_semaphore_create((long)cpuCount);
     dispatch_group_t hashingDispatchGroup = dispatch_group_create();
-    [condition lock];
     for (;;) {
         OSTuple<NSString *, NSData *> __block *inputTuple = imageStreamHandler();
         if (!inputTuple) {
             break;
         }
-        dispatch_group_enter(hashingDispatchGroup);
+        dispatch_semaphore_wait(hashingSemaphore, DISPATCH_TIME_FOREVER);
         dispatch_group_async(hashingDispatchGroup, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
           NSString *identifier = inputTuple.first;
           NSData *imageData = inputTuple.second;
@@ -56,14 +56,10 @@
           {
               [fingerPrintedTuples addObject:resultTuple];
           }
-          dispatch_group_leave(hashingDispatchGroup);
+          dispatch_semaphore_signal(hashingSemaphore);
         });
     }
-    dispatch_group_notify(hashingDispatchGroup, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-      [condition signal];
-    });
-    [condition wait];
-    [condition unlock];
+    dispatch_group_wait(hashingDispatchGroup, DISPATCH_TIME_FOREVER);
     [fingerPrintedTuples arrayWithPairCombinations:^BOOL(OSHashResultTuple *leftHandTuple, OSHashResultTuple *rightHandTuple) {
       OSHashDistanceType hashDistance = [[OSImageHashing sharedInstance] hashDistance:leftHandTuple.hashResult
                                                                                    to:rightHandTuple.hashResult
