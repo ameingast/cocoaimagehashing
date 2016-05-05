@@ -17,7 +17,7 @@
     static id instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-      instance = [[self class] new];
+      instance = [self new];
     });
     return instance;
 }
