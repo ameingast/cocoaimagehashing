@@ -56,23 +56,23 @@
 
 @implementation NSData (CocoaImageHashing)
 
-- (unsigned char *)RGBABitmapDataForResizedImageWithWidth:(NSUInteger)width
-                                                andHeight:(NSUInteger)height
+- (NSData *)RGBABitmapDataForResizedImageWithWidth:(NSUInteger)width
+                                         andHeight:(NSUInteger)height
 {
     UIImage *baseImage = [UIImage imageWithData:self];
     CGImageRef imageRef = [baseImage CGImage];
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    unsigned char *rawData = (unsigned char *)calloc(height * width * 4, sizeof(unsigned char));
+    NSMutableData *data = [NSMutableData dataWithLength:height * width * 4];
     NSUInteger bytesPerPixel = 4;
     NSUInteger bytesPerRow = bytesPerPixel * width;
     NSUInteger bitsPerComponent = 8;
-    CGContextRef context = CGBitmapContextCreate(rawData, width, height, bitsPerComponent, bytesPerRow, colorSpace,
+    CGContextRef context = CGBitmapContextCreate([data mutableBytes], width, height, bitsPerComponent, bytesPerRow, colorSpace,
                                                  kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
     CGColorSpaceRelease(colorSpace);
     CGRect rect = CGRectMake(0, 0, width, height);
     CGContextDrawImage(context, rect, imageRef);
     CGContextRelease(context);
-    return rawData;
+    return data;
 }
 
 @end
@@ -81,16 +81,18 @@
 
 @implementation NSData (CocoaImageHashing)
 
-- (unsigned char *)RGBABitmapDataForResizedImageWithWidth:(NSInteger)width
-                                                andHeight:(NSInteger)height
+- (NSData *)RGBABitmapDataForResizedImageWithWidth:(NSUInteger)width
+                                         andHeight:(NSUInteger)height
 {
     NSBitmapImageRep *sourceImageRep = [[NSBitmapImageRep alloc] initWithData:self];
     NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepFrom:sourceImageRep
-                                                  scaledToWidth:width
-                                                 scaledToHeight:height
+                                                  scaledToWidth:(NSInteger)width
+                                                 scaledToHeight:(NSInteger)height
                                              usingInterpolation:NSImageInterpolationHigh];
     unsigned char *pixels = [imageRep bitmapData];
-    return pixels;
+    NSData *result = [NSData dataWithBytes:pixels
+                                    length:width * height * 4];
+    return result;
 }
 
 @end

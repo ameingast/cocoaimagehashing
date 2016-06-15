@@ -21,11 +21,11 @@ static const OSHashDistanceType OSPHashDistanceThreshold = 10;
 - (OSHashType)hashImageData:(NSData *)imageData
 {
     NSAssert(imageData, @"Image data must not be null");
-    unsigned char *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:OSPHashImageWidthInPixels
-                                                                    andHeight:OSPhashImageHeightInPixels];
+    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:OSPHashImageWidthInPixels
+                                                             andHeight:OSPhashImageHeightInPixels];
     double greyscalePixels[OSPHashImageWidthInPixels][OSPhashImageHeightInPixels] = {{0.0}};
     double dctPixels[OSPHashImageWidthInPixels][OSPhashImageHeightInPixels] = {{0.0}};
-    greyscale_pixels_rgba_32_32(pixels, greyscalePixels);
+    greyscale_pixels_rgba_32_32([pixels bytes], greyscalePixels);
     fast_dct_rgba_32_32(greyscalePixels, dctPixels);
     double dctAverage = fast_avg_no_first_el_rgba_8_8(dctPixels);
     OSHashType result = phash_rgba_8_8(dctPixels, dctAverage);

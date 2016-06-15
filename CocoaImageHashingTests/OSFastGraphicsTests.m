@@ -124,12 +124,12 @@
 - (void)testDCT
 {
     NSData *imageData = [self loadImageAsData:@"blurred/architecture1.bmp"];
-    unsigned char *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:32
-                                                                    andHeight:32];
+    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:32
+                                                             andHeight:32];
     double greyscalePixels[32][32] = {{0.0}};
     double fastDctPixels[32][32] = {{0.0}};
     double dctPixels[32][32] = {{0.0}};
-    greyscale_pixels_rgba_32_32(pixels, greyscalePixels);
+    greyscale_pixels_rgba_32_32([pixels bytes], greyscalePixels);
     dct_rgba_32_32(greyscalePixels, dctPixels);
     fast_dct_rgba_32_32(greyscalePixels, fastDctPixels);
     for (NSUInteger i = 0; i < 32; i++) {
@@ -143,11 +143,11 @@
 {
     const NSUInteger iterations = 1024 * 2;
     NSData *imageData = [self loadImageAsData:@"blurred/architecture1.bmp"];
-    unsigned char *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:32
-                                                                    andHeight:32];
+    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:32
+                                                             andHeight:32];
     double fastDctPixels[32][32] = {{0.0}};
     double greyscalePixels[32][32] = {{0.0}};
-    greyscale_pixels_rgba_32_32(pixels, greyscalePixels);
+    greyscale_pixels_rgba_32_32([pixels bytes], greyscalePixels);
     NSDate *t0 = [NSDate date];
     for (NSUInteger i = 0; i < iterations; i++) {
         fast_dct_rgba_32_32(greyscalePixels, fastDctPixels);

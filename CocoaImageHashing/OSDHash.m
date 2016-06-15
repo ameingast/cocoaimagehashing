@@ -7,8 +7,8 @@
 //
 
 #import "OSCategories.h"
-#import "OSFastGraphics.h"
 #import "OSDHash.h"
+#import "OSFastGraphics.h"
 
 static const NSUInteger OSDHashImageWidthInPixels = 9;
 static const NSUInteger OSDHashImageHeightInPixels = 9;
@@ -21,9 +21,9 @@ static const OSHashDistanceType OSDHashDistanceThreshold = 9;
 - (OSHashType)hashImageData:(NSData *)imageData
 {
     NSAssert(imageData, @"Image data must not be null");
-    unsigned char *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:OSDHashImageWidthInPixels
-                                                                    andHeight:OSDHashImageHeightInPixels];
-    OSHashType result = dhash_rgba_9_9(pixels);
+    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:OSDHashImageWidthInPixels
+                                                             andHeight:OSDHashImageHeightInPixels];
+    OSHashType result = dhash_rgba_9_9([pixels bytes]);
     return result;
 }
 

@@ -47,8 +47,8 @@ NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 
-- (unsigned char *)RGBABitmapDataForResizedImageWithWidth:(NSInteger)width
-                                                andHeight:(NSInteger)height;
+- (NSData *)RGBABitmapDataForResizedImageWithWidth:(NSUInteger)width
+                                         andHeight:(NSUInteger)height;
 
 @end
 
