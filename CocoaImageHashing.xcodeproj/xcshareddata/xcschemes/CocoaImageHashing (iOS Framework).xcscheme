@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CAC724271BD7C81000B78B0C"
+               BuildableName = "CocoaImageHashingTests.xctest"
+               BlueprintName = "CocoaImageHashingTests (iOS)"
+               ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CA7413BC1BD0E84300C816B5"
+            BuildableName = "CocoaImageHashing.framework"
+            BlueprintName = "CocoaImageHashing (iOS Framework)"
+            ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
