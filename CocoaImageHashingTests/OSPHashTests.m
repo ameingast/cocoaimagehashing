@@ -86,4 +86,11 @@
     NSLog(@"Hashing image data @ %@ MB/s", @(hashMBsPerS));
 }
 
+- (void)testDataHashingWithMalformedInput
+{
+    NSData *data = [NSMutableData dataWithLength:1024 * 1024];
+    OSHashType result = [self.pHash hashImageData:data];
+    XCTAssertEqual(OSHashTypeError, result);
+}
+
 @end

@@ -23,6 +23,9 @@ static const OSHashDistanceType OSPHashDistanceThreshold = 10;
     NSAssert(imageData, @"Image data must not be null");
     NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:OSPHashImageWidthInPixels
                                                              andHeight:OSPhashImageHeightInPixels];
+    if (!pixels) {
+        return OSHashTypeError;
+    }
     double greyscalePixels[OSPHashImageWidthInPixels][OSPhashImageHeightInPixels] = {{0.0}};
     double dctPixels[OSPHashImageWidthInPixels][OSPhashImageHeightInPixels] = {{0.0}};
     greyscale_pixels_rgba_32_32([pixels bytes], greyscalePixels);

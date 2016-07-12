@@ -28,4 +28,11 @@
         withImageHashingProviderId:OSImageHashingProviderAHash];
 }
 
+- (void)testDataHashingWithMalformedInput
+{
+    NSData *data = [NSMutableData dataWithLength:1024 * 1024];
+    OSHashType result = [self.aHash hashImageData:data];
+    XCTAssertEqual(OSHashTypeError, result);
+}
+
 @end

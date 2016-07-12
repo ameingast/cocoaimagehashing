@@ -96,7 +96,7 @@
 {
     NSMutableArray<OSTuple<OSDataHolder *, OSDataHolder *> *> *result = [NSMutableArray new];
     for (NSString *leftHandImageName in [self imageNames]) {
-        for (NSString *folderPrefixName in @[ @"blurred", @"misc", @"compressed" ]) {
+        for (NSString *folderPrefixName in @[@"blurred", @"misc", @"compressed"]) {
 
             NSString *fileExtension;
             if ([folderPrefixName isEqualToString:@"compressed"]) {
@@ -199,7 +199,7 @@
     OSHashDistanceType distance = [[OSImageHashing sharedInstance] hashDistance:leftHandResult
                                                                              to:rightHandResult
                                                                  withProviderId:imageHashingProviderId];
-    XCTAssertEqual((NSUInteger)0, distance, @"Images should have 0 distance: %@ - %@", leftHandImageName, rightHandImageName);
+    XCTAssertEqual((NSInteger)0, distance, @"Images should have 0 distance: %@ - %@", leftHandImageName, rightHandImageName);
 }
 
 - (void)assertHashImagesSimilar:(NSString *)leftHandImageName
@@ -243,7 +243,7 @@
         NSUInteger __block i = 0;
         NSArray<OSTuple<NSString *, NSString *> *> *resultSet = [[OSImageHashing sharedInstance]
             similarImagesWithProvider:imageHashingProvider
-                forImageStreamHandler:^OSTuple<NSString *, NSData *> *{
+                forImageStreamHandler:^OSTuple<NSString *, NSData *> * {
                   if (i >= [subSet count]) {
                       return nil;
                   }

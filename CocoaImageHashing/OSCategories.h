@@ -47,8 +47,8 @@ NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 
-- (NSData *)RGBABitmapDataForResizedImageWithWidth:(NSUInteger)width
-                                         andHeight:(NSUInteger)height;
+- (nullable NSData *)RGBABitmapDataForResizedImageWithWidth:(NSUInteger)width
+                                                  andHeight:(NSUInteger)height;
 
 @end
 
@@ -81,7 +81,7 @@ NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 
-- (NSData *)dataRepresentation;
+- (nullable NSData *)dataRepresentation;
 
 NS_ASSUME_NONNULL_END
 
@@ -97,7 +97,7 @@ NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 
-- (NSData *)dataRepresentation;
+- (nullable NSData *)dataRepresentation;
 
 NS_ASSUME_NONNULL_END
 

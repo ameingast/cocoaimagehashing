@@ -111,4 +111,11 @@
     NSLog(@"Calculating %@ checks/s", @(checksPerS));
 }
 
+- (void)testDataHashingWithMalformedInput
+{
+    NSData *data = [NSMutableData dataWithLength:1024 * 1024];
+    OSHashType result = [self.dHash hashImageData:data];
+    XCTAssertEqual(OSHashTypeError, result);
+}
+
 @end

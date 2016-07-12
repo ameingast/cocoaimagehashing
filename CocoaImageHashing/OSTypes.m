@@ -11,6 +11,12 @@
 #import "OSPHash.h"
 #import "OSTypes.h"
 
+#pragma mark - Error Values
+
+const OSHashType OSHashTypeError = -1;
+
+#pragma mark - Categories
+
 @implementation OSTuple
 
 + (nonnull instancetype)tupleWithFirst:(nullable id)first
@@ -44,6 +50,8 @@
 @implementation OSHashResultTuple
 
 @end
+
+#pragma mark - Primitive Type Functions and Utilities
 
 inline OSImageHashingProviderId OSImageHashingProviderDefaultProviderId(void)
 {
@@ -79,7 +87,7 @@ inline NSString *NSStringFromOSImageHashingProviderId(OSImageHashingProviderId p
 
 inline NSArray<NSNumber *> *NSArrayFromOSImageHashingProviderId()
 {
-    return @[ @(OSImageHashingProviderAHash), @(OSImageHashingProviderDHash), @(OSImageHashingProviderPHash) ];
+    return @[@(OSImageHashingProviderAHash), @(OSImageHashingProviderDHash), @(OSImageHashingProviderPHash)];
 }
 
 inline NSArray<NSString *> *NSArrayFromOSImageHashingProviderIdNames()
@@ -93,7 +101,7 @@ inline NSArray<NSString *> *NSArrayFromOSImageHashingProviderIdNames()
     return result;
 }
 
-OSImageHashingQuality OSImageHashingQualityFromString(NSString *name)
+inline OSImageHashingQuality OSImageHashingQualityFromString(NSString *name)
 {
     NSCAssert(name, @"Image hashing quality name must not be null");
     if ([name isEqualToString:@"Low"]) {
@@ -122,7 +130,7 @@ inline NSString *NSStringFromOSImageHashingQuality(OSImageHashingQuality hashing
 
 inline NSArray<NSNumber *> *NSArrayFromOSImageHashingQuality()
 {
-    return @[ @(OSImageHashingQualityLow), @(OSImageHashingQualityMedium), @(OSImageHashingQualityHigh) ];
+    return @[@(OSImageHashingQualityLow), @(OSImageHashingQualityMedium), @(OSImageHashingQualityHigh)];
 }
 
 inline NSArray<NSString *> *NSArrayFromOSImageHashingQualityNames()

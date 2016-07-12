@@ -22,13 +22,15 @@
 
 /**
  * OSHashType represents a fingerprint of an image.
+ *
+ * OSHashTypeError represents an error in the hash calculation.
  */
-typedef UInt64 OSHashType;
+typedef SInt64 OSHashType;
 
 /**
  * OSHashDistanceType represents the distance between two image fingerprints.
  */
-typedef UInt64 OSHashDistanceType;
+typedef SInt64 OSHashDistanceType;
 
 /**
  * A type alias to help identify images by an id.
@@ -61,6 +63,13 @@ typedef NS_ENUM(UInt16, OSImageHashingQuality) {
     OSImageHashingQualityHigh,
 };
 
+#pragma mark - Error Values
+
+/**
+ * OSHashTypeError represents an OSHashType error result.
+ */
+extern const OSHashType OSHashTypeError;
+
 #pragma mark - Image Hashing Protocol
 
 /**
@@ -80,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Calculate the fingerprint/hash for a given image.
  *
- * The result is a 64-bit number.
+ * The result is a 64-bit number. Returns OSHashTypeError if an error occurs during image processing.
  */
 - (OSHashType)hashImage:(OSImageType *)image;
 
@@ -93,6 +102,8 @@ NS_ASSUME_NONNULL_BEGIN
  * Calculate the hash distance between two fingerprints/hashes.
  *
  * The hash distance is defined as the bit-to-bit difference between `leftHand` and `rightHand`.
+ *
+ * The `leftHand` and `rightHand` parameters must not be OSHashTypeError. 
  */
 - (OSHashDistanceType)hashDistance:(OSHashType)leftHand
                                 to:(OSHashType)rightHand;

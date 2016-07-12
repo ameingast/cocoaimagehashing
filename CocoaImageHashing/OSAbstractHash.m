@@ -7,8 +7,8 @@
 //
 
 #import "OSAbstractHash.h"
-#import "OSImageHashing.h"
 #import "OSCategories.h"
+#import "OSImageHashing.h"
 
 @implementation OSAbstractHash
 
@@ -18,6 +18,9 @@
 {
     NSAssert(image, @"Image must not be null");
     NSData *data = [image dataRepresentation];
+    if (!data) {
+        return OSHashTypeError;
+    }
     OSHashType result = [self hashImageData:data];
     return result;
 }
@@ -36,7 +39,9 @@
 - (OSHashDistanceType)hashDistance:(OSHashType)leftHand
                                 to:(OSHashType)rightHand
 {
-    OSHashDistanceType result = (OSHashDistanceType)__builtin_popcountll(leftHand ^ rightHand);
+    NSAssert(leftHand != OSHashTypeError, @"Left hand hash must not be OSHashTypeError");
+    NSAssert(rightHand != OSHashTypeError, @"Right hand hash must not be OSHashTypeError");
+    OSHashDistanceType result = (OSHashDistanceType)__builtin_popcountll((UInt64)leftHand ^ (UInt64)rightHand);
     return result;
 }
 

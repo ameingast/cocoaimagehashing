@@ -60,7 +60,13 @@
                                          andHeight:(NSUInteger)height
 {
     UIImage *baseImage = [UIImage imageWithData:self];
+    if (!baseImage) {
+        return nil;
+    }
     CGImageRef imageRef = [baseImage CGImage];
+    if (!imageRef) {
+        return nil;
+    }
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     NSMutableData *data = [NSMutableData dataWithLength:height * width * 4];
     NSUInteger bytesPerPixel = 4;
@@ -84,11 +90,17 @@
 - (NSData *)RGBABitmapDataForResizedImageWithWidth:(NSUInteger)width
                                          andHeight:(NSUInteger)height
 {
-    NSBitmapImageRep *sourceImageRep = [[NSBitmapImageRep alloc] initWithData:self];
+    NSBitmapImageRep *sourceImageRep = [NSBitmapImageRep imageRepWithData:self];
+    if (!sourceImageRep) {
+        return nil;
+    }
     NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepFrom:sourceImageRep
                                                   scaledToWidth:(NSInteger)width
                                                  scaledToHeight:(NSInteger)height
                                              usingInterpolation:NSImageInterpolationHigh];
+    if (!imageRep) {
+        return nil;
+    }
     unsigned char *pixels = [imageRep bitmapData];
     NSData *result = [NSData dataWithBytes:pixels
                                     length:width * height * 4];

@@ -23,6 +23,9 @@ static const OSHashDistanceType OSAHashDistanceThreshold = 10;
     NSAssert(imageData, @"Image data must not be null");
     NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:OSAHashImageWidthInPixels
                                                              andHeight:OSAhashImageHeightInPixels];
+    if (!pixels) {
+        return OSHashTypeError;
+    }
     OSHashType result = ahash_rgba_8_8([pixels bytes]);
     return result;
 }
