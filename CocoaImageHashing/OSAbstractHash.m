@@ -53,6 +53,9 @@
     NSAssert(rightHandImageData, @"Right hand image data must not be null");
     OSHashType leftHandImageDataHash = [self hashImageData:leftHandImageData];
     OSHashType rightHandImageDataHash = [self hashImageData:rightHandImageData];
+    if (leftHandImageDataHash == OSHashTypeError || rightHandImageDataHash == OSHashTypeError) {
+        return NO;
+    }
     OSHashDistanceType distance = [self hashDistance:leftHandImageDataHash
                                                   to:rightHandImageDataHash];
     return distance < distanceThreshold;
@@ -69,6 +72,13 @@
     OSHashType leftHandImageHash = [self hashImageData:leftHandImageData];
     OSHashType rightHandImageHash = [self hashImageData:rightHandImageData];
     OSHashType baseImageHash = [self hashImageData:baseImageData];
+    if (baseImageHash == OSHashTypeError) {
+        return NSOrderedSame;
+    } else if (leftHandImageHash == OSHashTypeError) {
+        return NSOrderedDescending;
+    } else if (rightHandImageHash == OSHashTypeError) {
+        return NSOrderedAscending;
+    }
     OSHashDistanceType distanceToLeftImageData = [self hashDistance:leftHandImageHash
                                                                  to:baseImageHash];
     OSHashDistanceType distanceToRightImageData = [self hashDistance:rightHandImageHash

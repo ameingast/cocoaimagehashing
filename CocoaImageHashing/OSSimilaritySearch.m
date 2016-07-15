@@ -6,9 +6,9 @@
 //  Copyright © 2015 Andreas Meingast. All rights reserved.
 //
 
-#import "OSSimilaritySearch.h"
 #import "OSCategories.h"
 #import "OSImageHashing.h"
+#import "OSSimilaritySearch.h"
 
 @implementation OSSimilaritySearch
 
@@ -46,15 +46,17 @@
           NSData *imageData = inputTuple.second;
           OSHashType hashResult = [[OSImageHashing sharedInstance] hashImageData:imageData
                                                                   withProviderId:imageHashingProviderId];
-          inputTuple.first = nil;
-          inputTuple.second = nil;
-          inputTuple = nil;
-          OSHashResultTuple<NSString *> *resultTuple = [OSHashResultTuple new];
-          resultTuple.first = identifier;
-          resultTuple.hashResult = hashResult;
-          @synchronized(fingerPrintedTuples)
-          {
-              [fingerPrintedTuples addObject:resultTuple];
+          if (hashResult != OSHashTypeError) {
+              inputTuple.first = nil;
+              inputTuple.second = nil;
+              inputTuple = nil;
+              OSHashResultTuple<NSString *> *resultTuple = [OSHashResultTuple new];
+              resultTuple.first = identifier;
+              resultTuple.hashResult = hashResult;
+              @synchronized(fingerPrintedTuples)
+              {
+                  [fingerPrintedTuples addObject:resultTuple];
+              }
           }
           dispatch_semaphore_signal(hashingSemaphore);
         });
@@ -64,13 +66,17 @@
       OSHashDistanceType hashDistance = [[OSImageHashing sharedInstance] hashDistance:leftHandTuple.hashResult
                                                                                    to:rightHandTuple.hashResult
                                                                        withProviderId:imageHashingProviderId];
+      if (hashDistance == OSHashTypeError) {
+          return NO;
+      }
       BOOL result = hashDistance <= hashDistanceThreshold;
       return result;
-    } withResultHandler:^(OSHashResultTuple *leftHandTuple, OSHashResultTuple *rightHandTuple) {
-      OSImageId *leftHandImageId = leftHandTuple.first;
-      OSImageId *rightHandImageId = rightHandTuple.first;
-      resultHandler(leftHandImageId, rightHandImageId);
-    }];
+    }
+        withResultHandler:^(OSHashResultTuple *leftHandTuple, OSHashResultTuple *rightHandTuple) {
+          OSImageId *leftHandImageId = leftHandTuple.first;
+          OSImageId *rightHandImageId = rightHandTuple.first;
+          resultHandler(leftHandImageId, rightHandImageId);
+        }];
 }
 
 - (NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
@@ -99,7 +105,7 @@
     NSArray<OSTuple<OSImageId *, OSImageId *> *> *result = [self
         similarImagesWithProvider:imageHashingProviderId
         withHashDistanceThreshold:hashDistanceThreshold
-            forImageStreamHandler:^OSTuple<OSImageId *, NSData *> *{
+            forImageStreamHandler:^OSTuple<OSImageId *, NSData *> * {
               if (i >= [imageTuples count]) {
                   return nil;
               }
