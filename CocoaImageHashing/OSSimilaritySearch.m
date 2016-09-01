@@ -49,12 +49,14 @@
           inputTuple.first = nil;
           inputTuple.second = nil;
           inputTuple = nil;
-          OSHashResultTuple<NSString *> *resultTuple = [OSHashResultTuple new];
-          resultTuple.first = identifier;
-          resultTuple.hashResult = hashResult;
-          @synchronized(fingerPrintedTuples)
-          {
-              [fingerPrintedTuples addObject:resultTuple];
+          if (hashResult != OSHashTypeError) {
+              OSHashResultTuple<NSString *> *resultTuple = [OSHashResultTuple new];
+              resultTuple.first = identifier;
+              resultTuple.hashResult = hashResult;
+              @synchronized(fingerPrintedTuples)
+              {
+                  [fingerPrintedTuples addObject:resultTuple];
+              }
           }
           dispatch_semaphore_signal(hashingSemaphore);
         });
