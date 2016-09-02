@@ -11,7 +11,7 @@
 #import "OSPHash.h"
 
 static const NSUInteger OSPHashImageWidthInPixels = 32;
-static const NSUInteger OSPhashImageHeightInPixels = 32;
+static const NSUInteger OSPHashImageHeightInPixels = 32;
 static const OSHashDistanceType OSPHashDistanceThreshold = 10;
 
 @implementation OSPHash
@@ -22,12 +22,12 @@ static const OSHashDistanceType OSPHashDistanceThreshold = 10;
 {
     NSAssert(imageData, @"Image data must not be null");
     NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:OSPHashImageWidthInPixels
-                                                             andHeight:OSPhashImageHeightInPixels];
+                                                             andHeight:OSPHashImageHeightInPixels];
     if (!pixels) {
         return OSHashTypeError;
     }
-    double greyscalePixels[OSPHashImageWidthInPixels][OSPhashImageHeightInPixels] = {{0.0}};
-    double dctPixels[OSPHashImageWidthInPixels][OSPhashImageHeightInPixels] = {{0.0}};
+    double greyscalePixels[OSPHashImageWidthInPixels][OSPHashImageHeightInPixels] = {{0.0}};
+    double dctPixels[OSPHashImageWidthInPixels][OSPHashImageHeightInPixels] = {{0.0}};
     greyscale_pixels_rgba_32_32([pixels bytes], greyscalePixels);
     fast_dct_rgba_32_32(greyscalePixels, dctPixels);
     double dctAverage = fast_avg_no_first_el_rgba_8_8(dctPixels);

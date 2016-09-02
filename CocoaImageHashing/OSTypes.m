@@ -80,7 +80,7 @@ inline NSString *NSStringFromOSImageHashingProviderId(OSImageHashingProviderId p
         case OSImageHashingProviderDHash:
             return @"dHash";
         case OSImageHashingProviderPHash:
-            return @"phash";
+            return @"pHash";
     }
     return nil;
 }
