@@ -103,7 +103,7 @@
     }
     unsigned char *pixels = [imageRep bitmapData];
     NSData *result = [NSData dataWithBytes:pixels
-                                    length:width * height * 4];
+                                    length:OS_ALIGN(4 * width, 64) * height];
     return result;
 }
 
@@ -130,7 +130,7 @@
                                                                            hasAlpha:YES
                                                                            isPlanar:NO
                                                                      colorSpaceName:NSCalibratedRGBColorSpace
-                                                                        bytesPerRow:0
+                                                                        bytesPerRow:OS_ALIGN(4 * width, 64) // multiple of 64 bytes to improve CG performance
                                                                        bitsPerPixel:0];
     [NSGraphicsContext saveGraphicsState];
     NSGraphicsContext *context = [NSGraphicsContext graphicsContextWithBitmapImageRep:imageRep];

@@ -203,6 +203,7 @@ NS_ASSUME_NONNULL_END
 
 #define OS_MARK_UNUSED_STRINGIFY(x) #x
 #define OS_MARK_UNUSED(x) _Pragma(OS_MARK_UNUSED_STRINGIFY(unused(x)))
+#define OS_ALIGN(x, multiple) ({ __typeof__(x) m = (multiple) - 1; ((x) + m) & ~m; })
 
 #pragma mark - Non-null Check Helpers
 

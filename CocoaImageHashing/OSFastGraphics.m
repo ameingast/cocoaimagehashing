@@ -522,7 +522,7 @@ inline OSHashType ahash_rgba_8_8(const unsigned char *pixels)
     INLINE_DHASH(row, 5);   \
     INLINE_DHASH(row, 6);   \
     INLINE_DHASH(row, 7);   \
-    pixels += 4; /*skip last column*/
+    pixels += 32; /*skip last column + padding*/
 
 #define UNROLL_DHASH_X() \
     UNROLL_DHASH_Y(0);   \
