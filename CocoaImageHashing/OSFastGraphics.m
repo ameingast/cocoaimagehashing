@@ -544,7 +544,7 @@ inline OSHashType dhash_rgba_9_9(const unsigned char *pixels)
 }
 
 #undef UNROLL_DHASH_X
-#undef CHECL_ROW_DHASH
+#undef UNROLL_DHASH_Y
 #undef INLINE_DHASH
 
 #undef GREYSCALE
