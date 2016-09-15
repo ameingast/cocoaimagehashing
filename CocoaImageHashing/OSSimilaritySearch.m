@@ -27,7 +27,7 @@
 - (void)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
         withHashDistanceThreshold:(OSHashDistanceType)hashDistanceThreshold
             forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)())imageStreamHandler
-                 forResultHandler:(void (^)(OSImageId *leftHandImageId, OSImageId *rightHandImageId))resultHandler
+                 forResultHandler:(void (^)(OSImageId * __unsafe_unretained leftHandImageId, OSImageId * __unsafe_unretained rightHandImageId))resultHandler
 {
     NSAssert(imageStreamHandler, @"Image stream handler must not be nil");
     NSAssert(resultHandler, @"Result handler must not be nil");
@@ -65,7 +65,7 @@
         });
     }
     dispatch_group_wait(hashingDispatchGroup, DISPATCH_TIME_FOREVER);
-    [fingerPrintedTuples arrayWithPairCombinations:^BOOL(OSHashResultTuple *leftHandTuple, OSHashResultTuple *rightHandTuple) {
+    [fingerPrintedTuples arrayWithPairCombinations:^BOOL(OSHashResultTuple * __unsafe_unretained leftHandTuple, OSHashResultTuple * __unsafe_unretained rightHandTuple) {
       OSHashDistanceType hashDistance = [hashingProvider hashDistance:leftHandTuple.hashResult
                                                                    to:rightHandTuple.hashResult];
       if (hashDistance == OSHashTypeError) {
@@ -74,7 +74,7 @@
       BOOL result = hashDistance <= hashDistanceThreshold;
       return result;
     }
-        withResultHandler:^(OSHashResultTuple *leftHandTuple, OSHashResultTuple *rightHandTuple) {
+        withResultHandler:^(OSHashResultTuple *  __unsafe_unretained leftHandTuple, OSHashResultTuple *  __unsafe_unretained rightHandTuple) {
           OSImageId *leftHandImageId = leftHandTuple.first;
           OSImageId *rightHandImageId = rightHandTuple.first;
           resultHandler(leftHandImageId, rightHandImageId);
@@ -90,7 +90,7 @@
     [self similarImagesWithProvider:imageHashingProviderId
           withHashDistanceThreshold:hashDistanceThreshold
               forImageStreamHandler:imageStreamHandler
-                   forResultHandler:^(OSImageId *leftHandImageId, OSImageId *rightHandImageId) {
+                   forResultHandler:^(OSImageId * __unsafe_unretained leftHandImageId, OSImageId * __unsafe_unretained rightHandImageId) {
                      OSTuple<OSImageId *, OSImageId *> *tuple = [OSTuple tupleWithFirst:leftHandImageId
                                                                               andSecond:rightHandImageId];
                      [tuples addObject:tuple];

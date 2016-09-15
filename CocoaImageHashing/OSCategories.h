@@ -32,10 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations;
 
-- (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations:(BOOL (^)(id leftHand, id rightHand))matcher;
+- (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations:(BOOL (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))matcher;
 
-- (void)arrayWithPairCombinations:(BOOL (^)(id leftHand, id rightHand))matcher
-                withResultHandler:(void (^)(id leftHand, id rightHand))resultHandler;
+- (void)arrayWithPairCombinations:(BOOL (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))matcher
+                withResultHandler:(void (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))resultHandler;
 
 NS_ASSUME_NONNULL_END
 

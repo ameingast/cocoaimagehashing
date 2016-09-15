@@ -15,7 +15,7 @@
 
 - (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations
 {
-    NSArray<OSTuple<id, id> *> *result = [self arrayWithPairCombinations:^BOOL(id leftHand, id rightHand) {
+    NSArray<OSTuple<id, id> *> *result = [self arrayWithPairCombinations:^BOOL(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand) {
       OS_MARK_UNUSED(leftHand);
       OS_MARK_UNUSED(rightHand);
       return YES;
@@ -23,11 +23,11 @@
     return result;
 }
 
-- (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations:(BOOL (^)(id leftHand, id rightHand))matcher
+- (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations:(BOOL (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))matcher
 {
     NSMutableArray<OSTuple<id, id> *> *pairs = [NSMutableArray new];
     [self arrayWithPairCombinations:matcher
-                  withResultHandler:^(id leftHand, id rightHand) {
+                  withResultHandler:^(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand) {
                     OSTuple<id, id> *tuple = [OSTuple tupleWithFirst:leftHand
                                                            andSecond:rightHand];
                     [pairs addObject:tuple];
@@ -35,8 +35,8 @@
     return pairs;
 }
 
-- (void)arrayWithPairCombinations:(BOOL (^)(id leftHand, id rightHand))matcher
-                withResultHandler:(void (^)(id leftHand, id rightHand))resultHandler
+- (void)arrayWithPairCombinations:(BOOL (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))matcher
+                withResultHandler:(void (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))resultHandler
 {
     for (NSUInteger i = 0; i < [self count] - 1; i++) {
         for (NSUInteger j = i + 1; j < [self count]; j++) {

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
         withHashDistanceThreshold:(OSHashDistanceType)hashDistanceThreshold
             forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)())imageStreamHandler
-                 forResultHandler:(void (^)(OSImageId *leftHandImageId, OSImageId *rightHandImageId))resultHandler;
+                 forResultHandler:(void (^)(OSImageId * __unsafe_unretained leftHandImageId, OSImageId * __unsafe_unretained rightHandImageId))resultHandler;
 
 - (NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
                                                   withHashDistanceThreshold:(OSHashDistanceType)hashDistanceThreshold
