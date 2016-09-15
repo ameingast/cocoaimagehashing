@@ -38,11 +38,14 @@
 - (void)arrayWithPairCombinations:(BOOL (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))matcher
                 withResultHandler:(void (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))resultHandler
 {
-    for (NSUInteger i = 0; i < [self count] - 1; i++) {
-        for (NSUInteger j = i + 1; j < [self count]; j++) {
-            BOOL result = matcher(self[i], self[j]);
+    NSUInteger count = [self count];
+    for (NSUInteger i = 0; i < count - 1; i++) {
+        id __unsafe_unretained left = self[i];
+        for (NSUInteger j = i + 1; j < count; j++) {
+            id __unsafe_unretained right = self[j];
+            BOOL result = matcher(left, right);
             if (result) {
-                resultHandler(self[i], self[j]);
+                resultHandler(left, right);
             }
         }
     }
