@@ -39,6 +39,7 @@
     if (!hashingProvider) {
         return;
     }
+    OSSpinLock volatile __block lock = OS_SPINLOCK_INIT;
     for (;;) {
         OSTuple<NSString *, NSData *> __block *inputTuple = imageStreamHandler();
         if (!inputTuple) {
@@ -56,10 +57,9 @@
               OSHashResultTuple<NSString *> *resultTuple = [OSHashResultTuple new];
               resultTuple.first = identifier;
               resultTuple.hashResult = hashResult;
-              @synchronized(fingerPrintedTuples)
-              {
-                  [fingerPrintedTuples addObject:resultTuple];
-              }
+              OSSpinLockLock(&lock);
+              [fingerPrintedTuples addObject:resultTuple];
+              OSSpinLockUnlock(&lock);
           }
           dispatch_semaphore_signal(hashingSemaphore);
         });
