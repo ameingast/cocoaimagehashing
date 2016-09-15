@@ -19,7 +19,7 @@
  * 4. concurrent stream based similarity search
  * 5. sequential array sorting based on fingerprint metrics
  */
-@interface OSImageHashing <__covariant A> : NSObject <OSImageHashingProvider>
+@interface OSImageHashing : NSObject <OSImageHashingProvider>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -162,24 +162,24 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Sort a generic NSArray with a sort-order defined by the array's content-images distance to a base image.
  */
-- (NSArray<A> *)sortedArrayUsingImageSimilartyComparator:(NSData *)baseImage
-                                                forArray:(NSArray<A> *)array
-                                       forImageConverter:(NSData * (^)(A arrayElement))imageConverter;
+- (NSArray<id> *)sortedArrayUsingImageSimilartyComparator:(NSData *)baseImage
+                                                forArray:(NSArray<id> *)array
+                                       forImageConverter:(NSData * (^)(id arrayElement))imageConverter;
 /*
  * @see -[OSImageHashing sortedArrayUsingImageSimilartyComparator:::];
  */
-- (NSArray<A> *)sortedArrayUsingImageSimilartyComparator:(NSData *)baseImage
-                                                forArray:(NSArray<A> *)array
+- (NSArray<id> *)sortedArrayUsingImageSimilartyComparator:(NSData *)baseImage
+                                                forArray:(NSArray<id> *)array
                                forImageHashingProviderId:(OSImageHashingProviderId)imageHashingProviderId
-                                       forImageConverter:(NSData * (^)(A arrayElement))imageConverter;
+                                       forImageConverter:(NSData * (^)(id arrayElement))imageConverter;
 
 /*
  * @see -[OSImageHashing sortedArrayUsingImageSimilartyComparator:::];
  */
-- (NSArray<A> *)sortedArrayUsingImageSimilartyComparator:(NSData *)baseImage
-                                                forArray:(NSArray<A> *)array
+- (NSArray<id> *)sortedArrayUsingImageSimilartyComparator:(NSData *)baseImage
+                                                forArray:(NSArray<id> *)array
                                   forImageHashingQuality:(OSImageHashingQuality)imageHashingQuality
-                                       forImageConverter:(NSData * (^)(A arrayElement))imageConverter;
+                                       forImageConverter:(NSData * (^)(id arrayElement))imageConverter;
 
 #pragma mark - Array sorting with image similarity metrics for NSData NSArrays
 

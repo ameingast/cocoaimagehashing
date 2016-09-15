@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,9 +16,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CAC724271BD7C81000B78B0C"
+               BlueprintIdentifier = "CADF6BBB1BC8EF9A0039E5A8"
                BuildableName = "CocoaImageHashingTests.xctest"
-               BlueprintName = "CocoaImageHashingTests (iOS)"
+               BlueprintName = "CocoaImageHashingTests (OS X)"
                ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
             </BuildableReference>
          </TestableReference>
