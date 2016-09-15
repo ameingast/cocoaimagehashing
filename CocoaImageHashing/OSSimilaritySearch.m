@@ -35,6 +35,10 @@
     NSUInteger cpuCount = [[NSProcessInfo processInfo] processorCount];
     dispatch_semaphore_t hashingSemaphore = dispatch_semaphore_create((long)cpuCount);
     dispatch_group_t hashingDispatchGroup = dispatch_group_create();
+    id<OSImageHashingProvider> hashingProvider = OSImageHashingProviderFromImageHashingProviderId(imageHashingProviderId);
+    if (!hashingProvider) {
+        return;
+    }
     for (;;) {
         OSTuple<NSString *, NSData *> __block *inputTuple = imageStreamHandler();
         if (!inputTuple) {
@@ -44,8 +48,7 @@
         dispatch_group_async(hashingDispatchGroup, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
           NSString *identifier = inputTuple.first;
           NSData *imageData = inputTuple.second;
-          OSHashType hashResult = [[OSImageHashing sharedInstance] hashImageData:imageData
-                                                                  withProviderId:imageHashingProviderId];
+          OSHashType hashResult = [hashingProvider hashImageData:imageData];
           if (hashResult != OSHashTypeError) {
               inputTuple.first = nil;
               inputTuple.second = nil;
@@ -63,9 +66,8 @@
     }
     dispatch_group_wait(hashingDispatchGroup, DISPATCH_TIME_FOREVER);
     [fingerPrintedTuples arrayWithPairCombinations:^BOOL(OSHashResultTuple *leftHandTuple, OSHashResultTuple *rightHandTuple) {
-      OSHashDistanceType hashDistance = [[OSImageHashing sharedInstance] hashDistance:leftHandTuple.hashResult
-                                                                                   to:rightHandTuple.hashResult
-                                                                       withProviderId:imageHashingProviderId];
+      OSHashDistanceType hashDistance = [hashingProvider hashDistance:leftHandTuple.hashResult
+                                                                   to:rightHandTuple.hashResult];
       if (hashDistance == OSHashTypeError) {
           return NO;
       }
