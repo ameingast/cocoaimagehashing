@@ -94,6 +94,13 @@
 
 #pragma mark - Abstract methods
 
++ (instancetype)sharedInstance
+{
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Abstract method called."
+                                 userInfo:nil];
+}
+
 - (OSHashDistanceType)hashDistanceSimilarityThreshold
 {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException

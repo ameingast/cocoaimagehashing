@@ -37,9 +37,9 @@
 {
     [super setUp];
     self.bundle = [NSBundle bundleForClass:[self class]];
-    self.dHash = [OSDHash new];
-    self.aHash = [OSAHash new];
-    self.pHash = [OSPHash new];
+    self.dHash = [OSDHash sharedInstance];
+    self.aHash = [OSAHash sharedInstance];
+    self.pHash = [OSPHash sharedInstance];
 }
 
 #pragma mark - Fixture Generators

@@ -177,13 +177,13 @@ inline NSArray<id<OSImageHashingProvider>> *NSArrayForProvidersFromOSImageHashin
 {
     NSMutableArray<id<OSImageHashingProvider>> *providers = [NSMutableArray new];
     if ((imageHashingProviderId & OSImageHashingProviderDHash)) {
-        [providers addObject:[OSDHash new]];
+        [providers addObject:[OSDHash sharedInstance]];
     }
     if ((imageHashingProviderId & OSImageHashingProviderPHash)) {
-        [providers addObject:[OSPHash new]];
+        [providers addObject:[OSPHash sharedInstance]];
     }
     if ((imageHashingProviderId & OSImageHashingProviderAHash)) {
-        [providers addObject:[OSAHash new]];
+        [providers addObject:[OSAHash sharedInstance]];
     }
     return providers;
 }

@@ -89,6 +89,11 @@ extern const OSHashType OSHashTypeError;
 NS_ASSUME_NONNULL_BEGIN
 
 /**
+ * Returns a shared instance for the hashing provider.
+ */
++ (instancetype)sharedInstance;
+
+/**
  * Calculate the fingerprint/hash for a given image.
  *
  * The result is a 64-bit number. Returns OSHashTypeError if an error occurs during image processing.

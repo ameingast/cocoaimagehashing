@@ -18,6 +18,16 @@ static const OSHashDistanceType OSDHashDistanceThreshold = 9;
 
 #pragma mark - OSImageHashing Protocol
 
++ (instancetype)sharedInstance
+{
+    static id instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [self new];
+    });
+    return instance;
+}
+
 - (OSHashType)hashImageData:(NSData *)imageData
 {
     NSAssert(imageData, @"Image data must not be null");
