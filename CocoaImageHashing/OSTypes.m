@@ -179,11 +179,11 @@ inline NSArray<id<OSImageHashingProvider>> *NSArrayForProvidersFromOSImageHashin
     if ((imageHashingProviderId & OSImageHashingProviderDHash)) {
         [providers addObject:[OSDHash new]];
     }
-    if ((imageHashingProviderId & OSImageHashingProviderAHash)) {
-        [providers addObject:[OSAHash new]];
-    }
     if ((imageHashingProviderId & OSImageHashingProviderPHash)) {
         [providers addObject:[OSPHash new]];
+    }
+    if ((imageHashingProviderId & OSImageHashingProviderAHash)) {
+        [providers addObject:[OSAHash new]];
     }
     return providers;
 }
