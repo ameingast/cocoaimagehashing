@@ -39,16 +39,25 @@
                 withResultHandler:(void (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))resultHandler
 {
     NSUInteger count = [self count];
+    if (!count) {
+        return;
+    }
+    id __unsafe_unretained *objects = (id __unsafe_unretained *)malloc(sizeof(id) * count);
+    if (!objects) {
+        return;
+    }
+    [self getObjects:objects range:NSMakeRange(0, count)];
     for (NSUInteger i = 0; i < count - 1; i++) {
-        id __unsafe_unretained left = self[i];
+        id __unsafe_unretained left = objects[i];
         for (NSUInteger j = i + 1; j < count; j++) {
-            id __unsafe_unretained right = self[j];
+            id __unsafe_unretained right = objects[j];
             BOOL result = matcher(left, right);
             if (result) {
                 resultHandler(left, right);
             }
         }
     }
+    free(objects);
 }
 
 @end
