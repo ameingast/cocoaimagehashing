@@ -469,6 +469,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA31B4A81D8C3E0A00AEF251 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		CA462F7D1BD252930010EEBD /* OSSimilaritySearchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSimilaritySearchTests.m; sourceTree = "<group>"; };
 		CA46F8A41BD680CB0067D945 /* CocoaImageHashing.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = CocoaImageHashing.profdata; sourceTree = "<group>"; };
 		CA7413711BD0DE9600C816B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -708,6 +709,7 @@
 		CADF6BA81BC8EF9A0039E5A8 = {
 			isa = PBXGroup;
 			children = (
+				CA31B4A81D8C3E0A00AEF251 /* Playground.playground */,
 				CAC724231BD7C74B00B78B0C /* Frameworks */,
 				CADF6BB31BC8EF9A0039E5A8 /* Products */,
 				CADF6BCD1BC8EFB20039E5A8 /* Resources */,
