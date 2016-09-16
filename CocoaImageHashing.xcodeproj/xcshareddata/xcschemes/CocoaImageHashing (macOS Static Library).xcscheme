@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CA74137C1BD0E5D200C816B5"
                BuildableName = "libCocoaImageHashing.a"
-               BlueprintName = "CocoaImageHashing (OS X Static Library)"
+               BlueprintName = "CocoaImageHashing (macOS Static Library)"
                ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA74137C1BD0E5D200C816B5"
             BuildableName = "libCocoaImageHashing.a"
-            BlueprintName = "CocoaImageHashing (OS X Static Library)"
+            BlueprintName = "CocoaImageHashing (macOS Static Library)"
             ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA74137C1BD0E5D200C816B5"
             BuildableName = "libCocoaImageHashing.a"
-            BlueprintName = "CocoaImageHashing (OS X Static Library)"
+            BlueprintName = "CocoaImageHashing (macOS Static Library)"
             ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

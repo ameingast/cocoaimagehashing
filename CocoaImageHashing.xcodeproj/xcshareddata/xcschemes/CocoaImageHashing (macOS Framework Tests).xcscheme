@@ -18,7 +18,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CADF6BBB1BC8EF9A0039E5A8"
                BuildableName = "CocoaImageHashingTests.xctest"
-               BlueprintName = "CocoaImageHashingTests (OS X)"
+               BlueprintName = "CocoaImageHashingTests (macOS)"
                ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
             </BuildableReference>
          </TestableReference>

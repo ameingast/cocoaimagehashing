@@ -993,9 +993,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CA74137C1BD0E5D200C816B5 /* CocoaImageHashing (OS X Static Library) */ = {
+		CA74137C1BD0E5D200C816B5 /* CocoaImageHashing (macOS Static Library) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA7413831BD0E5D200C816B5 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (OS X Static Library)" */;
+			buildConfigurationList = CA7413831BD0E5D200C816B5 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (macOS Static Library)" */;
 			buildPhases = (
 				CA7413791BD0E5D200C816B5 /* Sources */,
 				CA74137A1BD0E5D200C816B5 /* Frameworks */,
@@ -1005,7 +1005,7 @@
 			);
 			dependencies = (
 			);
-			name = "CocoaImageHashing (OS X Static Library)";
+			name = "CocoaImageHashing (macOS Static Library)";
 			productName = "CocoaImageHashing (OS X Static Library)";
 			productReference = CA74137D1BD0E5D200C816B5 /* libCocoaImageHashing.a */;
 			productType = "com.apple.product-type.library.static";
@@ -1067,9 +1067,9 @@
 			productReference = CAC724281BD7C81000B78B0C /* CocoaImageHashingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CADF6BB11BC8EF9A0039E5A8 /* CocoaImageHashing (OS X Framework) */ = {
+		CADF6BB11BC8EF9A0039E5A8 /* CocoaImageHashing (macOS Framework) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CADF6BC61BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (OS X Framework)" */;
+			buildConfigurationList = CADF6BC61BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (macOS Framework)" */;
 			buildPhases = (
 				CADF6BAD1BC8EF9A0039E5A8 /* Sources */,
 				CADF6BAE1BC8EF9A0039E5A8 /* Frameworks */,
@@ -1080,14 +1080,14 @@
 			);
 			dependencies = (
 			);
-			name = "CocoaImageHashing (OS X Framework)";
+			name = "CocoaImageHashing (macOS Framework)";
 			productName = CocoaImageHashing;
 			productReference = CADF6BB21BC8EF9A0039E5A8 /* CocoaImageHashing.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CADF6BBB1BC8EF9A0039E5A8 /* CocoaImageHashingTests (OS X) */ = {
+		CADF6BBB1BC8EF9A0039E5A8 /* CocoaImageHashingTests (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CADF6BC91BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashingTests (OS X)" */;
+			buildConfigurationList = CADF6BC91BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashingTests (macOS)" */;
 			buildPhases = (
 				CADF6BB81BC8EF9A0039E5A8 /* Sources */,
 				CADF6BB91BC8EF9A0039E5A8 /* Frameworks */,
@@ -1101,7 +1101,7 @@
 			dependencies = (
 				CADF6BBF1BC8EF9A0039E5A8 /* PBXTargetDependency */,
 			);
-			name = "CocoaImageHashingTests (OS X)";
+			name = "CocoaImageHashingTests (macOS)";
 			productName = CocoaImageHashingTests;
 			productReference = CADF6BBC1BC8EF9A0039E5A8 /* CocoaImageHashingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1147,11 +1147,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CADF6BB11BC8EF9A0039E5A8 /* CocoaImageHashing (OS X Framework) */,
-				CA74137C1BD0E5D200C816B5 /* CocoaImageHashing (OS X Static Library) */,
+				CADF6BB11BC8EF9A0039E5A8 /* CocoaImageHashing (macOS Framework) */,
+				CA74137C1BD0E5D200C816B5 /* CocoaImageHashing (macOS Static Library) */,
 				CA7413BC1BD0E84300C816B5 /* CocoaImageHashing (iOS Framework) */,
 				CA74139C1BD0E7CF00C816B5 /* CocoaImageHashing (iOS Static Library) */,
-				CADF6BBB1BC8EF9A0039E5A8 /* CocoaImageHashingTests (OS X) */,
+				CADF6BBB1BC8EF9A0039E5A8 /* CocoaImageHashingTests (macOS) */,
 				CAC724271BD7C81000B78B0C /* CocoaImageHashingTests (iOS) */,
 			);
 		};
@@ -1292,7 +1292,7 @@
 		};
 		CADF6BBF1BC8EF9A0039E5A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CADF6BB11BC8EF9A0039E5A8 /* CocoaImageHashing (OS X Framework) */;
+			target = CADF6BB11BC8EF9A0039E5A8 /* CocoaImageHashing (macOS Framework) */;
 			targetProxy = CADF6BBE1BC8EF9A0039E5A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1623,7 +1623,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CA7413831BD0E5D200C816B5 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (OS X Static Library)" */ = {
+		CA7413831BD0E5D200C816B5 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (macOS Static Library)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA7413841BD0E5D200C816B5 /* Debug */,
@@ -1668,7 +1668,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CADF6BC61BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (OS X Framework)" */ = {
+		CADF6BC61BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashing (macOS Framework)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CADF6BC71BC8EF9A0039E5A8 /* Debug */,
@@ -1677,7 +1677,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CADF6BC91BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashingTests (OS X)" */ = {
+		CADF6BC91BC8EF9A0039E5A8 /* Build configuration list for PBXNativeTarget "CocoaImageHashingTests (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CADF6BCA1BC8EF9A0039E5A8 /* Debug */,
