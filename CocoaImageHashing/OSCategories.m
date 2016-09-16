@@ -15,31 +15,19 @@
 
 - (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations
 {
-    NSArray<OSTuple<id, id> *> *result = [self arrayWithPairCombinations:^BOOL(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand) {
-      OS_MARK_UNUSED(leftHand);
-      OS_MARK_UNUSED(rightHand);
-      return YES;
-    }];
-    return result;
-}
-
-- (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations:(BOOL (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))matcher
-{
     NSMutableArray<OSTuple<id, id> *> *pairs = [NSMutableArray new];
     OSSpinLock volatile __block lock = OS_SPINLOCK_INIT;
-    [self arrayWithPairCombinations:matcher
-                  withResultHandler:^(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand) {
-                    OSTuple<id, id> *tuple = [OSTuple tupleWithFirst:leftHand
-                                                           andSecond:rightHand];
-                    OSSpinLockLock(&lock);
-                    [pairs addObject:tuple];
-                    OSSpinLockUnlock(&lock);
-                  }];
+    [self enumeratePairCombinationsUsingBlock:^(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand) {
+      OSTuple<id, id> *tuple = [OSTuple tupleWithFirst:leftHand
+                                             andSecond:rightHand];
+      OSSpinLockLock(&lock);
+      [pairs addObject:tuple];
+      OSSpinLockUnlock(&lock);
+    }];
     return pairs;
 }
 
-- (void)arrayWithPairCombinations:(BOOL (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))matcher
-                withResultHandler:(void (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))resultHandler
+- (void)enumeratePairCombinationsUsingBlock:(void (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))block
 {
     NSUInteger count = [self count];
     if (!count) {
@@ -54,10 +42,7 @@
         id __unsafe_unretained left = objects[i];
         for (NSUInteger j = i + 1; j < count; j++) {
             id __unsafe_unretained right = objects[j];
-            BOOL result = matcher(left, right);
-            if (result) {
-                resultHandler(left, right);
-            }
+            block(left, right);
         }
     });
     free(objects);

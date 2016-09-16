@@ -65,20 +65,13 @@
         });
     }
     dispatch_group_wait(hashingDispatchGroup, DISPATCH_TIME_FOREVER);
-    [fingerPrintedTuples arrayWithPairCombinations:^BOOL(OSHashResultTuple * __unsafe_unretained leftHandTuple, OSHashResultTuple * __unsafe_unretained rightHandTuple) {
-      OSHashDistanceType hashDistance = [hashingProvider hashDistance:leftHandTuple.hashResult
-                                                                   to:rightHandTuple.hashResult];
-      if (hashDistance == OSHashTypeError) {
-          return NO;
-      }
-      BOOL result = hashDistance <= hashDistanceThreshold;
-      return result;
-    }
-        withResultHandler:^(OSHashResultTuple *  __unsafe_unretained leftHandTuple, OSHashResultTuple *  __unsafe_unretained rightHandTuple) {
-          OSImageId *leftHandImageId = leftHandTuple.first;
-          OSImageId *rightHandImageId = rightHandTuple.first;
-          resultHandler(leftHandImageId, rightHandImageId);
-        }];
+    [fingerPrintedTuples enumeratePairCombinationsUsingBlock:^(OSHashResultTuple * __unsafe_unretained leftHandTuple, OSHashResultTuple * __unsafe_unretained rightHandTuple) {
+        OSHashDistanceType hashDistance = [hashingProvider hashDistance:leftHandTuple.hashResult
+                                                                     to:rightHandTuple.hashResult];
+        if (hashDistance <= hashDistanceThreshold && hashDistance != OSHashTypeError) {
+            resultHandler(leftHandTuple.first, rightHandTuple.first);
+        }
+    }];
 }
 
 - (NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
