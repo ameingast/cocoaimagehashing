@@ -87,13 +87,16 @@
 {
     NSAssert(imageStreamHandler, @"Image stream handler must not be nil");
     NSMutableArray<OSTuple<NSString *, NSString *> *> *tuples = [NSMutableArray new];
+    OSSpinLock volatile __block lock = OS_SPINLOCK_INIT;
     [self similarImagesWithProvider:imageHashingProviderId
           withHashDistanceThreshold:hashDistanceThreshold
               forImageStreamHandler:imageStreamHandler
                    forResultHandler:^(OSImageId * __unsafe_unretained leftHandImageId, OSImageId * __unsafe_unretained rightHandImageId) {
                      OSTuple<OSImageId *, OSImageId *> *tuple = [OSTuple tupleWithFirst:leftHandImageId
                                                                               andSecond:rightHandImageId];
+                     OSSpinLockLock(&lock);
                      [tuples addObject:tuple];
+                     OSSpinLockUnlock(&lock);
                    }];
     return tuples;
 }

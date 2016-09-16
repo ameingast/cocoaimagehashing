@@ -26,11 +26,14 @@
 - (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations:(BOOL (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))matcher
 {
     NSMutableArray<OSTuple<id, id> *> *pairs = [NSMutableArray new];
+    OSSpinLock volatile __block lock = OS_SPINLOCK_INIT;
     [self arrayWithPairCombinations:matcher
                   withResultHandler:^(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand) {
                     OSTuple<id, id> *tuple = [OSTuple tupleWithFirst:leftHand
                                                            andSecond:rightHand];
+                    OSSpinLockLock(&lock);
                     [pairs addObject:tuple];
+                    OSSpinLockUnlock(&lock);
                   }];
     return pairs;
 }
@@ -47,7 +50,7 @@
         return;
     }
     [self getObjects:objects range:NSMakeRange(0, count)];
-    for (NSUInteger i = 0; i < count - 1; i++) {
+    dispatch_apply(count - 1, dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^(size_t i) {
         id __unsafe_unretained left = objects[i];
         for (NSUInteger j = i + 1; j < count; j++) {
             id __unsafe_unretained right = objects[j];
@@ -56,7 +59,7 @@
                 resultHandler(left, right);
             }
         }
-    }
+    });
     free(objects);
 }
 
