@@ -22,7 +22,7 @@ const OSHashType OSHashTypeError = -1;
 + (nonnull instancetype)tupleWithFirst:(nullable id)first
                              andSecond:(nullable id)second
 {
-    id this = [[self class] alloc];
+    id this = [self alloc];
     return [this initWithFirst:first
                      andSecond:second];
 }
@@ -80,7 +80,7 @@ inline NSString *NSStringFromOSImageHashingProviderId(OSImageHashingProviderId p
         case OSImageHashingProviderDHash:
             return @"dHash";
         case OSImageHashingProviderPHash:
-            return @"phash";
+            return @"pHash";
     }
     return nil;
 }

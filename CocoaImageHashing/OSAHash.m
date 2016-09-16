@@ -11,7 +11,7 @@
 #import "OSFastGraphics.h"
 
 static const NSUInteger OSAHashImageWidthInPixels = 8;
-static const NSUInteger OSAhashImageHeightInPixels = 8;
+static const NSUInteger OSAHashImageHeightInPixels = 8;
 static const OSHashDistanceType OSAHashDistanceThreshold = 10;
 
 @implementation OSAHash
@@ -22,7 +22,7 @@ static const OSHashDistanceType OSAHashDistanceThreshold = 10;
 {
     NSAssert(imageData, @"Image data must not be null");
     NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:OSAHashImageWidthInPixels
-                                                             andHeight:OSAhashImageHeightInPixels];
+                                                             andHeight:OSAHashImageHeightInPixels];
     if (!pixels) {
         return OSHashTypeError;
     }

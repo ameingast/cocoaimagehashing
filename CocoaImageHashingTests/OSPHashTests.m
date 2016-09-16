@@ -35,7 +35,7 @@
           withImageHashingProviderId:OSImageHashingProviderPHash];
 }
 
-- (void)testImageSimilarityOnPhash
+- (void)testImageSimilarityOnPHash
 {
     NSArray<NSArray<OSDataHolder *> *> *dataSet = [self similarImages];
     NSUInteger baseCount = [dataSet count];
@@ -65,7 +65,7 @@
     }
 }
 
-- (void)testpHashMultithreadedHashingPerformance
+- (void)testPHashMultithreadedHashingPerformance
 {
     const NSUInteger iterations = 1024 * 2;
     unsigned long long filesize = [@"blurred/architecture1.bmp" fileSizeOfElementInBundle:[self bundle]];

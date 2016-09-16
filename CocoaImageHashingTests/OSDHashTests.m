@@ -67,7 +67,7 @@
     }];
 }
 
-- (void)testdHashMultithreadedHashingPerformance
+- (void)testDHashMultithreadedHashingPerformance
 {
     const NSUInteger iterations = 1024 * 8;
     unsigned long long filesize = [@"blurred/architecture1.bmp" fileSizeOfElementInBundle:[self bundle]];
