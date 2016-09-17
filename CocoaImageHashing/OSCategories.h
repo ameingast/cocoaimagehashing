@@ -6,17 +6,17 @@
 //  Copyright © 2015 Andreas Meingast. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #endif
 
 #if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 #endif
 

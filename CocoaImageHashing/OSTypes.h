@@ -6,7 +6,7 @@
 //  Copyright © 2015 Andreas Meingast. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #pragma mark - Cross Platform Type Aliases
 
@@ -48,6 +48,7 @@ typedef NS_OPTIONS(UInt16, OSImageHashingProviderId) {
     OSImageHashingProviderAHash = 1 << 0,
     OSImageHashingProviderDHash = 1 << 1,
     OSImageHashingProviderPHash = 1 << 2,
+    OSImageHashingProviderNone = 0
 };
 
 /**
@@ -61,6 +62,7 @@ typedef NS_ENUM(UInt16, OSImageHashingQuality) {
     OSImageHashingQualityLow,
     OSImageHashingQualityMedium,
     OSImageHashingQualityHigh,
+    OSImageHashingQualityNone
 };
 
 #pragma mark - Error Values

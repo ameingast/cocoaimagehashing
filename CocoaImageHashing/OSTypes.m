@@ -19,6 +19,9 @@ const OSHashType OSHashTypeError = -1;
 
 @implementation OSTuple
 
+@synthesize first = _first;
+@synthesize second = _second;
+
 + (nonnull instancetype)tupleWithFirst:(nullable id)first
                              andSecond:(nullable id)second
 {
@@ -49,6 +52,9 @@ const OSHashType OSHashTypeError = -1;
 
 @implementation OSHashResultTuple
 
+@synthesize first = _first;
+@synthesize hashResult = _hashResult;
+
 @end
 
 #pragma mark - Primitive Type Functions and Utilities
@@ -68,7 +74,7 @@ inline OSImageHashingProviderId OSImageHashingProviderIdFromString(NSString *nam
     } else if ([name isEqualToString:@"pHash"]) {
         return OSImageHashingProviderPHash;
     } else {
-        return UINT16_MAX;
+        return OSImageHashingProviderNone;
     }
 }
 
@@ -81,6 +87,8 @@ inline NSString *NSStringFromOSImageHashingProviderId(OSImageHashingProviderId p
             return @"dHash";
         case OSImageHashingProviderPHash:
             return @"pHash";
+        case OSImageHashingProviderNone:
+            return @"None";
     }
     return nil;
 }
@@ -111,7 +119,7 @@ inline OSImageHashingQuality OSImageHashingQualityFromString(NSString *name)
     } else if ([name isEqualToString:@"High"]) {
         return OSImageHashingQualityHigh;
     } else {
-        return UINT16_MAX;
+        return OSImageHashingQualityNone;
     }
 }
 
@@ -124,6 +132,8 @@ inline NSString *NSStringFromOSImageHashingQuality(OSImageHashingQuality hashing
             return @"Medium";
         case OSImageHashingQualityHigh:
             return @"High";
+        case OSImageHashingQualityNone:
+            return @"None";
     }
     return nil;
 }
@@ -149,9 +159,10 @@ inline OSImageHashingProviderId OSImageHashingProviderIdForHashingQuality(OSImag
     switch (hashingQuality) {
         case OSImageHashingQualityLow:
         case OSImageHashingQualityMedium:
-            return OSImageHashingProviderDHash;
         case OSImageHashingQualityHigh:
-            return (OSImageHashingProviderDHash | OSImageHashingProviderPHash);
+            return OSImageHashingProviderDHash;
+        case OSImageHashingQualityNone:
+            return OSImageHashingProviderNone;
     }
 }
 

@@ -6,7 +6,7 @@
 //  Copyright © 2015 Andreas Meingast. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 #import "OSImageHashing.h"
 #import "OSCategories.h"

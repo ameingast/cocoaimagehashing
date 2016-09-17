@@ -109,7 +109,7 @@
               if (i >= [imageTuples count]) {
                   return nil;
               }
-              OSTuple<OSImageId *, NSData *> *tuple = imageTuples[i];
+              OSTuple<OSImageId *, NSData *> *tuple = [imageTuples objectAtIndex:i];
               i++;
               return tuple;
             }];

@@ -28,7 +28,7 @@
 - (void)testImageDiversityOnPublicInterface
 {
     NSArray<OSTuple<OSDataHolder *, OSDataHolder *> *> *dataSet = [self diverseImages];
-    NSLog(@"Testing %@  combinations", @([dataSet count]));
+    NSLog(@"Testing %@ combinations", @([dataSet count]));
     NSOperationQueue *operationQueue = [NSOperationQueue new];
     operationQueue.maxConcurrentOperationCount = (NSInteger)[[NSProcessInfo processInfo] processorCount] * 2;
     for (OSTuple<OSDataHolder *, OSDataHolder *> *pair in dataSet) {

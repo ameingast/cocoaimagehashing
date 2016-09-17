@@ -6,7 +6,7 @@
 //  Copyright © 2015 Andreas Meingast. All rights reserved.
 //
 
-#import "OSTypes.h"
+#import <CocoaImageHashing/OSTypes.h>
 
 /**
  * The OSImageHashing class is the primary way to interact with the CocoaImageHashing framework.

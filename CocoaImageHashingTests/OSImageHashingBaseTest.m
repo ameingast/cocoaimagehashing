@@ -10,6 +10,9 @@
 
 @implementation OSDataHolder
 
+@synthesize data = _data;
+@synthesize name = _name;
+
 + (OSDataHolder *)holderWithData:(NSData *)data
                          andName:(NSString *)name
 {
@@ -22,6 +25,11 @@
 @end
 
 @implementation OSImageHashingBaseTest
+
+@synthesize bundle = _bundle;
+@synthesize aHash = _aHash;
+@synthesize dHash = _dHash;
+@synthesize pHash = _pHash;
 
 #pragma mark - XCTest
 
