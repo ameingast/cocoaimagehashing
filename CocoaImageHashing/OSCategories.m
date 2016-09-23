@@ -68,10 +68,10 @@
         return nil;
     }
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    NSMutableData *data = [NSMutableData dataWithLength:height * width * 4];
     NSUInteger bytesPerPixel = 4;
-    NSUInteger bytesPerRow = bytesPerPixel * width;
+    NSUInteger bytesPerRow = OS_ALIGN(width * bytesPerPixel, 64);
     NSUInteger bitsPerComponent = 8;
+    NSMutableData *data = [NSMutableData dataWithLength:height * bytesPerRow];
     CGContextRef context = CGBitmapContextCreate([data mutableBytes], width, height, bitsPerComponent, bytesPerRow, colorSpace,
                                                  kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
     CGColorSpaceRelease(colorSpace);
