@@ -9,6 +9,8 @@
 #import "OSCategories.h"
 #import "OSTypes.h"
 
+@import Darwin.libkern.OSAtomic;
+
 #pragma mark - NSArray Category
 
 @implementation NSArray (CocoaImageHashing)

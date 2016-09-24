@@ -10,6 +10,8 @@
 #import "OSImageHashing.h"
 #import "OSSimilaritySearch.h"
 
+@import Darwin.libkern.OSAtomic;
+
 @implementation OSSimilaritySearch
 
 + (instancetype)sharedInstance
