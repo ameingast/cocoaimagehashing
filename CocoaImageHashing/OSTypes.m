@@ -35,8 +35,8 @@ const OSHashType OSHashTypeError = -1;
 {
     self = [super init];
     if (self) {
-        self.first = first;
-        self.second = second;
+        _first = first;
+        _second = second;
     }
     return self;
 }
@@ -44,7 +44,7 @@ const OSHashType OSHashTypeError = -1;
 - (NSString *)description
 {
     NSString *result = [NSString stringWithFormat:@"<%@: %p, first: %@, second: %@>",
-                                                  NSStringFromClass([self class]), (__bridge void *)self, self.first, self.second];
+                                                  NSStringFromClass([self class]), (__bridge void *)self, _first, _second];
     return result;
 }
 

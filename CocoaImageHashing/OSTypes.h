@@ -155,7 +155,7 @@ NS_ASSUME_NONNULL_END
 /**
  * A fast, lockless, generic  2-tuple implementation.
  */
-@interface OSTuple <A, B> : NSObject
+@interface OSTuple<A, B> : NSObject
 
 @property (strong, nonatomic, nullable) A first;
 @property (strong, nonatomic, nullable) B second;
@@ -177,7 +177,7 @@ NS_ASSUME_NONNULL_END
 /**
  * A fast, lockless, specific 2-tuple implementation storing a generic first-value and a OSHAshType second-value.
  */
-@interface OSHashResultTuple <A> : NSObject
+@interface OSHashResultTuple<A> : NSObject
 
 @property (strong, nonatomic, nullable) A first;
 @property (nonatomic) OSHashType hashResult;

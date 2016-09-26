@@ -6,7 +6,7 @@
 //  Copyright © 2015 Andreas Meingast. All rights reserved.
 //
 
-#import "OSTypes.h"
+#import "OSTypes+Internal.h"
 
 @interface OSSimilaritySearch : NSObject
 

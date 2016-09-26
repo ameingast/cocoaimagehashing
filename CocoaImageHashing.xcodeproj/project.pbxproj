@@ -239,6 +239,10 @@
 		CAEA26681BD110C200380B76 /* OSSimilaritySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEA26621BD110C200380B76 /* OSSimilaritySearch.m */; };
 		CAEA26691BD110C200380B76 /* OSSimilaritySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEA26621BD110C200380B76 /* OSSimilaritySearch.m */; };
 		CAEA266A1BD110C200380B76 /* OSSimilaritySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEA26621BD110C200380B76 /* OSSimilaritySearch.m */; };
+		F7E65B401D99A614004A7B31 /* OSTypes+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E65B3F1D99A614004A7B31 /* OSTypes+Internal.h */; };
+		F7E65B411D99A614004A7B31 /* OSTypes+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E65B3F1D99A614004A7B31 /* OSTypes+Internal.h */; };
+		F7E65B421D99A614004A7B31 /* OSTypes+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E65B3F1D99A614004A7B31 /* OSTypes+Internal.h */; };
+		F7E65B431D99A614004A7B31 /* OSTypes+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E65B3F1D99A614004A7B31 /* OSTypes+Internal.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -579,6 +583,7 @@
 		CAE958EF1BCAD7D30061A909 /* OSCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSCategories.m; path = CocoaImageHashing/OSCategories.m; sourceTree = "<group>"; };
 		CAEA26611BD110C200380B76 /* OSSimilaritySearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSimilaritySearch.h; path = CocoaImageHashing/OSSimilaritySearch.h; sourceTree = "<group>"; };
 		CAEA26621BD110C200380B76 /* OSSimilaritySearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSSimilaritySearch.m; path = CocoaImageHashing/OSSimilaritySearch.m; sourceTree = "<group>"; };
+		F7E65B3F1D99A614004A7B31 /* OSTypes+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OSTypes+Internal.h"; path = "CocoaImageHashing/OSTypes+Internal.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -752,6 +757,7 @@
 				CADF6C641BC8F15A0039E5A8 /* OSImageHashing.h */,
 				CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */,
 				CA963C111BCFCBD500D74D22 /* OSTypes.h */,
+				F7E65B3F1D99A614004A7B31 /* OSTypes+Internal.h */,
 				CA963C131BCFCC6200D74D22 /* OSTypes.m */,
 			);
 			name = Source;
@@ -930,6 +936,7 @@
 				CA74138E1BD0E65100C816B5 /* OSAHash.h in Headers */,
 				CA74138F1BD0E65100C816B5 /* OSDHash.h in Headers */,
 				CAEA26641BD110C200380B76 /* OSSimilaritySearch.h in Headers */,
+				F7E65B411D99A614004A7B31 /* OSTypes+Internal.h in Headers */,
 				CA7413901BD0E65100C816B5 /* OSPHash.h in Headers */,
 				CA7413911BD0E65100C816B5 /* CocoaImageHashing.h in Headers */,
 				CA7413931BD0E65100C816B5 /* OSTypes.h in Headers */,
@@ -947,6 +954,7 @@
 				CA7413AF1BD0E81700C816B5 /* OSAHash.h in Headers */,
 				CA7413B01BD0E81700C816B5 /* OSDHash.h in Headers */,
 				CAEA26661BD110C200380B76 /* OSSimilaritySearch.h in Headers */,
+				F7E65B431D99A614004A7B31 /* OSTypes+Internal.h in Headers */,
 				CA7413B11BD0E81700C816B5 /* OSPHash.h in Headers */,
 				CA7413B21BD0E81700C816B5 /* CocoaImageHashing.h in Headers */,
 				CA7413B41BD0E81700C816B5 /* OSTypes.h in Headers */,
@@ -964,6 +972,7 @@
 				CA7413CD1BD0E88300C816B5 /* OSAHash.h in Headers */,
 				CA7413CE1BD0E88300C816B5 /* OSDHash.h in Headers */,
 				CAEA26651BD110C200380B76 /* OSSimilaritySearch.h in Headers */,
+				F7E65B421D99A614004A7B31 /* OSTypes+Internal.h in Headers */,
 				CA7413CF1BD0E88300C816B5 /* OSPHash.h in Headers */,
 				CA7413D01BD0E88300C816B5 /* CocoaImageHashing.h in Headers */,
 				CA7413D21BD0E88300C816B5 /* OSTypes.h in Headers */,
@@ -981,6 +990,7 @@
 				CA95045F1BCD9A1000305210 /* OSFastGraphics.h in Headers */,
 				CAE958F01BCAD7D30061A909 /* OSCategories.h in Headers */,
 				CAEA26631BD110C200380B76 /* OSSimilaritySearch.h in Headers */,
+				F7E65B401D99A614004A7B31 /* OSTypes+Internal.h in Headers */,
 				CADF6C701BC8F1E40039E5A8 /* OSPHash.h in Headers */,
 				CA963C121BCFCBD500D74D22 /* OSTypes.h in Headers */,
 				CADF6C661BC8F15A0039E5A8 /* OSImageHashing.h in Headers */,
@@ -1491,6 +1501,8 @@
 					"-Wall",
 					"-Weverything",
 					"-pedantic",
+					"-Wno-direct-ivar-access",
+					"-Wno-objc-interface-ivars",
 				);
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -1574,6 +1586,8 @@
 					"-Wall",
 					"-Weverything",
 					"-pedantic",
+					"-Wno-direct-ivar-access",
+					"-Wno-objc-interface-ivars",
 				);
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
