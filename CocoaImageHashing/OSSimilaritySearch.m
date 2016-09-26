@@ -45,14 +45,16 @@
         if (!inputTuple) {
             break;
         }
+        NSData * __unsafe_unretained imageData = inputTuple->_second;
+        if (!imageData) {
+            continue;
+        }
         dispatch_semaphore_wait(hashingSemaphore, DISPATCH_TIME_FOREVER);
         dispatch_group_async(hashingDispatchGroup, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-          NSString * __unsafe_unretained identifier = inputTuple->_first;
-          NSData * __unsafe_unretained imageData = inputTuple->_second;
           OSHashType hashResult = [hashingProvider hashImageData:imageData];
           if (hashResult != OSHashTypeError) {
               OSHashResultTuple<NSString *> *resultTuple = [OSHashResultTuple new];
-              resultTuple->_first = identifier;
+              resultTuple->_first = inputTuple->_first;
               resultTuple->_hashResult = hashResult;
               OSSpinLockLock(&lock);
               [fingerPrintedTuples addObject:resultTuple];
