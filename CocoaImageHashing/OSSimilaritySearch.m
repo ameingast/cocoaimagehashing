@@ -51,9 +51,6 @@
           NSData * __unsafe_unretained imageData = inputTuple->_second;
           OSHashType hashResult = [hashingProvider hashImageData:imageData];
           if (hashResult != OSHashTypeError) {
-              inputTuple.first = nil;
-              inputTuple.second = nil;
-              inputTuple = nil;
               OSHashResultTuple<NSString *> *resultTuple = [OSHashResultTuple new];
               resultTuple->_first = identifier;
               resultTuple->_hashResult = hashResult;
