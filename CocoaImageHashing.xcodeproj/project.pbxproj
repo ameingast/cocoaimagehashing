@@ -99,7 +99,7 @@
 		CA7413AC1BD0E7FB00C816B5 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA963C131BCFCC6200D74D22 /* OSTypes.m */; };
 		CA7413AD1BD0E7FB00C816B5 /* OSImageHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF6C731BC8F3820039E5A8 /* OSImageHashing.m */; };
 		CA7413AF1BD0E81700C816B5 /* OSAHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C691BC8F1DD0039E5A8 /* OSAHash.h */; };
-		CA7413B01BD0E81700C816B5 /* OSDHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C5F1BC8F0370039E5A8 /* OSDHash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7413B01BD0E81700C816B5 /* OSDHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C5F1BC8F0370039E5A8 /* OSDHash.h */; };
 		CA7413B11BD0E81700C816B5 /* OSPHash.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6C6E1BC8F1E40039E5A8 /* OSPHash.h */; };
 		CA7413B21BD0E81700C816B5 /* CocoaImageHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = CADF6BB51BC8EF9A0039E5A8 /* CocoaImageHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA7413B41BD0E81700C816B5 /* OSTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CA963C111BCFCBD500D74D22 /* OSTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
