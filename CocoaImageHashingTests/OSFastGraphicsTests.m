@@ -158,4 +158,22 @@
     NSLog(@"DCT processing %@ MB/s", @(MBs / executionTime));
 }
 
+- (void)testResizedRGBABitmapDataScanline
+{
+    NSData *imageData = [self loadImageAsData:@"misc/latrobe.bmp"];
+    for (NSUInteger dim = 8; dim <= 9; dim++) {
+        NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:dim
+                                                                 andHeight:dim];
+        uint64_t *lines = (uint64_t *)[pixels bytes];
+        NSUInteger length = [pixels length] / sizeof(lines);
+        for (NSUInteger i = 0; i < length; i += 8) {
+            XCTAssertNotEqual(lines[i], (uint64_t)0);
+            XCTAssertNotEqual(lines[i + 1], (uint64_t)0);
+            XCTAssertNotEqual(lines[i + 2], (uint64_t)0);
+            XCTAssertNotEqual(lines[i + 3], (uint64_t)0);
+            XCTAssertNotEqual(lines[i + 4], (uint64_t)0);
+        }
+    }
+}
+
 @end
