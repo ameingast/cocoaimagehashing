@@ -52,6 +52,11 @@
 
 #pragma mark - NSData Category
 
+OS_INLINE OS_ALWAYS_INLINE NSUInteger OSBytesPerRowForWidth(NSUInteger width)
+{
+    return (width == 8) ? 32 : OS_ALIGN(4 * width, 64);
+}
+
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
 @implementation NSData (CocoaImageHashing)
@@ -68,8 +73,7 @@
         return nil;
     }
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    NSUInteger bytesPerPixel = 4;
-    NSUInteger bytesPerRow = OS_ALIGN(width * bytesPerPixel, 64);
+    NSUInteger bytesPerRow = OSBytesPerRowForWidth(width);
     NSUInteger bitsPerComponent = 8;
     NSMutableData *data = [NSMutableData dataWithLength:height * bytesPerRow];
     CGContextRef context = CGBitmapContextCreate([data mutableBytes], width, height, bitsPerComponent, bytesPerRow, colorSpace,
@@ -95,15 +99,15 @@
         return nil;
     }
     NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepFrom:sourceImageRep
-                                                  scaledToWidth:(NSInteger)width
-                                                 scaledToHeight:(NSInteger)height
+                                                  scaledToWidth:width
+                                                 scaledToHeight:height
                                              usingInterpolation:NSImageInterpolationHigh];
     if (!imageRep) {
         return nil;
     }
     unsigned char *pixels = [imageRep bitmapData];
     NSData *result = [NSData dataWithBytes:pixels
-                                    length:OS_ALIGN(4 * width, 64) * height];
+                                    length:OSBytesPerRowForWidth(width) * height];
     return result;
 }
 
@@ -118,19 +122,19 @@
 @implementation NSBitmapImageRep (CocoaImageHashing)
 
 + (NSBitmapImageRep *)imageRepFrom:(NSBitmapImageRep *)sourceImageRep
-                     scaledToWidth:(NSInteger)width
-                    scaledToHeight:(NSInteger)height
+                     scaledToWidth:(NSUInteger)width
+                    scaledToHeight:(NSUInteger)height
                 usingInterpolation:(NSImageInterpolation)imageInterpolation
 {
     NSBitmapImageRep *imageRep = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:NULL
-                                                                         pixelsWide:width
-                                                                         pixelsHigh:height
+                                                                         pixelsWide:(NSInteger)width
+                                                                         pixelsHigh:(NSInteger)height
                                                                       bitsPerSample:8
                                                                     samplesPerPixel:4
                                                                            hasAlpha:YES
                                                                            isPlanar:NO
                                                                      colorSpaceName:NSCalibratedRGBColorSpace
-                                                                        bytesPerRow:OS_ALIGN(4 * width, 64) // multiple of 64 bytes to improve CG performance
+                                                                        bytesPerRow:(NSInteger)OSBytesPerRowForWidth(width)
                                                                        bitsPerPixel:0];
     [NSGraphicsContext saveGraphicsState];
     NSGraphicsContext *context = [NSGraphicsContext graphicsContextWithBitmapImageRep:imageRep];
