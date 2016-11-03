@@ -124,8 +124,8 @@
 - (void)testDCT
 {
     NSData *imageData = [self loadImageAsData:@"blurred/architecture1.bmp"];
-    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:32
-                                                             andHeight:32];
+    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:8
+                                                             andHeight:8];
     double greyscalePixels[32][32] = {{0.0}};
     double fastDctPixels[32][32] = {{0.0}};
     double dctPixels[32][32] = {{0.0}};
@@ -143,8 +143,8 @@
 {
     const NSUInteger iterations = 1024 * 2;
     NSData *imageData = [self loadImageAsData:@"blurred/architecture1.bmp"];
-    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:32
-                                                             andHeight:32];
+    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:8
+                                                             andHeight:8];
     double fastDctPixels[32][32] = {{0.0}};
     double greyscalePixels[32][32] = {{0.0}};
     greyscale_pixels_rgba_32_32([pixels bytes], greyscalePixels);
