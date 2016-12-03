@@ -63,8 +63,8 @@ NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_BEGIN
 
 + (NSBitmapImageRep *)imageRepFrom:(NSBitmapImageRep *)sourceImageRep
-                     scaledToWidth:(NSInteger)width
-                    scaledToHeight:(NSInteger)height
+                     scaledToWidth:(NSUInteger)width
+                    scaledToHeight:(NSUInteger)height
                 usingInterpolation:(NSImageInterpolation)imageInterpolation;
 
 NS_ASSUME_NONNULL_END

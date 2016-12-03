@@ -124,8 +124,8 @@
 - (void)testDCT
 {
     NSData *imageData = [self loadImageAsData:@"blurred/architecture1.bmp"];
-    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:32
-                                                             andHeight:32];
+    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:8
+                                                             andHeight:8];
     double greyscalePixels[32][32] = {{0.0}};
     double fastDctPixels[32][32] = {{0.0}};
     double dctPixels[32][32] = {{0.0}};
@@ -143,8 +143,8 @@
 {
     const NSUInteger iterations = 1024 * 2;
     NSData *imageData = [self loadImageAsData:@"blurred/architecture1.bmp"];
-    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:32
-                                                             andHeight:32];
+    NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:8
+                                                             andHeight:8];
     double fastDctPixels[32][32] = {{0.0}};
     double greyscalePixels[32][32] = {{0.0}};
     greyscale_pixels_rgba_32_32([pixels bytes], greyscalePixels);
@@ -156,6 +156,24 @@
     NSTimeInterval executionTime = [t1 timeIntervalSinceDate:t0];
     double MBs = (iterations * 32 * 32 * sizeof(double)) / 1024. / 1024.;
     NSLog(@"DCT processing %@ MB/s", @(MBs / executionTime));
+}
+
+- (void)testResizedRGBABitmapDataScanline
+{
+    NSData *imageData = [self loadImageAsData:@"misc/latrobe.bmp"];
+    for (NSUInteger dim = 8; dim <= 9; dim++) {
+        NSData *pixels = [imageData RGBABitmapDataForResizedImageWithWidth:dim
+                                                                 andHeight:dim];
+        uint64_t *lines = (uint64_t *)[pixels bytes];
+        NSUInteger length = [pixels length] / sizeof(lines);
+        for (NSUInteger i = 0; i < length; i += 8) {
+            XCTAssertNotEqual(lines[i], (uint64_t)0);
+            XCTAssertNotEqual(lines[i + 1], (uint64_t)0);
+            XCTAssertNotEqual(lines[i + 2], (uint64_t)0);
+            XCTAssertNotEqual(lines[i + 3], (uint64_t)0);
+            XCTAssertNotEqual(lines[i + 4], (uint64_t)0);
+        }
+    }
 }
 
 @end
