@@ -205,28 +205,3 @@ id<OSImageHashingProvider> OSImageHashingProviderFromImageHashingProviderId(OSIm
 NSArray<id<OSImageHashingProvider>> *NSArrayForProvidersFromOSImageHashingProviderId(OSImageHashingProviderId imageHashingProviderId);
 
 NS_ASSUME_NONNULL_END
-
-#pragma mark - Utility Macros
-
-#define OS_ALIGN(x, multiple) ({ __typeof__(x) m = (multiple) - 1; ((x) + m) & ~m; })
-
-#pragma mark - Non-null Check Helpers
-
-/**
- * A workaround class to defeat CLANGs warnings for some GNU-extensions for C for null-checking.
- */
-@interface OSNonNullHolder <__covariant Type>
-
-NS_ASSUME_NONNULL_BEGIN
-
-- (Type)el;
-
-NS_ASSUME_NONNULL_END
-
-@end
-
-#define OS_CAST_NONNULL(V)                  \
-    ({                                      \
-        OSNonNullHolder<__typeof(V)> *type; \
-        (__typeof(type.el)) V;              \
-    })

@@ -7,7 +7,7 @@
 //
 
 #import "OSCategories.h"
-#import "OSTypes.h"
+#import "OSTypes+Internal.h"
 
 @import Darwin.libkern.OSAtomic;
 

@@ -10,6 +10,7 @@
 
 #import "OSImageHashing.h"
 #import "OSCategories.h"
+#import "OSTypes+Internal.h"
 #import "OSAHash.h"
 #import "OSDHash.h"
 #import "OSPHash.h"
