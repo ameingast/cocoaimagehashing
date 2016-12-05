@@ -108,9 +108,8 @@
                                  userInfo:nil];
 }
 
-- (OSHashType)hashImageData:(NSData *)imageData
+- (OSHashType)hashImageData:(NSData * OS_UNUSED)imageData
 {
-    OS_MARK_UNUSED(imageData);
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
                                    reason:@"Abstract method called."
                                  userInfo:nil];
