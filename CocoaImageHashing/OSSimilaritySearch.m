@@ -65,8 +65,7 @@
     }
     dispatch_group_wait(hashingDispatchGroup, DISPATCH_TIME_FOREVER);
     [fingerPrintedTuples enumeratePairCombinationsUsingBlock:^(OSHashResultTuple * __unsafe_unretained leftHandTuple, OSHashResultTuple * __unsafe_unretained rightHandTuple) {
-        OSHashDistanceType hashDistance = [hashingProvider hashDistance:leftHandTuple->_hashResult
-                                                                     to:rightHandTuple->_hashResult];
+        OSHashDistanceType hashDistance = OSHammingDistance(leftHandTuple->_hashResult, rightHandTuple->_hashResult);
         if (hashDistance <= hashDistanceThreshold && hashDistance != OSHashTypeError) {
             resultHandler(leftHandTuple->_first, rightHandTuple->_first);
         }

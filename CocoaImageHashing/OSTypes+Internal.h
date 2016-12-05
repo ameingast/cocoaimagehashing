@@ -23,3 +23,10 @@
 
 @end
 
+#pragma mark - Primitive Type Functions and Utilities
+
+OS_INLINE OSHashDistanceType OSHammingDistance(OSHashType leftHand, OSHashType rightHand)
+{
+    return (OSHashDistanceType)__builtin_popcountll((UInt64)leftHand ^ (UInt64)rightHand);
+}
+
