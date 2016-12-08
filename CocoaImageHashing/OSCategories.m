@@ -7,7 +7,9 @@
 //
 
 #import "OSCategories.h"
-#import "OSTypes.h"
+#import "OSTypes+Internal.h"
+
+@import Darwin.libkern.OSAtomic;
 
 #pragma mark - NSArray Category
 
@@ -15,37 +17,37 @@
 
 - (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations
 {
-    NSArray<OSTuple<id, id> *> *result = [self arrayWithPairCombinations:^BOOL(id leftHand, id rightHand) {
-      OS_MARK_UNUSED(leftHand);
-      OS_MARK_UNUSED(rightHand);
-      return YES;
-    }];
-    return result;
-}
-
-- (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations:(BOOL (^)(id leftHand, id rightHand))matcher
-{
     NSMutableArray<OSTuple<id, id> *> *pairs = [NSMutableArray new];
-    [self arrayWithPairCombinations:matcher
-                  withResultHandler:^(id leftHand, id rightHand) {
-                    OSTuple<id, id> *tuple = [OSTuple tupleWithFirst:leftHand
-                                                           andSecond:rightHand];
-                    [pairs addObject:tuple];
-                  }];
+    OSSpinLock volatile __block lock = OS_SPINLOCK_INIT;
+    [self enumeratePairCombinationsUsingBlock:^(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand) {
+      OSTuple<id, id> *tuple = [OSTuple tupleWithFirst:leftHand
+                                             andSecond:rightHand];
+      OSSpinLockLock(&lock);
+      [pairs addObject:tuple];
+      OSSpinLockUnlock(&lock);
+    }];
     return pairs;
 }
 
-- (void)arrayWithPairCombinations:(BOOL (^)(id leftHand, id rightHand))matcher
-                withResultHandler:(void (^)(id leftHand, id rightHand))resultHandler
+- (void)enumeratePairCombinationsUsingBlock:(void (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))block
 {
-    for (NSUInteger i = 0; i < [self count] - 1; i++) {
-        for (NSUInteger j = i + 1; j < [self count]; j++) {
-            BOOL result = matcher(self[i], self[j]);
-            if (result) {
-                resultHandler(self[i], self[j]);
-            }
-        }
+    NSUInteger count = [self count];
+    if (!count) {
+        return;
     }
+    id __unsafe_unretained *objects = (id __unsafe_unretained *)malloc(sizeof(id) * count);
+    if (!objects) {
+        return;
+    }
+    [self getObjects:objects range:NSMakeRange(0, count)];
+    dispatch_apply(count - 1, dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^(size_t i) {
+        id __unsafe_unretained left = objects[i];
+        for (NSUInteger j = i + 1; j < count; j++) {
+            id __unsafe_unretained right = objects[j];
+            block(left, right);
+        }
+    });
+    free(objects);
 }
 
 @end

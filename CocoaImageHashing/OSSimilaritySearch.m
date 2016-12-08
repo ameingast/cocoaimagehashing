@@ -10,6 +10,8 @@
 #import "OSImageHashing.h"
 #import "OSSimilaritySearch.h"
 
+@import Darwin.libkern.OSAtomic;
+
 @implementation OSSimilaritySearch
 
 + (instancetype)sharedInstance
@@ -27,7 +29,7 @@
 - (void)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
         withHashDistanceThreshold:(OSHashDistanceType)hashDistanceThreshold
             forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)())imageStreamHandler
-                 forResultHandler:(void (^)(OSImageId *leftHandImageId, OSImageId *rightHandImageId))resultHandler
+                 forResultHandler:(void (^)(OSImageId * __unsafe_unretained leftHandImageId, OSImageId * __unsafe_unretained rightHandImageId))resultHandler
 {
     NSAssert(imageStreamHandler, @"Image stream handler must not be nil");
     NSAssert(resultHandler, @"Result handler must not be nil");
@@ -35,48 +37,41 @@
     NSUInteger cpuCount = [[NSProcessInfo processInfo] processorCount];
     dispatch_semaphore_t hashingSemaphore = dispatch_semaphore_create((long)cpuCount);
     dispatch_group_t hashingDispatchGroup = dispatch_group_create();
+    id<OSImageHashingProvider> hashingProvider = OSImageHashingProviderFromImageHashingProviderId(imageHashingProviderId);
+    if (!hashingProvider) {
+        return;
+    }
+    OSSpinLock volatile __block lock = OS_SPINLOCK_INIT;
     for (;;) {
         OSTuple<NSString *, NSData *> __block *inputTuple = imageStreamHandler();
         if (!inputTuple) {
             break;
         }
+        NSData * __unsafe_unretained imageData = inputTuple->_second;
+        if (!imageData) {
+            continue;
+        }
         dispatch_semaphore_wait(hashingSemaphore, DISPATCH_TIME_FOREVER);
         dispatch_group_async(hashingDispatchGroup, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-          NSString *identifier = inputTuple.first;
-          NSData *imageData = inputTuple.second;
-          OSHashType hashResult = [[OSImageHashing sharedInstance] hashImageData:imageData
-                                                                  withProviderId:imageHashingProviderId];
+          OSHashType hashResult = [hashingProvider hashImageData:imageData];
           if (hashResult != OSHashTypeError) {
-              inputTuple.first = nil;
-              inputTuple.second = nil;
-              inputTuple = nil;
               OSHashResultTuple<NSString *> *resultTuple = [OSHashResultTuple new];
-              resultTuple.first = identifier;
-              resultTuple.hashResult = hashResult;
-              @synchronized(fingerPrintedTuples)
-              {
-                  [fingerPrintedTuples addObject:resultTuple];
-              }
+              resultTuple->_first = inputTuple->_first;
+              resultTuple->_hashResult = hashResult;
+              OSSpinLockLock(&lock);
+              [fingerPrintedTuples addObject:resultTuple];
+              OSSpinLockUnlock(&lock);
           }
           dispatch_semaphore_signal(hashingSemaphore);
         });
     }
     dispatch_group_wait(hashingDispatchGroup, DISPATCH_TIME_FOREVER);
-    [fingerPrintedTuples arrayWithPairCombinations:^BOOL(OSHashResultTuple *leftHandTuple, OSHashResultTuple *rightHandTuple) {
-      OSHashDistanceType hashDistance = [[OSImageHashing sharedInstance] hashDistance:leftHandTuple.hashResult
-                                                                                   to:rightHandTuple.hashResult
-                                                                       withProviderId:imageHashingProviderId];
-      if (hashDistance == OSHashTypeError) {
-          return NO;
-      }
-      BOOL result = hashDistance <= hashDistanceThreshold;
-      return result;
-    }
-        withResultHandler:^(OSHashResultTuple *leftHandTuple, OSHashResultTuple *rightHandTuple) {
-          OSImageId *leftHandImageId = leftHandTuple.first;
-          OSImageId *rightHandImageId = rightHandTuple.first;
-          resultHandler(leftHandImageId, rightHandImageId);
-        }];
+    [fingerPrintedTuples enumeratePairCombinationsUsingBlock:^(OSHashResultTuple * __unsafe_unretained leftHandTuple, OSHashResultTuple * __unsafe_unretained rightHandTuple) {
+        OSHashDistanceType hashDistance = OSHammingDistance(leftHandTuple->_hashResult, rightHandTuple->_hashResult);
+        if (hashDistance <= hashDistanceThreshold && hashDistance != OSHashTypeError) {
+            resultHandler(leftHandTuple->_first, rightHandTuple->_first);
+        }
+    }];
 }
 
 - (NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
@@ -85,13 +80,16 @@
 {
     NSAssert(imageStreamHandler, @"Image stream handler must not be nil");
     NSMutableArray<OSTuple<NSString *, NSString *> *> *tuples = [NSMutableArray new];
+    OSSpinLock volatile __block lock = OS_SPINLOCK_INIT;
     [self similarImagesWithProvider:imageHashingProviderId
           withHashDistanceThreshold:hashDistanceThreshold
               forImageStreamHandler:imageStreamHandler
-                   forResultHandler:^(OSImageId *leftHandImageId, OSImageId *rightHandImageId) {
+                   forResultHandler:^(OSImageId * __unsafe_unretained leftHandImageId, OSImageId * __unsafe_unretained rightHandImageId) {
                      OSTuple<OSImageId *, OSImageId *> *tuple = [OSTuple tupleWithFirst:leftHandImageId
                                                                               andSecond:rightHandImageId];
+                     OSSpinLockLock(&lock);
                      [tuples addObject:tuple];
+                     OSSpinLockUnlock(&lock);
                    }];
     return tuples;
 }
@@ -109,9 +107,7 @@
               if (i >= [imageTuples count]) {
                   return nil;
               }
-              OSTuple<OSImageId *, NSData *> *tuple = [imageTuples objectAtIndex:i];
-              i++;
-              return tuple;
+              return [imageTuples objectAtIndex:i++];
             }];
     return result;
 }
@@ -124,15 +120,15 @@
     NSMutableDictionary<OSImageId *, OSImageId *> *representatives = [NSMutableDictionary new];
     NSMutableDictionary<OSImageId *, NSMutableSet<OSImageId *> *> *result = [NSMutableDictionary new];
     for (OSTuple<OSImageId *, OSImageId *> *tuple in similarImageTuples) {
-        OSImageId *first = tuple.first;
-        OSImageId *second = tuple.second;
+        OSImageId * __unsafe_unretained first = tuple->_first;
+        OSImageId * __unsafe_unretained second = tuple->_second;
         if (first && second) {
-            OSImageId *firstRep = representatives[first];
+            OSImageId * __unsafe_unretained firstRep = representatives[first];
             if (!firstRep) {
                 representatives[first] = firstRep = first;
                 result[first] = [NSMutableSet set];
             }
-            OSImageId *secondRep = representatives[second];
+            OSImageId * __unsafe_unretained secondRep = representatives[second];
             if (!secondRep) {
                 representatives[second] = firstRep;
             }

@@ -89,6 +89,11 @@ extern const OSHashType OSHashTypeError;
 NS_ASSUME_NONNULL_BEGIN
 
 /**
+ * Returns a shared instance for the hashing provider.
+ */
++ (instancetype)sharedInstance;
+
+/**
  * Calculate the fingerprint/hash for a given image.
  *
  * The result is a 64-bit number. Returns OSHashTypeError if an error occurs during image processing.
@@ -150,7 +155,7 @@ NS_ASSUME_NONNULL_END
 /**
  * A fast, lockless, generic  2-tuple implementation.
  */
-@interface OSTuple <__covariant A, __covariant B> : NSObject
+@interface OSTuple<A, B> : NSObject
 
 @property (strong, nonatomic, nullable) A first;
 @property (strong, nonatomic, nullable) B second;
@@ -172,7 +177,7 @@ NS_ASSUME_NONNULL_END
 /**
  * A fast, lockless, specific 2-tuple implementation storing a generic first-value and a OSHAshType second-value.
  */
-@interface OSHashResultTuple <__covariant A> : NSObject
+@interface OSHashResultTuple<A> : NSObject
 
 @property (strong, nonatomic, nullable) A first;
 @property (nonatomic) OSHashType hashResult;
@@ -200,30 +205,3 @@ id<OSImageHashingProvider> OSImageHashingProviderFromImageHashingProviderId(OSIm
 NSArray<id<OSImageHashingProvider>> *NSArrayForProvidersFromOSImageHashingProviderId(OSImageHashingProviderId imageHashingProviderId);
 
 NS_ASSUME_NONNULL_END
-
-#pragma mark - Utility Macros
-
-#define OS_MARK_UNUSED_STRINGIFY(x) #x
-#define OS_MARK_UNUSED(x) _Pragma(OS_MARK_UNUSED_STRINGIFY(unused(x)))
-#define OS_ALIGN(x, multiple) ({ __typeof__(x) m = (multiple) - 1; ((x) + m) & ~m; })
-
-#pragma mark - Non-null Check Helpers
-
-/**
- * A workaround class to defeat CLANGs warnings for some GNU-extensions for C for null-checking.
- */
-@interface OSNonNullHolder <__covariant Type>
-
-NS_ASSUME_NONNULL_BEGIN
-
-- (Type)el;
-
-NS_ASSUME_NONNULL_END
-
-@end
-
-#define OS_CAST_NONNULL(V)                  \
-    ({                                      \
-        OSNonNullHolder<__typeof(V)> *type; \
-        (__typeof(type.el)) V;              \
-    })

@@ -9,6 +9,7 @@
 #import "OSAbstractHash.h"
 #import "OSCategories.h"
 #import "OSImageHashing.h"
+#import "OSTypes+Internal.h"
 
 @implementation OSAbstractHash
 
@@ -41,8 +42,7 @@
 {
     NSAssert(leftHand != OSHashTypeError, @"Left hand hash must not be OSHashTypeError");
     NSAssert(rightHand != OSHashTypeError, @"Right hand hash must not be OSHashTypeError");
-    OSHashDistanceType result = (OSHashDistanceType)__builtin_popcountll((UInt64)leftHand ^ (UInt64)rightHand);
-    return result;
+    return OSHammingDistance(leftHand, rightHand);
 }
 
 - (BOOL)compareImageData:(NSData *)leftHandImageData
@@ -94,6 +94,13 @@
 
 #pragma mark - Abstract methods
 
++ (instancetype)sharedInstance
+{
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Abstract method called."
+                                 userInfo:nil];
+}
+
 - (OSHashDistanceType)hashDistanceSimilarityThreshold
 {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
@@ -101,9 +108,8 @@
                                  userInfo:nil];
 }
 
-- (OSHashType)hashImageData:(NSData *)imageData
+- (OSHashType)hashImageData:(NSData * OS_UNUSED)imageData
 {
-    OS_MARK_UNUSED(imageData);
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
                                    reason:@"Abstract method called."
                                  userInfo:nil];
