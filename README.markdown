@@ -1,6 +1,7 @@
 # CocoaImageHashing
 
 [![Build Status](https://api.travis-ci.org/ameingast/cocoaimagehashing.png)](https://travis-ci.org/ameingast/cocoaimagehashing)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Hey there and welcome to *CocoaImageHashing*, a framework helping you with
 [perceptual hashing](https://en.wikipedia.org/wiki/Perceptual_hashing).
@@ -56,6 +57,22 @@ Just declare this dependency in your Podfile:
 ```ruby
 pod 'CocoaImageHashing', :git => 'https://github.com/ameingast/cocoaimagehashing.git'
 ```
+
+### Installation with Carthage
+
+To use [Carthage](https://github.com/Carthage/Carthage) (a more lightweight but more hands on package manager) just create a `Cartfile` with 
+
+```ruby
+github "ameingast/cocoaimagehashing" ~> 1.4.0
+```
+
+Then follow the [steps in the Carthage guide](https://github.com/Carthage/Carthage#getting-started) basically (for iOS):
+
+* run `carthage update`
+* drag the framework from Carthage/Build into Linked Frameworks on the General tab
+* add `carthage copy-frameworks` to a `Run Scripts` phase
+
+and you're done.  The [steps for Mac are very similar](https://github.com/Carthage/Carthage#getting-started).
 
 ### Using the Framework
 
