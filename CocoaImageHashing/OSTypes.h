@@ -193,7 +193,7 @@ OSImageHashingProviderId OSImageHashingProviderDefaultProviderId(void);
 OSImageHashingProviderId OSImageHashingProviderIdFromString(NSString *name);
 NSString *NSStringFromOSImageHashingProviderId(OSImageHashingProviderId providerId);
 NSArray<NSNumber *> *NSArrayFromOSImageHashingProviderId(void);
-NSArray<NSString *> *NSArrayFromOSImageHashingProviderIdNames();
+NSArray<NSString *> *NSArrayFromOSImageHashingProviderIdNames(void);
 
 OSImageHashingQuality OSImageHashingQualityFromString(NSString *name);
 NSString *NSStringFromOSImageHashingQuality(OSImageHashingQuality hashingQuality);

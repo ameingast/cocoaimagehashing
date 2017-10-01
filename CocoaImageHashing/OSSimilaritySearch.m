@@ -28,7 +28,7 @@
 
 - (void)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
         withHashDistanceThreshold:(OSHashDistanceType)hashDistanceThreshold
-            forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)())imageStreamHandler
+            forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)(void))imageStreamHandler
                  forResultHandler:(void (^)(OSImageId * __unsafe_unretained leftHandImageId, OSImageId * __unsafe_unretained rightHandImageId))resultHandler
 {
     NSAssert(imageStreamHandler, @"Image stream handler must not be nil");
@@ -76,7 +76,7 @@
 
 - (NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
                                                   withHashDistanceThreshold:(OSHashDistanceType)hashDistanceThreshold
-                                                      forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)())imageStreamHandler
+                                                      forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)(void))imageStreamHandler
 {
     NSAssert(imageStreamHandler, @"Image stream handler must not be nil");
     NSMutableArray<OSTuple<NSString *, NSString *> *> *tuples = [NSMutableArray new];
