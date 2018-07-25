@@ -26,23 +26,23 @@
 
 #pragma mark - NSArray Category
 
-@interface NSArray (CocoaImageHashing)
-
 NS_ASSUME_NONNULL_BEGIN
+
+@interface NSArray (CocoaImageHashing)
 
 - (NSArray<OSTuple<id, id> *> *)arrayWithPairCombinations;
 
 - (void)enumeratePairCombinationsUsingBlock:(void (^)(id __unsafe_unretained leftHand, id __unsafe_unretained rightHand))block;
 
-NS_ASSUME_NONNULL_END
-
 @end
+
+NS_ASSUME_NONNULL_END
 
 #pragma mark - NSData Category
 
-@interface NSData (CococaImageHashing)
-
 NS_ASSUME_NONNULL_BEGIN
+
+@interface NSData (CococaImageHashing)
 
 - (nullable NSData *)RGBABitmapDataForResizedImageWithWidth:(NSUInteger)width
                                                   andHeight:(NSUInteger)height;
@@ -55,18 +55,18 @@ NS_ASSUME_NONNULL_END
 
 #if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
-@interface NSBitmapImageRep (CocoaImageHashing)
-
 NS_ASSUME_NONNULL_BEGIN
+
+@interface NSBitmapImageRep (CocoaImageHashing)
 
 + (NSBitmapImageRep *)imageRepFrom:(NSBitmapImageRep *)sourceImageRep
                      scaledToWidth:(NSUInteger)width
                     scaledToHeight:(NSUInteger)height
                 usingInterpolation:(NSImageInterpolation)imageInterpolation;
 
-NS_ASSUME_NONNULL_END
-
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif
 
@@ -74,15 +74,15 @@ NS_ASSUME_NONNULL_END
 
 #if !(TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
-@interface NSImage (CocoaImageHashing)
-
 NS_ASSUME_NONNULL_BEGIN
+
+@interface NSImage (CocoaImageHashing)
 
 - (nullable NSData *)dataRepresentation;
 
-NS_ASSUME_NONNULL_END
-
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif
 
@@ -90,26 +90,26 @@ NS_ASSUME_NONNULL_END
 
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
-@interface UIImage (CocoaImageHashing)
-
 NS_ASSUME_NONNULL_BEGIN
+
+@interface UIImage (CocoaImageHashing)
 
 - (nullable NSData *)dataRepresentation;
 
-NS_ASSUME_NONNULL_END
-
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif
 
 #pragma mark - NSString Category
 
-@interface NSString (CocoaImageHashing)
-
 NS_ASSUME_NONNULL_BEGIN
+
+@interface NSString (CocoaImageHashing)
 
 - (unsigned long long)fileSizeOfElementInBundle:(NSBundle *)bundle;
 
-NS_ASSUME_NONNULL_END
-
 @end
+
+NS_ASSUME_NONNULL_END

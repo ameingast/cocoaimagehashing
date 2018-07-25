@@ -74,6 +74,8 @@ extern const OSHashType OSHashTypeError;
 
 #pragma mark - Image Hashing Protocol
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Create perceptual fingerprints for image data.
  * 
@@ -85,8 +87,6 @@ extern const OSHashType OSHashTypeError;
  * 4. Determining if two images are similar
  */
 @protocol OSImageHashingProvider
-
-NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Returns a shared instance for the hashing provider.
@@ -146,11 +146,13 @@ NS_ASSUME_NONNULL_BEGIN
                                                    forLeftHandImageData:(NSData *)leftHandImageData
                                                   forRightHandImageData:(NSData *)rightHandImageData;
 
-NS_ASSUME_NONNULL_END
-
 @end
 
+NS_ASSUME_NONNULL_END
+
 #pragma mark - Tuples
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A fast, lockless, generic  2-tuple implementation.
@@ -174,6 +176,10 @@ NS_ASSUME_NONNULL_END
 
 @end
 
+NS_ASSUME_NONNULL_END
+
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * A fast, lockless, specific 2-tuple implementation storing a generic first-value and a OSHAshType second-value.
  */
@@ -183,6 +189,8 @@ NS_ASSUME_NONNULL_END
 @property (nonatomic) OSHashType hashResult;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #pragma mark - Primitive Type Functions and Utilities
 

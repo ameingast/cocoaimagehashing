@@ -9,6 +9,10 @@
 #import "OSImageHashing.h"
 #import "OSAbstractHash.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface OSPHash : OSAbstractHash
 
 @end
+
+NS_ASSUME_NONNULL_END

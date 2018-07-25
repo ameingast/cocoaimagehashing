@@ -8,6 +8,8 @@
 
 #import "OSTypes.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 #pragma mark - Matrix Rotation
 
 void rotate_matrix(unsigned char *pixels, const unsigned int n);
@@ -31,3 +33,5 @@ double fast_avg_no_first_el_rgba_8_8(const double pixels[32][32]);
 OSHashType phash_rgba_8_8(const double pixels[32][32], double dctAverage);
 OSHashType ahash_rgba_8_8(const unsigned char *pixels);
 OSHashType dhash_rgba_9_9(const unsigned char *pixels);
+
+NS_ASSUME_NONNULL_END

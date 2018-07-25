@@ -8,6 +8,8 @@
 
 #import <CocoaImageHashing/OSTypes.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * The OSImageHashing class is the primary way to interact with the CocoaImageHashing framework.
  *
@@ -20,8 +22,6 @@
  * 5. sequential array sorting based on fingerprint metrics
  */
 @interface OSImageHashing : NSObject <OSImageHashingProvider>
-
-NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @brief Factory method for instantiating OSImageHashing objects.
@@ -210,6 +210,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSDictionary<OSImageId *, NSSet<OSImageId *> *> *)dictionaryFromSimilarImagesResult:(NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImageTuples;
 
-NS_ASSUME_NONNULL_END
-
 @end
+
+NS_ASSUME_NONNULL_END

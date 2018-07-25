@@ -7,6 +7,8 @@
 
 #pragma mark - Tuples
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface OSTuple<A, B> () {
     @public
     A __strong _Nullable _first;
@@ -15,6 +17,10 @@
 
 @end
 
+NS_ASSUME_NONNULL_END
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface OSHashResultTuple <A> () {
     @public
     A __strong _Nullable _first;
@@ -22,6 +28,10 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END
+
+NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Utility Macros
 
@@ -34,20 +44,22 @@ OS_INLINE OSHashDistanceType OSHammingDistance(OSHashType leftHand, OSHashType r
     return (OSHashDistanceType)__builtin_popcountll((UInt64)leftHand ^ (UInt64)rightHand);
 }
 
+NS_ASSUME_NONNULL_END
+
 #pragma mark - Non-null Check Helpers
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A workaround class to defeat CLANGs warnings for some GNU-extensions for C for null-checking.
  */
 @interface OSNonNullHolder <__covariant Type>
 
-NS_ASSUME_NONNULL_BEGIN
-
 - (Type)el;
 
-NS_ASSUME_NONNULL_END
-
 @end
+
+NS_ASSUME_NONNULL_END
 
 #define OS_CAST_NONNULL(V)                  \
     ({                                      \
