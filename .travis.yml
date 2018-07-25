@@ -1,4 +1,7 @@
-osx_image: xcode9
+osx_image: xcode9.4
 language: objective-c
 script:
-  - xcodebuild -scheme CocoaImageHashing\ \(macOS\ Static\ Library\) build
+  - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(macOS\ Framework\) clean build test CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES
+  - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(iOS\ Framework\) -destination "OS=11.4,name=iPhone X" clean build test CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES
+  - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(macOS\ Static\ Library\) clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES
+  - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(iOS\ Static\ Library\) clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES

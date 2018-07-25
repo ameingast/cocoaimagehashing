@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -473,9 +473,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA2357BE210908F800ABB3A2 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		CA31B4A81D8C3E0A00AEF251 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CA462F7D1BD252930010EEBD /* OSSimilaritySearchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSimilaritySearchTests.m; sourceTree = "<group>"; };
-		CA46F8A41BD680CB0067D945 /* CocoaImageHashing.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = CocoaImageHashing.profdata; sourceTree = "<group>"; };
 		CA7413711BD0DE9600C816B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CA7413731BD0E01500C816B5 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		CA7413771BD0E1F900C816B5 /* CocoaImageHashing.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CocoaImageHashing.podspec.json; sourceTree = "<group>"; };
@@ -652,15 +652,6 @@
 			name = "Similarity Search";
 			sourceTree = "<group>";
 		};
-		CA46F8A31BD680CB0067D945 /* Optimization Profiles */ = {
-			isa = PBXGroup;
-			children = (
-				CA46F8A41BD680CB0067D945 /* CocoaImageHashing.profdata */,
-			);
-			name = "Optimization Profiles";
-			path = OptimizationProfiles;
-			sourceTree = "<group>";
-		};
 		CA73155E1BCE35CD00F42629 /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -766,12 +757,12 @@
 		CADF6BCD1BC8EFB20039E5A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA46F8A31BD680CB0067D945 /* Optimization Profiles */,
 				CA74136F1BD0DE7B00C816B5 /* Test */,
-				CA7413771BD0E1F900C816B5 /* CocoaImageHashing.podspec.json */,
-				CADF6BB71BC8EF9A0039E5A8 /* Info.plist */,
 				CA7413711BD0DE9600C816B5 /* LICENSE */,
+				CA7413771BD0E1F900C816B5 /* CocoaImageHashing.podspec.json */,
 				CA7413731BD0E01500C816B5 /* README.markdown */,
+				CADF6BB71BC8EF9A0039E5A8 /* Info.plist */,
+				CA2357BE210908F800ABB3A2 /* .travis.yml */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1146,7 +1137,7 @@
 				};
 			};
 			buildConfigurationList = CADF6BAC1BC8EF9A0039E5A8 /* Build configuration list for PBXProject "CocoaImageHashing" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1350,7 +1341,6 @@
 		CA7413C31BD0E84300C816B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1369,7 +1359,6 @@
 		CA7413C41BD0E84300C816B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1453,6 +1442,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1555,6 +1545,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1615,8 +1606,6 @@
 		CADF6BC71BC8EF9A0039E5A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1628,6 +1617,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.operationalsemantics.CocoaImageHashing;
 				PRODUCT_NAME = CocoaImageHashing;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1635,8 +1625,6 @@
 		CADF6BC81BC8EF9A0039E5A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1648,7 +1636,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.operationalsemantics.CocoaImageHashing;
 				PRODUCT_NAME = CocoaImageHashing;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};

@@ -19,7 +19,7 @@
     NSMutableArray<OSTuple<OSImageId *, NSData *> *> *dataset = [NSMutableArray new];
     NSData *image = [self loadImageAsData:@"blurred/Tower-Bridge-at-night--London--England_web.bmp"];
     for (NSUInteger i = 0; i < 5000; i++) {
-        NSString *identifier = [NSString stringWithFormat:@"%ld", i];
+        NSString *identifier = [NSString stringWithFormat:@"%ld", (unsigned long)i];
         OSTuple<OSImageId *, NSData *> *tuple = [OSTuple tupleWithFirst:identifier
                                                               andSecond:image];
         [dataset addObject:tuple];
@@ -38,9 +38,9 @@
     NSUInteger binSize = [[dataSet firstObject] count] - 1;
     NSMutableArray<OSTuple<OSImageId *, OSImageId *> *> *similarTuples = [dataSet valueForKeyPath:@"@unionOfArrays.name.@arrayWithPairCombinations"];
     NSDictionary<OSImageId *, NSSet<OSImageId *> *> *result = [[OSImageHashing sharedInstance] dictionaryFromSimilarImagesResult:similarTuples];
-    XCTAssertEqual([result count], representativesCount, @"There should be %lu different representatives", representativesCount);
-    XCTAssertEqualObjects([[result allValues] valueForKeyPath:@"@min.@count"], @(binSize), @"Representatives should not have less than %lu similar images", binSize);
-    XCTAssertEqualObjects([[result allValues] valueForKeyPath:@"@max.@count"], @(binSize), @"Representatives should not have more than %lu similar images", binSize);
+    XCTAssertEqual([result count], representativesCount, @"There should be %lu different representatives", (unsigned long)representativesCount);
+    XCTAssertEqualObjects([[result allValues] valueForKeyPath:@"@min.@count"], @(binSize), @"Representatives should not have less than %lu similar images", (unsigned long)binSize);
+    XCTAssertEqualObjects([[result allValues] valueForKeyPath:@"@max.@count"], @(binSize), @"Representatives should not have more than %lu similar images", (unsigned long)binSize);
 }
 
 @end

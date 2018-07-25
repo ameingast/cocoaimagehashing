@@ -134,7 +134,8 @@
     fast_dct_rgba_32_32(greyscalePixels, fastDctPixels);
     for (NSUInteger i = 0; i < 32; i++) {
         for (NSUInteger j = 0; j < 32; j++) {
-            XCTAssertEqual(dctPixels[i][j], fastDctPixels[i][j], @"DCT mismatch at: %@ %@", @(i), @(j));
+            XCTAssertTrue(fabs(dctPixels[i][j] - fastDctPixels[i][j]) < 0.00000001,
+                          @"DCT mismatch at: %@ %@", @(i), @(j));
         }
     }
 }
