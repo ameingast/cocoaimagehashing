@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CADF6BB11BC8EF9A0039E5A8"
+               BlueprintIdentifier = "CA448FCD2109F086009B03CD"
                BuildableName = "CocoaImageHashing.framework"
-               BlueprintName = "CocoaImageHashing (macOS Framework)"
+               BlueprintName = "CocoaImageHashing (tvOS Framework)"
                ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CADF6BBB1BC8EF9A0039E5A8"
+               BlueprintIdentifier = "CA44900C2109F11E009B03CD"
                BuildableName = "CocoaImageHashingTests.xctest"
-               BlueprintName = "CocoaImageHashingTests (macOS Framework)"
+               BlueprintName = "CocoaImageHashingTests (tvOS Framework)"
                ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CADF6BB11BC8EF9A0039E5A8"
+            BlueprintIdentifier = "CA448FCD2109F086009B03CD"
             BuildableName = "CocoaImageHashing.framework"
-            BlueprintName = "CocoaImageHashing (macOS Framework)"
+            BlueprintName = "CocoaImageHashing (tvOS Framework)"
             ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CADF6BB11BC8EF9A0039E5A8"
+            BlueprintIdentifier = "CA448FCD2109F086009B03CD"
             BuildableName = "CocoaImageHashing.framework"
-            BlueprintName = "CocoaImageHashing (macOS Framework)"
+            BlueprintName = "CocoaImageHashing (tvOS Framework)"
             ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CADF6BB11BC8EF9A0039E5A8"
+            BlueprintIdentifier = "CA448FCD2109F086009B03CD"
             BuildableName = "CocoaImageHashing.framework"
-            BlueprintName = "CocoaImageHashing (macOS Framework)"
+            BlueprintName = "CocoaImageHashing (tvOS Framework)"
             ReferencedContainer = "container:CocoaImageHashing.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
