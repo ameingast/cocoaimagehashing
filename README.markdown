@@ -1,7 +1,7 @@
 # CocoaImageHashing
 
 [![build Status](https://api.travis-ci.org/ameingast/cocoaimagehashing.png)](https://travis-ci.org/ameingast/cocoaimagehashing)
-[![carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![codecov](http://codecov.io/github/ameingast/cocoaimagehashing/coverage.svg?branch=master)](http://codecov.io/github/ameingast/cocoaimagehashing?branch=master)
 [![cocoapods](https://img.shields.io/cocoapods/v/CocoaImageHashing)](https://img.shields.io/cocoapods/v/CocoaImageHashing.svg)
 [![license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
