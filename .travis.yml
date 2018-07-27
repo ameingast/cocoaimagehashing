@@ -9,5 +9,6 @@ script:
   - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(iOS\ Static\ Library\) clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
   - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(tvOS\ Static\ Library\) clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
   - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(watchOS\ Static\ Library\) clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+  - pod lib lint --verbose
 after_success:
 - bash <(curl -s https://codecov.io/bash)
