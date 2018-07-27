@@ -20,10 +20,10 @@ This makes perceptual hashing functions useful for:
 * finding similar images or matching
 * sorting an image set wrt a base image
 
-This framework was written for Mac OS X and iOS. This means that basic image
-transformations are executed through CoreGraphics. There are no external
-dependencies, so getting the framework integrated into your project is
-straight-forward.
+This framework was written for macOS, iOS, watchOS and tvOS. This means 
+that basic image transformations are executed through CoreGraphics. 
+There are no external dependencies, so getting the framework integrated 
+into your project is straight-forward.
 
 This framework provides three hashing functions with the following properties:
 
@@ -63,7 +63,7 @@ pod 'CocoaImageHashing', :git => 'https://github.com/ameingast/cocoaimagehashing
 To use [Carthage](https://github.com/Carthage/Carthage) (a more lightweight but more hands on package manager) just create a `Cartfile` with 
 
 ```ruby
-github "ameingast/cocoaimagehashing" ~> 1.4.0
+github "ameingast/cocoaimagehashing" ~> 1.5.0
 ```
 
 Then follow the [steps in the Carthage guide](https://github.com/Carthage/Carthage#getting-started) basically (for iOS):
