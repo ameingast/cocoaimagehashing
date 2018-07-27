@@ -115,7 +115,7 @@ More detailed information on types is available
 ##### Comparing two images for similarity:
 
 ```objective-c
-@import CocoaImageHashing;
+#import <CocoaImageHashing/CocoaImageHashing.h>
 
 @interface HashExample : NSObject
 
@@ -137,7 +137,7 @@ More detailed information on types is available
 ##### Measuring the distance between two fingerprints
 
 ```objective-c
-@import CocoaImageHashing;
+#import <CocoaImageHashing/CocoaImageHashing.h>
 
 @interface DistanceExample : NSObject
 
@@ -158,7 +158,7 @@ More detailed information on types is available
 ##### Finding similar images
 
 ```objective-c
-@import CocoaImageHashing;
+#import <CocoaImageHashing/CocoaImageHashing.h>
 
 @interface DuplicationExample : NSObject
 
@@ -187,7 +187,7 @@ More detailed information on types is available
 ##### Sorting an NSArray containing image data
 
 ```objective-c
-@import CocoaImageHashing;
+#import <CocoaImageHashing/CocoaImageHashing.h>
 
 @interface SortingExample : NSObject
 

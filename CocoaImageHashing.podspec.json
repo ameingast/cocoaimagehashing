@@ -11,7 +11,7 @@
     "requires_arc": true,
     "frameworks": [ "Foundation" ],
     "source_files": "CocoaImageHashing/*.{h,m}",
-    "public_header_files": [ "CocoaImageHashing.h", "CocoaImageHashing/OSTypes.h", "CocoaImageHashing/OSImageHashing.h" ],
+    "public_header_files": [ "CocoaImageHashing/CocoaImageHashing.h", "CocoaImageHashing/OSTypes.h", "CocoaImageHashing/OSImageHashing.h" ],
     "osx": { "frameworks": [ "Cocoa" ] },
     "ios": { "frameworks": [ "UIKit" ] }
 }
