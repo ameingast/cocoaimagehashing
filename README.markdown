@@ -3,7 +3,7 @@
 [![build Status](https://api.travis-ci.org/ameingast/cocoaimagehashing.png)](https://travis-ci.org/ameingast/cocoaimagehashing)
 [![carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![codecov](http://codecov.io/github/ameingast/cocoaimagehashing/coverage.svg?branch=master)](http://codecov.io/github/ameingast/cocoaimagehashing?branch=master)
-[![cocoapods](https://img.shields.io/cocoapods/v/CocoaImageHashing)](https://img.shields.io/cocoapods/v/CocoaImageHashing.svg)
+![cocoapods](https://img.shields.io/cocoapods/v/CocoaImageHashing.svg)](https://img.shields.io/cocoapods/v/CocoaImageHashing.svg)
 [![license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 ![platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20iOS%20%7C%20tvOS%20%7C%20watchOS-blue.svg?longCache=true&style=flat)
 
