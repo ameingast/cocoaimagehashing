@@ -25,7 +25,7 @@ const OSHashType OSHashTypeError = -1;
 + (nonnull instancetype)tupleWithFirst:(nullable id)first
                              andSecond:(nullable id)second
 {
-    id this = [self alloc];
+    OSTuple *this = [self alloc];
     return [this initWithFirst:first
                      andSecond:second];
 }
