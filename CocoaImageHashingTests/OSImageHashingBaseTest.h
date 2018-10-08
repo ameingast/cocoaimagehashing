@@ -47,5 +47,8 @@
         withImageHashingProviderId:(OSImageHashingProviderId)imageHashingProviderId;
 - (void)assertImageSimilarityForProvider:(OSImageHashingProviderId)imageHashingProvider
                               forDataSet:(NSArray<NSArray<OSDataHolder *> *> *)dataSet;
+- (void)assertHashOfImageWithName:(NSString *)imageName
+                        isEqualTo:(OSHashType)referenceHash
+                      forProvider:(OSImageHashingProviderId)imageHashingProvider;
 
 @end

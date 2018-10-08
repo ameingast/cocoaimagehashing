@@ -400,10 +400,10 @@ inline double fast_avg_no_first_el_rgba_8_8(const double pixels[32][32])
 
 #pragma mark - pHash
 
-#define INLINE_PHASH(row, col)                                   \
-    if (row != 0 && col != 0 && pixels[row][col] > dctAverage) { \
-        SETBIT(result, cnt);                                     \
-    }                                                            \
+#define INLINE_PHASH(row, col)                                     \
+    if ((row != 0 || col != 0) && pixels[row][col] > dctAverage) { \
+        SETBIT(result, cnt);                                       \
+    }                                                              \
     cnt++;
 
 #define UNROLL_PHASH_Y(row) \

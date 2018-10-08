@@ -35,4 +35,17 @@
     XCTAssertEqual(OSHashTypeError, result);
 }
 
+- (void)testAHashValuesRegression
+{
+    [self assertHashOfImageWithName:@"blurred/architecture1.bmp"
+                          isEqualTo:-8608191228601917537
+                        forProvider:OSImageHashingProviderAHash];
+    [self assertHashOfImageWithName:@"compressed/architecture1.jpg"
+                          isEqualTo:-8608472703578630209
+                        forProvider:OSImageHashingProviderAHash];
+    [self assertHashOfImageWithName:@"blurred/bamarket115.bmp"
+                          isEqualTo:-16954737706286081
+                        forProvider:OSImageHashingProviderAHash];
+}
+
 @end

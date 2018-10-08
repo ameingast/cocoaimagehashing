@@ -264,4 +264,16 @@
     }
 }
 
+// Hashes should never change for same images. Users of this library are relying on the values.
+- (void)assertHashOfImageWithName:(NSString *)imageName
+                        isEqualTo:(OSHashType)referenceHash
+                      forProvider:(OSImageHashingProviderId)imageHashingProvider
+{
+    NSData *imageData = [self loadImageAsData:imageName];
+    OSHashType actualHash = [[OSImageHashing sharedInstance] hashImageData:imageData
+                                                            withProviderId:imageHashingProvider];
+    
+    XCTAssertEqual(actualHash, referenceHash, @"Actual hash do not match reference hash");
+}
+
 @end
