@@ -6,7 +6,7 @@
 //  Copyright © 2015 Andreas Meingast. All rights reserved.
 //
 
-#import <CocoaImageHashing/OSImageHashing.h>
+#import "OSImageHashing.h"
 
 FOUNDATION_EXPORT double CocoaImageHashingVersionNumber;
 FOUNDATION_EXPORT const unsigned char CocoaImageHashingVersionString[];

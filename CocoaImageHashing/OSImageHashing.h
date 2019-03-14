@@ -6,7 +6,7 @@
 //  Copyright © 2015 Andreas Meingast. All rights reserved.
 //
 
-#import <CocoaImageHashing/OSTypes.h>
+#import "OSTypes.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
