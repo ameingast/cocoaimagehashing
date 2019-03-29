@@ -1848,10 +1848,11 @@
 			};
 			buildConfigurationList = CADF6BAC1BC8EF9A0039E5A8 /* Build configuration list for PBXProject "CocoaImageHashing" */;
 			compatibilityVersion = "Xcode 3.1";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CADF6BA81BC8EF9A0039E5A8;
 			productRefGroup = CADF6BB31BC8EF9A0039E5A8 /* Products */;
