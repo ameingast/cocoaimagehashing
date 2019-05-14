@@ -101,27 +101,27 @@ NS_ASSUME_NONNULL_BEGIN
  * Such an ID can for example be the unique file-path of an image on disk or a database-id referencing an image.
  */
 - (NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImagesWithHashingQuality:(OSImageHashingQuality)imageHashingQuality
-                                                            forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)(void))imageStreamHandler;
+                                                            forImageStreamHandler:(OSTuple<OSImageId *, NSData *> *__nullable (^)(void))imageStreamHandler;
 
 /**
  * @see -[OSImageHashing similarImagesWithHashingQuality::]
  */
 - (NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImagesWithHashingQuality:(OSImageHashingQuality)imageHashingQuality
                                                         withHashDistanceThreshold:(OSHashDistanceType)hashDistanceThreshold
-                                                            forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)(void))imageStreamHandler;
+                                                            forImageStreamHandler:(OSTuple<OSImageId *, NSData *> *__nullable (^)(void))imageStreamHandler;
 
 /**
  * @see -[OSImageHashing similarImagesWithHashingQuality::]
  */
 - (NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
-                                                      forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)(void))imageStreamHandler;
+                                                      forImageStreamHandler:(OSTuple<OSImageId *, NSData *> *__nullable (^)(void))imageStreamHandler;
 
 /**
  * @see -[OSImageHashing similarImagesWithHashingQuality::]
  */
 - (NSArray<OSTuple<OSImageId *, OSImageId *> *> *)similarImagesWithProvider:(OSImageHashingProviderId)imageHashingProviderId
                                                   withHashDistanceThreshold:(OSHashDistanceType)hashDistanceThreshold
-                                                      forImageStreamHandler:(OSTuple<OSImageId *, NSData *> * (^)(void))imageStreamHandler;
+                                                      forImageStreamHandler:(OSTuple<OSImageId *, NSData *> *__nullable (^)(void))imageStreamHandler;
 
 #pragma mark - Concurrent, array based similarity search
 
