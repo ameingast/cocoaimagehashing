@@ -32,3 +32,6 @@ Pods/
 
 # Profiling
 Profiles/
+
+# Swift package manager
+.build/

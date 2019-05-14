@@ -3,7 +3,7 @@
 //  CocoaImageHashing
 //
 
-#import <CocoaImageHashing/OSTypes.h>
+#import "OSTypes.h"
 
 #pragma mark - Tuples
 
