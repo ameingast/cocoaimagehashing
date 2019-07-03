@@ -438,6 +438,10 @@
 		CA77A59E1BD7E35A00F9EA70 /* Tower-Bridge-at-night--London--England_web.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C141BC8EFC00039E5A8 /* Tower-Bridge-at-night--London--England_web.bmp */; };
 		CA77A59F1BD7E35A00F9EA70 /* uk-golf-scotland.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C151BC8EFC00039E5A8 /* uk-golf-scotland.bmp */; };
 		CA77A5A01BD7E35A00F9EA70 /* wallacestevens.bmp in Copy Misc Images */ = {isa = PBXBuildFile; fileRef = CADF6C161BC8EFC00039E5A8 /* wallacestevens.bmp */; };
+		CA86CA6D22CCFDE500CE4C34 /* shim.h in Headers */ = {isa = PBXBuildFile; fileRef = CA86CA6C22CCFDE500CE4C34 /* shim.h */; };
+		CA86CA6E22CCFDE500CE4C34 /* shim.h in Headers */ = {isa = PBXBuildFile; fileRef = CA86CA6C22CCFDE500CE4C34 /* shim.h */; };
+		CA86CA6F22CCFDE500CE4C34 /* shim.h in Headers */ = {isa = PBXBuildFile; fileRef = CA86CA6C22CCFDE500CE4C34 /* shim.h */; };
+		CA86CA7022CCFDE500CE4C34 /* shim.h in Headers */ = {isa = PBXBuildFile; fileRef = CA86CA6C22CCFDE500CE4C34 /* shim.h */; };
 		CA95045F1BCD9A1000305210 /* OSFastGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = CA95045D1BCD9A1000305210 /* OSFastGraphics.h */; };
 		CA963C121BCFCBD500D74D22 /* OSTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CA963C111BCFCBD500D74D22 /* OSTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA963C141BCFCC6200D74D22 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = CA963C131BCFCC6200D74D22 /* OSTypes.m */; };
@@ -956,6 +960,7 @@
 		CA7413BD1BD0E84300C816B5 /* CocoaImageHashing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaImageHashing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7413D61BD0EAA800C816B5 /* OSAbstractHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSAbstractHash.h; path = CocoaImageHashing/OSAbstractHash.h; sourceTree = "<group>"; };
 		CA7413D71BD0EAA800C816B5 /* OSAbstractHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSAbstractHash.m; path = CocoaImageHashing/OSAbstractHash.m; sourceTree = "<group>"; };
+		CA86CA6C22CCFDE500CE4C34 /* shim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shim.h; path = CocoaImageHashing/shim.h; sourceTree = "<group>"; };
 		CA95045D1BCD9A1000305210 /* OSFastGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSFastGraphics.h; path = CocoaImageHashing/OSFastGraphics.h; sourceTree = "<group>"; };
 		CA95045E1BCD9A1000305210 /* OSFastGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSFastGraphics.m; path = CocoaImageHashing/OSFastGraphics.m; sourceTree = "<group>"; };
 		CA963C111BCFCBD500D74D22 /* OSTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSTypes.h; path = CocoaImageHashing/OSTypes.h; sourceTree = "<group>"; };
@@ -1175,6 +1180,7 @@
 				CAE958EF1BCAD7D30061A909 /* OSCategories.m */,
 				CA95045D1BCD9A1000305210 /* OSFastGraphics.h */,
 				CA95045E1BCD9A1000305210 /* OSFastGraphics.m */,
+				CA86CA6C22CCFDE500CE4C34 /* shim.h */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -1474,6 +1480,7 @@
 				CA448F622109EF8D009B03CD /* CocoaImageHashing.h in Headers */,
 				CA448F632109EF8D009B03CD /* OSTypes.h in Headers */,
 				CA448F642109EF8D009B03CD /* OSImageHashing.h in Headers */,
+				CA86CA6F22CCFDE500CE4C34 /* shim.h in Headers */,
 				CA448F652109EF8D009B03CD /* OSCategories.h in Headers */,
 				CA448F662109EF8D009B03CD /* OSFastGraphics.h in Headers */,
 			);
@@ -1492,6 +1499,7 @@
 				CA448FE12109F086009B03CD /* CocoaImageHashing.h in Headers */,
 				CA448FE22109F086009B03CD /* OSTypes.h in Headers */,
 				CA448FE32109F086009B03CD /* OSImageHashing.h in Headers */,
+				CA86CA7022CCFDE500CE4C34 /* shim.h in Headers */,
 				CA448FE42109F086009B03CD /* OSCategories.h in Headers */,
 				CA448FE52109F086009B03CD /* OSFastGraphics.h in Headers */,
 			);
@@ -1564,6 +1572,7 @@
 				CA7413D01BD0E88300C816B5 /* CocoaImageHashing.h in Headers */,
 				CA7413D21BD0E88300C816B5 /* OSTypes.h in Headers */,
 				CA7413D31BD0E88300C816B5 /* OSImageHashing.h in Headers */,
+				CA86CA6E22CCFDE500CE4C34 /* shim.h in Headers */,
 				CA7413D41BD0E89100C816B5 /* OSCategories.h in Headers */,
 				CA7413D51BD0E89100C816B5 /* OSFastGraphics.h in Headers */,
 			);
@@ -1582,6 +1591,7 @@
 				CA963C121BCFCBD500D74D22 /* OSTypes.h in Headers */,
 				CADF6C661BC8F15A0039E5A8 /* OSImageHashing.h in Headers */,
 				CADF6BB61BC8EF9A0039E5A8 /* CocoaImageHashing.h in Headers */,
+				CA86CA6D22CCFDE500CE4C34 /* shim.h in Headers */,
 				CADF6C6B1BC8F1DD0039E5A8 /* OSAHash.h in Headers */,
 				CADF6C611BC8F0370039E5A8 /* OSDHash.h in Headers */,
 			);

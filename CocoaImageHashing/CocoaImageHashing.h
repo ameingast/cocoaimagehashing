@@ -7,14 +7,6 @@
 //
 
 #import "OSImageHashing.h"
-#import "OSAbstractHash.h"
-#import "OSAHash.h"
-#import "OSCategories.h"
-#import "OSDHash.h"
-#import "OSFastGraphics.h"
-#import "OSPHash.h"
-#import "OSSimilaritySearch.h"
-#import "OSTypes.h"
 
 FOUNDATION_EXPORT double CocoaImageHashingVersionNumber;
 FOUNDATION_EXPORT const unsigned char CocoaImageHashingVersionString[];
