@@ -116,6 +116,19 @@ More detailed information on types is available
 
 #### Examples
 
+##### Swift Usage Pattern
+
+```swift
+import CocoaImageHashing
+
+let osImageHasher = OSImageHashing.sharedInstance()
+
+let myImage = UIImage(named: "image-asset-name")
+
+let myHashValue = osImageHasher.hashImage(myImage!, with: .pHash)
+print(myHashValue)
+```
+
 ##### Comparing two images for similarity:
 
 ```objective-c
