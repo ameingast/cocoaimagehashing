@@ -213,7 +213,7 @@ More detailed information on types is available
 @end
 ```
 
-More examples can be found in the test suite!
+More examples can be found in the test suite and the project playground.
 
 ## Contact and Contributions
 
