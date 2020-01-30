@@ -41,14 +41,9 @@ This framework provides three hashing functions with the following properties:
 
 Depending on the hashing algorithm, perceptual hashing generally can yield
 very good performance. This library was built primarily for ease of use, but
-hashing performance was critical, too.
-
-Fingerprint calculation makes use of current CPU instruction pipelines by
+hashing performance was critical, too. Some utility functions have data parallelism
+built in and fingerprint calculation makes use of current CPU instruction pipelines by
 unrolling and inlining all tight loops of used hashing algorithms.
-
-On a Dual-Core 2.6GHz i5, the fastest hashing algorithm (dHash) achieves
-a hashing throughput of up to 700MB/s and 30.0000 hash distance calculations
-per second on 4 cores.
 
 ## How To Get Started
 
@@ -118,6 +113,17 @@ More detailed information on types is available
 
 ##### Comparing two images for similarity:
 
+```swift
+import CocoaImageHashing
+
+let firstImageData = Data()
+let secondImageData = Data()
+let result = OSImageHashing.sharedInstance().compareImageData(firstImageData,
+                                                              to: secondImageData,
+                                                              with: .pHash)
+print("Match", result)
+```
+
 ```objective-c
 #import <CocoaImageHashing/CocoaImageHashing.h>
 
@@ -140,6 +146,15 @@ More detailed information on types is available
 
 ##### Measuring the distance between two fingerprints
 
+```swift
+import CocoaImageHashing
+
+let lhsData = OSImageHashing.sharedInstance().hashImageData(Data(), with: .pHash)
+let rhsData = OSImageHashing.sharedInstance().hashImageData(Data(), with: .pHash)
+let result = OSImageHashing.sharedInstance().hashDistance(lhsData, to: rhsData, with: .pHash)
+print("Distance", result)
+```
+
 ```objective-c
 #import <CocoaImageHashing/CocoaImageHashing.h>
 
@@ -159,7 +174,24 @@ More detailed information on types is available
 
 @end
 ```
+
 ##### Finding similar images
+
+```swift
+import CocoaImageHashing
+
+var imageData = [Data(), Data(), Data()]
+let similarImages = imageHashing.similarImages(withProvider: .pHash) {
+    if imageData.count > 0 {
+        let data = imageData.removeFirst()
+        return OSTuple<NSString, NSData>(first: name as NSString, 
+                                         andSecond: data as NSData)
+    } else {
+        return nil
+    }
+}
+print("Similar Images", similarImages)
+```
 
 ```objective-c
 #import <CocoaImageHashing/CocoaImageHashing.h>
@@ -189,6 +221,17 @@ More detailed information on types is available
 ```
 
 ##### Sorting an NSArray containing image data
+
+```swift
+import CocoaImageHashing
+
+let baseImage = Data()
+let images = [Data(), Data(), Data()]
+let sortedImages = imageHashing.sortedArray(usingImageSimilartyComparator: baseImage, 
+                                            for: images, 
+                                            for: .pHash)
+print("Sorted images", sortedImages)
+```
 
 ```objective-c
 #import <CocoaImageHashing/CocoaImageHashing.h>
