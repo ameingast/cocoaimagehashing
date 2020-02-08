@@ -1,12 +1,12 @@
-osx_image: xcode10.2
+osx_image: xcode11.3
 language: objective-c
 before_install:
   - gem install cocoapods
 script:
   - set -o pipefail
   - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(macOS\ Framework\) clean build test CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
-  - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(iOS\ Framework\) -destination "OS=12.1,name=iPhone X" clean build test CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
-  - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(tvOS\ Framework\) -destination "OS=12.1,name=Apple TV 4K" clean build test CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
+  - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(iOS\ Framework\) -destination "OS=13.3,name=iPhone 11" clean build test CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
+  - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(tvOS\ Framework\) -destination "OS=13.3,name=Apple TV 4K" clean build test CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
   - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(watchOS\ Framework\) clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
   - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(macOS\ Static\ Library\) clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
   - xcodebuild -configuration Release -scheme CocoaImageHashing\ \(iOS\ Static\ Library\) clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_TESTABILITY=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
