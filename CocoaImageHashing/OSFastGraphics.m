@@ -152,6 +152,7 @@ inline void rotate_rgba_matrix_9_9(unsigned char *pixels)
     UNROLL_GREYSCALE_Y(7);   \
     UNROLL_GREYSCALE_Y(8);   \
     UNROLL_GREYSCALE_Y(9);   \
+    UNROLL_GREYSCALE_Y(10);  \
     UNROLL_GREYSCALE_Y(11);  \
     UNROLL_GREYSCALE_Y(12);  \
     UNROLL_GREYSCALE_Y(13);  \
@@ -273,7 +274,7 @@ inline void fast_dct_rgba_32_32(const double pixels[32][32], double result[32][3
           for (int j = 0; j < N; j++) {
               CO1[i][j] = cos(((2 * i + 1.0) / (2.0 * (double)N)) * j * M_PI);
               CO2[i][j] = cos(((2 * i + 1.0) / (2.0 * (double)N)) * j * M_PI);
-              CV[i][j] = (c[i] * c[j]) / 4.0;
+              CV[i][j] = (c[i] * c[j]) / sqrt(2.0 * N);
           }
       }
     });
@@ -309,7 +310,7 @@ inline void dct_rgba_32_32(const double pixels[32][32], double result[32][32])
                     sum += cos(((2 * i + 1.0) / (2.0 * (double)N)) * u * M_PI) * cos(((2 * j + 1.0) / (2.0 * (double)N)) * v * M_PI) * (pixels[i][j]);
                 }
             }
-            sum *= ((c[u] * c[v]) / 4.0);
+            sum *= ((c[u] * c[v]) / sqrt(2.0 * N));
             result[u][v] = sum;
         }
     }

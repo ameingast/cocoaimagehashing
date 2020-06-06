@@ -135,7 +135,7 @@ OS_INLINE OS_ALWAYS_INLINE NSUInteger OSBytesPerRowForWidth(NSUInteger width)
                                                                     samplesPerPixel:4
                                                                            hasAlpha:YES
                                                                            isPlanar:NO
-                                                                     colorSpaceName:NSCalibratedRGBColorSpace
+                                                                     colorSpaceName:NSDeviceRGBColorSpace
                                                                         bytesPerRow:(NSInteger)OSBytesPerRowForWidth(width)
                                                                        bitsPerPixel:0];
     [NSGraphicsContext saveGraphicsState];
