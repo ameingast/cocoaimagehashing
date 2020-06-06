@@ -62,7 +62,7 @@ pod 'CocoaImageHashing', :git => 'https://github.com/ameingast/cocoaimagehashing
 To use [Carthage](https://github.com/Carthage/Carthage) (a more lightweight but more hands on package manager) just create a `Cartfile` with 
 
 ```ruby
-github "ameingast/cocoaimagehashing" ~> 1.7.0
+github "ameingast/cocoaimagehashing" ~> 1.8.0
 ```
 
 Then follow the [steps in the Carthage guide](https://github.com/Carthage/Carthage#getting-started) basically (for iOS):
