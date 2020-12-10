@@ -207,11 +207,11 @@ print("Similar Images", similarImages)
     NSData *firstImageData = [NSData new];
     NSData *secondImageData = [NSData new]
     NSData *thirdImageData = [NSData new];
-    NSMutableArray<OSTuple<OSImageId *, NSData *> *> *data = [NSMutableArray new];
+    NSMutableArray<OSTuple<OSImageId *, NSData *> *> *images = [NSMutableArray new];
     NSUInteger i = 0;
     for (NSData *data in @[ firstImageData, secondImageData, thirdImageData ]) {
        OSTuple<OSImageId *, NSData *> *tuple = [OSTuple tupleWithFirst:[NSString stringWithFormat:@"%@", @(i++)] andSecond:data];
-       [data addObject:tuple];
+       [images addObject:tuple];
     }
     NSArray<OSTuple<OSImageId *, OSImageId *> *> *similarImageIdsAsTuples = [[OSImageHashing sharedInstance] similarImagesWithHashingQuality:OSImageHashingQualityHigh forImages:images];
     NSLog(@"Similar image ids: %@", similarImageIdsAsTuples);
